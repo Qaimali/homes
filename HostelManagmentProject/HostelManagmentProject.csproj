@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D99A963-1E84-454B-9641-5AF86B4F1566}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HostelManagmentProject</RootNamespace>
+    <AssemblyName>HostelManagmentProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Stregistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stregistration.Designer.cs">
+      <DependentUpon>Stregistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stcomplain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stcomplain.Designer.cs">
+      <DependentUpon>Stcomplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admincomplain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admincomplain.Designer.cs">
+      <DependentUpon>Admincomplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adcomplaintsread.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adcomplaintsread.Designer.cs">
+      <DependentUpon>Adcomplaintsread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gpcheckinst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gpcheckinst.Designer.cs">
+      <DependentUpon>Gpcheckinst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gpcheckoutst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gpcheckoutst.Designer.cs">
+      <DependentUpon>Gpcheckoutst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StFormSubmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StFormSubmission.Designer.cs">
+      <DependentUpon>StFormSubmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adpendingrequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adpendingrequest.Designer.cs">
+      <DependentUpon>Adpendingrequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdregisteredStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdregisteredStudents.Designer.cs">
+      <DependentUpon>AdregisteredStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stregistration.resx">
+      <DependentUpon>Stregistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stcomplain.resx">
+      <DependentUpon>Stcomplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admincomplain.resx">
+      <DependentUpon>Admincomplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adcomplaintsread.resx">
+      <DependentUpon>Adcomplaintsread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gpcheckinst.resx">
+      <DependentUpon>Gpcheckinst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gpcheckoutst.resx">
+      <DependentUpon>Gpcheckoutst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StFormSubmission.resx">
+      <DependentUpon>StFormSubmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adpendingrequest.resx">
+      <DependentUpon>Adpendingrequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdregisteredStudents.resx">
+      <DependentUpon>AdregisteredStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\Service1.wsdl" />
+    <None Include="Web References\localhost\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okBD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_checkmark_clip_art_17451.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26241320_925105544314378_1842606496_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homes2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homes21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:5352/Service1.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost:5352/Service1.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HostelManagmentProject_localhost_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\localhost\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
