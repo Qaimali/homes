@@ -18,6 +18,3 @@ C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagment
 C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.AdregisteredStudents.resources
 C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Login.resources
 C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.register.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe.config
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.exe
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.pdb

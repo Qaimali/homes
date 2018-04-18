@@ -52,14 +52,18 @@ namespace HostelManagmentProject
             localhost.Service1 sc = new localhost.Service1();
             bool admin = true;
             bool fail = true;
-            
-            
+            bool student = true;
+            bool notst = true;
             sc.isAdmin(txtusername.Text, txtpassword.Text, out admin, out fail);
+            sc.isStudent(txtusername.Text, txtpassword.Text, out student, out notst);
             if (admin)
             {
                 MessageBox.Show("welcocme admin");
             }
-            
+            else if (student)
+            {
+                MessageBox.Show("welcocme student");
+            }
             else
             {
                 MessageBox.Show("Not Welcome in homes");

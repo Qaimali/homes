@@ -29,9 +29,13 @@ namespace HostelManagmentProject.localhost {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback regstOperationCompleted;
+        
         private System.Threading.SendOrPostCallback regadminOperationCompleted;
         
         private System.Threading.SendOrPostCallback isAdminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback isStudentOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -72,10 +76,50 @@ namespace HostelManagmentProject.localhost {
         }
         
         /// <remarks/>
+        public event regstCompletedEventHandler regstCompleted;
+        
+        /// <remarks/>
         public event regadminCompletedEventHandler regadminCompleted;
         
         /// <remarks/>
         public event isAdminCompletedEventHandler isAdminCompleted;
+        
+        /// <remarks/>
+        public event isStudentCompletedEventHandler isStudentCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void regst([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer) {
+            this.Invoke("regst", new object[] {
+                        username,
+                        password,
+                        question,
+                        answer});
+        }
+        
+        /// <remarks/>
+        public void regstAsync(string username, string password, string question, string answer) {
+            this.regstAsync(username, password, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void regstAsync(string username, string password, string question, string answer, object userState) {
+            if ((this.regstOperationCompleted == null)) {
+                this.regstOperationCompleted = new System.Threading.SendOrPostCallback(this.OnregstOperationCompleted);
+            }
+            this.InvokeAsync("regst", new object[] {
+                        username,
+                        password,
+                        question,
+                        answer}, this.regstOperationCompleted, userState);
+        }
+        
+        private void OnregstOperationCompleted(object arg) {
+            if ((this.regstCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.regstCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regadmin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -144,6 +188,38 @@ namespace HostelManagmentProject.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/isStudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void isStudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool isStudentResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool isStudentResultSpecified) {
+            object[] results = this.Invoke("isStudent", new object[] {
+                        username,
+                        password});
+            isStudentResult = ((bool)(results[0]));
+            isStudentResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void isStudentAsync(string username, string password) {
+            this.isStudentAsync(username, password, null);
+        }
+        
+        /// <remarks/>
+        public void isStudentAsync(string username, string password, object userState) {
+            if ((this.isStudentOperationCompleted == null)) {
+                this.isStudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnisStudentOperationCompleted);
+            }
+            this.InvokeAsync("isStudent", new object[] {
+                        username,
+                        password}, this.isStudentOperationCompleted, userState);
+        }
+        
+        private void OnisStudentOperationCompleted(object arg) {
+            if ((this.isStudentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.isStudentCompleted(this, new isStudentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -161,6 +237,10 @@ namespace HostelManagmentProject.localhost {
             return false;
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void regstCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
@@ -193,6 +273,40 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public bool isAdminResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void isStudentCompletedEventHandler(object sender, isStudentCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class isStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal isStudentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool isStudentResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool isStudentResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

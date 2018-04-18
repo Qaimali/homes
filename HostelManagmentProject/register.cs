@@ -20,8 +20,15 @@ namespace HostelManagmentProject
         private void cmdregister_Click(object sender, EventArgs e)
         {
             localhost.Service1 sc = new localhost.Service1();
+            string st = "student";
             string admin="admin";
-            if (comboBox2.GetItemText(comboBox2.SelectedItem) == admin)
+            if (comboBox2.GetItemText(comboBox2.SelectedItem) == st)
+            {
+                sc.regst(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
+
+                MessageBox.Show("Dear student you are signed up");
+            }
+            else if (comboBox2.GetItemText(comboBox2.SelectedItem) == admin)
             {
                 sc.regadmin(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
                 MessageBox.Show("admin you are registered");

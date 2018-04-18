@@ -6,6 +6,12 @@
       <xsd:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_regst_InputMessage">
+    <wsdl:part name="parameters" element="tns:regst" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:regstResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_regadmin_InputMessage">
     <wsdl:part name="parameters" element="tns:regadmin" />
   </wsdl:message>
@@ -18,7 +24,17 @@
   <wsdl:message name="IService1_isAdmin_OutputMessage">
     <wsdl:part name="parameters" element="tns:isAdminResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_isStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:isStudent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isStudentResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="regst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regst" message="tns:IService1_regst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regstResponse" message="tns:IService1_regst_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="regadmin">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/regadmin" message="tns:IService1_regadmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/regadminResponse" message="tns:IService1_regadmin_OutputMessage" />
@@ -27,9 +43,22 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/isAdmin" message="tns:IService1_isAdmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/isAdminResponse" message="tns:IService1_isAdmin_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="isStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isStudent" message="tns:IService1_isStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isStudentResponse" message="tns:IService1_isStudent_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="regst">
+      <soap:operation soapAction="http://tempuri.org/IService1/regst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="regadmin">
       <soap:operation soapAction="http://tempuri.org/IService1/regadmin" style="document" />
       <wsdl:input>
@@ -41,6 +70,15 @@
     </wsdl:operation>
     <wsdl:operation name="isAdmin">
       <soap:operation soapAction="http://tempuri.org/IService1/isAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/isStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
