@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-mknska
-=======
-qaimali
->>>>>>> 76cbb0b05bcccad6d16d84d0bb0363698187cf0c
