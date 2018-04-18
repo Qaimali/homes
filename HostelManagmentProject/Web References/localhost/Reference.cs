@@ -45,6 +45,14 @@ namespace HostelManagmentProject.localhost {
         
         private System.Threading.SendOrPostCallback isGatekeeperOperationCompleted;
         
+        private System.Threading.SendOrPostCallback canresetAdminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback canresetstudentOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback canresetrtOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback canresetgatekeeperOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -106,6 +114,18 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public event isGatekeeperCompletedEventHandler isGatekeeperCompleted;
+        
+        /// <remarks/>
+        public event canresetAdminCompletedEventHandler canresetAdminCompleted;
+        
+        /// <remarks/>
+        public event canresetstudentCompletedEventHandler canresetstudentCompleted;
+        
+        /// <remarks/>
+        public event canresetrtCompletedEventHandler canresetrtCompleted;
+        
+        /// <remarks/>
+        public event canresetgatekeeperCompletedEventHandler canresetgatekeeperCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -372,6 +392,142 @@ namespace HostelManagmentProject.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/canresetAdmin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void canresetAdmin([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, out bool canresetAdminResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool canresetAdminResultSpecified) {
+            object[] results = this.Invoke("canresetAdmin", new object[] {
+                        username,
+                        question,
+                        answer});
+            canresetAdminResult = ((bool)(results[0]));
+            canresetAdminResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void canresetAdminAsync(string username, string question, string answer) {
+            this.canresetAdminAsync(username, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void canresetAdminAsync(string username, string question, string answer, object userState) {
+            if ((this.canresetAdminOperationCompleted == null)) {
+                this.canresetAdminOperationCompleted = new System.Threading.SendOrPostCallback(this.OncanresetAdminOperationCompleted);
+            }
+            this.InvokeAsync("canresetAdmin", new object[] {
+                        username,
+                        question,
+                        answer}, this.canresetAdminOperationCompleted, userState);
+        }
+        
+        private void OncanresetAdminOperationCompleted(object arg) {
+            if ((this.canresetAdminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.canresetAdminCompleted(this, new canresetAdminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/canresetstudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void canresetstudent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, out bool canresetstudentResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool canresetstudentResultSpecified) {
+            object[] results = this.Invoke("canresetstudent", new object[] {
+                        username,
+                        question,
+                        answer});
+            canresetstudentResult = ((bool)(results[0]));
+            canresetstudentResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void canresetstudentAsync(string username, string question, string answer) {
+            this.canresetstudentAsync(username, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void canresetstudentAsync(string username, string question, string answer, object userState) {
+            if ((this.canresetstudentOperationCompleted == null)) {
+                this.canresetstudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OncanresetstudentOperationCompleted);
+            }
+            this.InvokeAsync("canresetstudent", new object[] {
+                        username,
+                        question,
+                        answer}, this.canresetstudentOperationCompleted, userState);
+        }
+        
+        private void OncanresetstudentOperationCompleted(object arg) {
+            if ((this.canresetstudentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.canresetstudentCompleted(this, new canresetstudentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/canresetrt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void canresetrt([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, out bool canresetrtResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool canresetrtResultSpecified) {
+            object[] results = this.Invoke("canresetrt", new object[] {
+                        username,
+                        question,
+                        answer});
+            canresetrtResult = ((bool)(results[0]));
+            canresetrtResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void canresetrtAsync(string username, string question, string answer) {
+            this.canresetrtAsync(username, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void canresetrtAsync(string username, string question, string answer, object userState) {
+            if ((this.canresetrtOperationCompleted == null)) {
+                this.canresetrtOperationCompleted = new System.Threading.SendOrPostCallback(this.OncanresetrtOperationCompleted);
+            }
+            this.InvokeAsync("canresetrt", new object[] {
+                        username,
+                        question,
+                        answer}, this.canresetrtOperationCompleted, userState);
+        }
+        
+        private void OncanresetrtOperationCompleted(object arg) {
+            if ((this.canresetrtCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.canresetrtCompleted(this, new canresetrtCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/canresetgatekeeper", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void canresetgatekeeper([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, out bool canresetgatekeeperResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool canresetgatekeeperResultSpecified) {
+            object[] results = this.Invoke("canresetgatekeeper", new object[] {
+                        username,
+                        question,
+                        answer});
+            canresetgatekeeperResult = ((bool)(results[0]));
+            canresetgatekeeperResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void canresetgatekeeperAsync(string username, string question, string answer) {
+            this.canresetgatekeeperAsync(username, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void canresetgatekeeperAsync(string username, string question, string answer, object userState) {
+            if ((this.canresetgatekeeperOperationCompleted == null)) {
+                this.canresetgatekeeperOperationCompleted = new System.Threading.SendOrPostCallback(this.OncanresetgatekeeperOperationCompleted);
+            }
+            this.InvokeAsync("canresetgatekeeper", new object[] {
+                        username,
+                        question,
+                        answer}, this.canresetgatekeeperOperationCompleted, userState);
+        }
+        
+        private void OncanresetgatekeeperOperationCompleted(object arg) {
+            if ((this.canresetgatekeeperCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.canresetgatekeeperCompleted(this, new canresetgatekeeperCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -535,6 +691,142 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public bool isGatekeeperResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void canresetAdminCompletedEventHandler(object sender, canresetAdminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class canresetAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal canresetAdminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool canresetAdminResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool canresetAdminResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void canresetstudentCompletedEventHandler(object sender, canresetstudentCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class canresetstudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal canresetstudentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool canresetstudentResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool canresetstudentResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void canresetrtCompletedEventHandler(object sender, canresetrtCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class canresetrtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal canresetrtCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool canresetrtResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool canresetrtResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void canresetgatekeeperCompletedEventHandler(object sender, canresetgatekeeperCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class canresetgatekeeperCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal canresetgatekeeperCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool canresetgatekeeperResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool canresetgatekeeperResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

@@ -54,6 +54,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forgotpas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotpas.Designer.cs">
+      <DependentUpon>forgotpas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="forgotpas.resx">
+      <DependentUpon>forgotpas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +305,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\register1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login12.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

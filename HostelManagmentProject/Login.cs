@@ -83,6 +83,13 @@ namespace HostelManagmentProject
                 MessageBox.Show("welcocme in homes");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            forgotpas fog = new forgotpas();
+            fog.Show();
+            this.Hide();
+        }
     }
 
 }

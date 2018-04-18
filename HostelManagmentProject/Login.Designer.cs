@@ -49,6 +49,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Forgot Password";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmdlogin
             // 
@@ -116,7 +117,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project;
+            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project2;
             this.pictureBox1.Location = new System.Drawing.Point(-50, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(475, 181);

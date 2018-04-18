@@ -165,17 +165,17 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(757, 149);
+            this.linkLabel1.Location = new System.Drawing.Point(41, 415);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(33, 13);
             this.linkLabel1.TabIndex = 209;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.Text = "home";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project;
+            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project1;
             this.pictureBox1.Location = new System.Drawing.Point(-50, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(459, 181);
