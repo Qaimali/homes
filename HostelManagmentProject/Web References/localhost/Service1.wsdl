@@ -12,6 +12,18 @@
   <wsdl:message name="IService1_regst_OutputMessage">
     <wsdl:part name="parameters" element="tns:regstResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_reggk_InputMessage">
+    <wsdl:part name="parameters" element="tns:reggk" />
+  </wsdl:message>
+  <wsdl:message name="IService1_reggk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:reggkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regrt_InputMessage">
+    <wsdl:part name="parameters" element="tns:regrt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regrt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:regrtResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_regadmin_InputMessage">
     <wsdl:part name="parameters" element="tns:regadmin" />
   </wsdl:message>
@@ -30,10 +42,30 @@
   <wsdl:message name="IService1_isStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:isStudentResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_isRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:isRT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isRTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isGatekeeper_InputMessage">
+    <wsdl:part name="parameters" element="tns:isGatekeeper" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isGatekeeper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isGatekeeperResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="regst">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/regst" message="tns:IService1_regst_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/regstResponse" message="tns:IService1_regst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reggk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/reggk" message="tns:IService1_reggk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/reggkResponse" message="tns:IService1_reggk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="regrt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regrt" message="tns:IService1_regrt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regrtResponse" message="tns:IService1_regrt_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="regadmin">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/regadmin" message="tns:IService1_regadmin_InputMessage" />
@@ -47,11 +79,37 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/isStudent" message="tns:IService1_isStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/isStudentResponse" message="tns:IService1_isStudent_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="isRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isRT" message="tns:IService1_isRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isRTResponse" message="tns:IService1_isRT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isGatekeeper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isGatekeeper" message="tns:IService1_isGatekeeper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isGatekeeperResponse" message="tns:IService1_isGatekeeper_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="regst">
       <soap:operation soapAction="http://tempuri.org/IService1/regst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reggk">
+      <soap:operation soapAction="http://tempuri.org/IService1/reggk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="regrt">
+      <soap:operation soapAction="http://tempuri.org/IService1/regrt" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -79,6 +137,24 @@
     </wsdl:operation>
     <wsdl:operation name="isStudent">
       <soap:operation soapAction="http://tempuri.org/IService1/isStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/isRT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGatekeeper">
+      <soap:operation soapAction="http://tempuri.org/IService1/isGatekeeper" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

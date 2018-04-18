@@ -31,11 +31,19 @@ namespace HostelManagmentProject.localhost {
         
         private System.Threading.SendOrPostCallback regstOperationCompleted;
         
+        private System.Threading.SendOrPostCallback reggkOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback regrtOperationCompleted;
+        
         private System.Threading.SendOrPostCallback regadminOperationCompleted;
         
         private System.Threading.SendOrPostCallback isAdminOperationCompleted;
         
         private System.Threading.SendOrPostCallback isStudentOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback isRTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback isGatekeeperOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -79,6 +87,12 @@ namespace HostelManagmentProject.localhost {
         public event regstCompletedEventHandler regstCompleted;
         
         /// <remarks/>
+        public event reggkCompletedEventHandler reggkCompleted;
+        
+        /// <remarks/>
+        public event regrtCompletedEventHandler regrtCompleted;
+        
+        /// <remarks/>
         public event regadminCompletedEventHandler regadminCompleted;
         
         /// <remarks/>
@@ -86,6 +100,12 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public event isStudentCompletedEventHandler isStudentCompleted;
+        
+        /// <remarks/>
+        public event isRTCompletedEventHandler isRTCompleted;
+        
+        /// <remarks/>
+        public event isGatekeeperCompletedEventHandler isGatekeeperCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -118,6 +138,74 @@ namespace HostelManagmentProject.localhost {
             if ((this.regstCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.regstCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/reggk", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void reggk([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer) {
+            this.Invoke("reggk", new object[] {
+                        username,
+                        password,
+                        question,
+                        answer});
+        }
+        
+        /// <remarks/>
+        public void reggkAsync(string username, string password, string question, string answer) {
+            this.reggkAsync(username, password, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void reggkAsync(string username, string password, string question, string answer, object userState) {
+            if ((this.reggkOperationCompleted == null)) {
+                this.reggkOperationCompleted = new System.Threading.SendOrPostCallback(this.OnreggkOperationCompleted);
+            }
+            this.InvokeAsync("reggk", new object[] {
+                        username,
+                        password,
+                        question,
+                        answer}, this.reggkOperationCompleted, userState);
+        }
+        
+        private void OnreggkOperationCompleted(object arg) {
+            if ((this.reggkCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.reggkCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regrt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void regrt([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer) {
+            this.Invoke("regrt", new object[] {
+                        username,
+                        password,
+                        question,
+                        answer});
+        }
+        
+        /// <remarks/>
+        public void regrtAsync(string username, string password, string question, string answer) {
+            this.regrtAsync(username, password, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void regrtAsync(string username, string password, string question, string answer, object userState) {
+            if ((this.regrtOperationCompleted == null)) {
+                this.regrtOperationCompleted = new System.Threading.SendOrPostCallback(this.OnregrtOperationCompleted);
+            }
+            this.InvokeAsync("regrt", new object[] {
+                        username,
+                        password,
+                        question,
+                        answer}, this.regrtOperationCompleted, userState);
+        }
+        
+        private void OnregrtOperationCompleted(object arg) {
+            if ((this.regrtCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.regrtCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -220,6 +308,70 @@ namespace HostelManagmentProject.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/isRT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void isRT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool isRTResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool isRTResultSpecified) {
+            object[] results = this.Invoke("isRT", new object[] {
+                        username,
+                        password});
+            isRTResult = ((bool)(results[0]));
+            isRTResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void isRTAsync(string username, string password) {
+            this.isRTAsync(username, password, null);
+        }
+        
+        /// <remarks/>
+        public void isRTAsync(string username, string password, object userState) {
+            if ((this.isRTOperationCompleted == null)) {
+                this.isRTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnisRTOperationCompleted);
+            }
+            this.InvokeAsync("isRT", new object[] {
+                        username,
+                        password}, this.isRTOperationCompleted, userState);
+        }
+        
+        private void OnisRTOperationCompleted(object arg) {
+            if ((this.isRTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.isRTCompleted(this, new isRTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/isGatekeeper", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void isGatekeeper([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool isGatekeeperResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool isGatekeeperResultSpecified) {
+            object[] results = this.Invoke("isGatekeeper", new object[] {
+                        username,
+                        password});
+            isGatekeeperResult = ((bool)(results[0]));
+            isGatekeeperResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void isGatekeeperAsync(string username, string password) {
+            this.isGatekeeperAsync(username, password, null);
+        }
+        
+        /// <remarks/>
+        public void isGatekeeperAsync(string username, string password, object userState) {
+            if ((this.isGatekeeperOperationCompleted == null)) {
+                this.isGatekeeperOperationCompleted = new System.Threading.SendOrPostCallback(this.OnisGatekeeperOperationCompleted);
+            }
+            this.InvokeAsync("isGatekeeper", new object[] {
+                        username,
+                        password}, this.isGatekeeperOperationCompleted, userState);
+        }
+        
+        private void OnisGatekeeperOperationCompleted(object arg) {
+            if ((this.isGatekeeperCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.isGatekeeperCompleted(this, new isGatekeeperCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -241,6 +393,14 @@ namespace HostelManagmentProject.localhost {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void regstCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void reggkCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void regrtCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
@@ -307,6 +467,74 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public bool isStudentResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void isRTCompletedEventHandler(object sender, isRTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class isRTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal isRTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool isRTResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool isRTResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void isGatekeeperCompletedEventHandler(object sender, isGatekeeperCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class isGatekeeperCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal isGatekeeperCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool isGatekeeperResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool isGatekeeperResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

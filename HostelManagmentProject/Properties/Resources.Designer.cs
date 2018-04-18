@@ -143,6 +143,16 @@ namespace HostelManagmentProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Login12 {
+            get {
+                object obj = ResourceManager.GetObject("Login12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap okBD1 {
             get {
                 object obj = ResourceManager.GetObject("okBD1", resourceCulture);
@@ -163,6 +173,36 @@ namespace HostelManagmentProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap project1 {
+            get {
+                object obj = ResourceManager.GetObject("project1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap project2 {
+            get {
+                object obj = ResourceManager.GetObject("project2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap project3 {
+            get {
+                object obj = ResourceManager.GetObject("project3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap register {
             get {
                 object obj = ResourceManager.GetObject("register", resourceCulture);
@@ -176,6 +216,16 @@ namespace HostelManagmentProject.Properties {
         internal static System.Drawing.Bitmap register1 {
             get {
                 object obj = ResourceManager.GetObject("register1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap register2 {
+            get {
+                object obj = ResourceManager.GetObject("register2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

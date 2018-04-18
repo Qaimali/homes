@@ -54,6 +54,12 @@ namespace HostelManagmentProject
             bool fail = true;
             bool student = true;
             bool notst = true;
+            bool rt = true;
+            bool notrt = true;
+            bool gatekeeper = true;
+            bool notgk = true;
+            sc.isGatekeeper(txtusername.Text, txtpassword.Text, out gatekeeper, out notgk);
+            sc.isRT(txtusername.Text, txtpassword.Text, out rt, out notrt);
             sc.isAdmin(txtusername.Text, txtpassword.Text, out admin, out fail);
             sc.isStudent(txtusername.Text, txtpassword.Text, out student, out notst);
             if (admin)
@@ -64,13 +70,21 @@ namespace HostelManagmentProject
             {
                 MessageBox.Show("welcocme student");
             }
+            else if (rt)
+            {
+                MessageBox.Show("wellcocme RT");
+            }
+            else if (gatekeeper)
+            {
+                MessageBox.Show("wellcocme gatekeeper");
+            }
             else
             {
-                MessageBox.Show("Not Welcome in homes");
+                MessageBox.Show("welcocme in homes");
             }
-         }
-     }
+        }
+    }
 
-  }
-        
-             
+}
+
+

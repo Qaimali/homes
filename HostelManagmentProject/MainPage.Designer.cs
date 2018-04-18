@@ -39,7 +39,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::HostelManagmentProject.Properties.Resources.register1;
+            this.pictureBox3.Image = global::HostelManagmentProject.Properties.Resources.register2;
             this.pictureBox3.Location = new System.Drawing.Point(529, 277);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(149, 109);
@@ -51,7 +51,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::HostelManagmentProject.Properties.Resources.Login11;
+            this.pictureBox2.Image = global::HostelManagmentProject.Properties.Resources.Login12;
             this.pictureBox2.Location = new System.Drawing.Point(400, 277);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(132, 109);
@@ -62,7 +62,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project;
+            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project3;
             this.pictureBox1.Location = new System.Drawing.Point(116, 77);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(784, 177);
