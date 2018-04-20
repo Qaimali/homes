@@ -1,0 +1,5 @@
+c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\WcfService3\WcfService3\bin\WcfService3.dll
+c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\WcfService3\WcfService3\bin\WcfService3.pdb
+c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\WcfService3\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
+c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\WcfService3\WcfService3\obj\Debug\WcfService3.dll
+c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\WcfService3\WcfService3\obj\Debug\WcfService3.pdb
