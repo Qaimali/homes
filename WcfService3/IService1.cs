@@ -28,9 +28,13 @@ namespace WcfService3
         bool isRT(string username, string password);
         [OperationContract]
         bool isGatekeeper(string username, string password);
-
+        [OperationContract]
+        bool canresetAdmin(string n1,string q1,string a1,string pass);
+        [OperationContract]
+        bool canresetgatekeeper(string n1, string q1, string a1, string pass);
+        [OperationContract]
+        bool canresetstudent(string n1, string q1, string a1, string pass);
+        [OperationContract]
+        bool canresetrt(string n1, string q1, string a1, string pass);
     }
-
-
-
 }

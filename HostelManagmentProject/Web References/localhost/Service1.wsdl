@@ -60,6 +60,12 @@
   <wsdl:message name="IService1_canresetAdmin_OutputMessage">
     <wsdl:part name="parameters" element="tns:canresetAdminResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_canresetgatekeeper_InputMessage">
+    <wsdl:part name="parameters" element="tns:canresetgatekeeper" />
+  </wsdl:message>
+  <wsdl:message name="IService1_canresetgatekeeper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:canresetgatekeeperResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_canresetstudent_InputMessage">
     <wsdl:part name="parameters" element="tns:canresetstudent" />
   </wsdl:message>
@@ -71,12 +77,6 @@
   </wsdl:message>
   <wsdl:message name="IService1_canresetrt_OutputMessage">
     <wsdl:part name="parameters" element="tns:canresetrtResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_canresetgatekeeper_InputMessage">
-    <wsdl:part name="parameters" element="tns:canresetgatekeeper" />
-  </wsdl:message>
-  <wsdl:message name="IService1_canresetgatekeeper_OutputMessage">
-    <wsdl:part name="parameters" element="tns:canresetgatekeeperResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="regst">
@@ -115,6 +115,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetAdmin" message="tns:IService1_canresetAdmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetAdminResponse" message="tns:IService1_canresetAdmin_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="canresetgatekeeper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetgatekeeper" message="tns:IService1_canresetgatekeeper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetgatekeeperResponse" message="tns:IService1_canresetgatekeeper_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="canresetstudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetstudent" message="tns:IService1_canresetstudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetstudentResponse" message="tns:IService1_canresetstudent_OutputMessage" />
@@ -122,10 +126,6 @@
     <wsdl:operation name="canresetrt">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetrt" message="tns:IService1_canresetrt_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetrtResponse" message="tns:IService1_canresetrt_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="canresetgatekeeper">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetgatekeeper" message="tns:IService1_canresetgatekeeper_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetgatekeeperResponse" message="tns:IService1_canresetgatekeeper_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -211,6 +211,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="canresetgatekeeper">
+      <soap:operation soapAction="http://tempuri.org/IService1/canresetgatekeeper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="canresetstudent">
       <soap:operation soapAction="http://tempuri.org/IService1/canresetstudent" style="document" />
       <wsdl:input>
@@ -222,15 +231,6 @@
     </wsdl:operation>
     <wsdl:operation name="canresetrt">
       <soap:operation soapAction="http://tempuri.org/IService1/canresetrt" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="canresetgatekeeper">
-      <soap:operation soapAction="http://tempuri.org/IService1/canresetgatekeeper" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

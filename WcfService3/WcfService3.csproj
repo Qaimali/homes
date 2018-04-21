@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Service References\ServiceReference1\Service1.wsdl" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Service References\ServiceReference1\Service1.xsd">
       <SubType>Designer</SubType>
     </None>

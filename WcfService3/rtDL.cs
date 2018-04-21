@@ -24,5 +24,18 @@ namespace WcfService3
             }
             return isfound;
         }
+        public bool resetRtPass(string u1, string q1, string a1, string p1)
+        {
+            bool isfound = false;
+            foreach (CRT ad in rtDL.rtlist)
+            {
+                if (ad.Name == u1 && ad.Question == q1 && ad.Answer == a1)
+                {
+                    isfound = true;
+                    ad.Password = p1;
+                }
+            }
+            return isfound;
+        }
     }
 }

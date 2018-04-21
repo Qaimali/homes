@@ -86,6 +86,41 @@ namespace WcfService3
             }
             return false;
         }
-
+        public bool canresetAdmin(string n1, string q1, string a1, string pass) 
+        {
+            adminDL ad = new adminDL();
+            if(ad.resetadminpass(n1,q1,a1,pass))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool canresetgatekeeper(string n1, string q1, string a1, string pass) 
+        {
+            gatekDL gk = new gatekDL();
+            if(gk.resetGatePass(n1,q1,a1,pass))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool canresetstudent(string n1, string q1, string a1, string pass) 
+        {
+            studentDL st = new studentDL();
+            if (st.resetStudentPass(n1, q1, a1,pass)) 
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool canresetrt(string n1, string q1, string a1, string pass) 
+        {
+            rtDL rt = new rtDL();
+            if(rt.resetRtPass(n1,q1,a1,pass))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

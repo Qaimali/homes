@@ -90,6 +90,13 @@ namespace HostelManagmentProject
             fog.Show();
             this.Hide();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MainPage log = new MainPage();
+            log.Show();
+            this.Hide();
+        }
     }
 
 }
