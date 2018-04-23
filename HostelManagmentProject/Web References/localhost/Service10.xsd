@@ -1,191 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="regst">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="answer" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="regstResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="reggk">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="answer" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="reggkResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="regrt">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="answer" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="regrtResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="regadmin">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="answer" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="regadminResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isAdmin">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isAdminResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="isAdminResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isStudent">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isStudentResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="isStudentResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isRT">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isRTResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="isRTResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isGatekeeper">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="isGatekeeperResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="isGatekeeperResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetAdmin">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="n1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="q1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="a1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetAdminResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="canresetAdminResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetgatekeeper">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="n1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="q1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="a1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetgatekeeperResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="canresetgatekeeperResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetstudent">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="n1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="q1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="a1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetstudentResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="canresetstudentResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetrt">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="n1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="q1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="a1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="canresetrtResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="canresetrtResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService3" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCnotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cnotification" nillable="true" type="tns:Cnotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCnotification" nillable="true" type="tns:ArrayOfCnotification" />
+  <xs:complexType name="Cnotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Notification" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cnotification" nillable="true" type="tns:Cnotification" />
+  <xs:complexType name="ArrayOfHostel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hostel" nillable="true" type="tns:Hostel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHostel" nillable="true" type="tns:ArrayOfHostel" />
+  <xs:complexType name="Hostel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GatekeeperList" nillable="true" type="tns:ArrayOfCgatek" />
+      <xs:element minOccurs="0" name="HostelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfRooms" type="xs:int" />
+      <xs:element minOccurs="0" name="Roomlist" nillable="true" type="tns:ArrayOfroom" />
+      <xs:element minOccurs="0" name="RtList" nillable="true" type="tns:ArrayOfCRT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hostel" nillable="true" type="tns:Hostel" />
+  <xs:complexType name="ArrayOfCgatek">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cgatek" nillable="true" type="tns:Cgatek" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCgatek" nillable="true" type="tns:ArrayOfCgatek" />
+  <xs:complexType name="Cgatek">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cgatek" nillable="true" type="tns:Cgatek" />
+  <xs:complexType name="ArrayOfroom">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="room" nillable="true" type="tns:room" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroom" nillable="true" type="tns:ArrayOfroom" />
+  <xs:complexType name="room">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Allotees" type="xs:int" />
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="Roomnumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="room" nillable="true" type="tns:room" />
+  <xs:complexType name="ArrayOfCRT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CRT" nillable="true" type="tns:CRT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCRT" nillable="true" type="tns:ArrayOfCRT" />
+  <xs:complexType name="CRT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRT" nillable="true" type="tns:CRT" />
 </xs:schema>

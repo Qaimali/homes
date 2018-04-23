@@ -216,6 +216,7 @@
             this.Controls.Add(this.menuStrip2);
             this.Name = "register";
             this.Text = "register";
+            this.Load += new System.EventHandler(this.register_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

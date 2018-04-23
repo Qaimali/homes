@@ -35,5 +35,12 @@ namespace WcfService3
             get { return answer; }
             set { answer = value; }
         }
+        List<Cnotification> notificationlist = new List<Cnotification>();
+
+        public List<Cnotification> Notificationlist
+        {
+            get { return notificationlist; }
+            set { notificationlist = value; }
+        }
     }
 }

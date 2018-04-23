@@ -71,5 +71,10 @@ namespace HostelManagmentProject
             log.Show();
             this.Hide();
         }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

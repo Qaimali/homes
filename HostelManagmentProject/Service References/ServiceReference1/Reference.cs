@@ -9,35 +9,181 @@
 //------------------------------------------------------------------------------
 
 namespace HostelManagmentProject.ServiceReference1 {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cnotification", Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    [System.SerializableAttribute()]
+    public partial class Cnotification : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NotificationField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Notification {
+            get {
+                return this.NotificationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NotificationField, value) != true)) {
+                    this.NotificationField = value;
+                    this.RaisePropertyChanged("Notification");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addst", ReplyAction="http://tempuri.org/IService1/addstResponse")]
-        void addst(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/regst", ReplyAction="http://tempuri.org/IService1/regstResponse")]
+        void regst(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addst", ReplyAction="http://tempuri.org/IService1/addstResponse")]
-        System.Threading.Tasks.Task addstAsync(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/regst", ReplyAction="http://tempuri.org/IService1/regstResponse")]
+        System.Threading.Tasks.Task regstAsync(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addgk", ReplyAction="http://tempuri.org/IService1/addgkResponse")]
-        void addgk(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/reggk", ReplyAction="http://tempuri.org/IService1/reggkResponse")]
+        void reggk(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addgk", ReplyAction="http://tempuri.org/IService1/addgkResponse")]
-        System.Threading.Tasks.Task addgkAsync(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/reggk", ReplyAction="http://tempuri.org/IService1/reggkResponse")]
+        System.Threading.Tasks.Task reggkAsync(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addrt", ReplyAction="http://tempuri.org/IService1/addrtResponse")]
-        void addrt(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/regrt", ReplyAction="http://tempuri.org/IService1/regrtResponse")]
+        void regrt(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addrt", ReplyAction="http://tempuri.org/IService1/addrtResponse")]
-        System.Threading.Tasks.Task addrtAsync(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/regrt", ReplyAction="http://tempuri.org/IService1/regrtResponse")]
+        System.Threading.Tasks.Task regrtAsync(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addadmin", ReplyAction="http://tempuri.org/IService1/addadminResponse")]
-        void addadmin(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/regadmin", ReplyAction="http://tempuri.org/IService1/regadminResponse")]
+        void regadmin(string username, string password, string question, string answer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addadmin", ReplyAction="http://tempuri.org/IService1/addadminResponse")]
-        System.Threading.Tasks.Task addadminAsync(string username, string password, string question, string answer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/regadmin", ReplyAction="http://tempuri.org/IService1/regadminResponse")]
+        System.Threading.Tasks.Task regadminAsync(string username, string password, string question, string answer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isAdmin", ReplyAction="http://tempuri.org/IService1/isAdminResponse")]
+        bool isAdmin(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isAdmin", ReplyAction="http://tempuri.org/IService1/isAdminResponse")]
+        System.Threading.Tasks.Task<bool> isAdminAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isStudent", ReplyAction="http://tempuri.org/IService1/isStudentResponse")]
+        bool isStudent(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isStudent", ReplyAction="http://tempuri.org/IService1/isStudentResponse")]
+        System.Threading.Tasks.Task<bool> isStudentAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isRT", ReplyAction="http://tempuri.org/IService1/isRTResponse")]
+        bool isRT(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isRT", ReplyAction="http://tempuri.org/IService1/isRTResponse")]
+        System.Threading.Tasks.Task<bool> isRTAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isGatekeeper", ReplyAction="http://tempuri.org/IService1/isGatekeeperResponse")]
+        bool isGatekeeper(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isGatekeeper", ReplyAction="http://tempuri.org/IService1/isGatekeeperResponse")]
+        System.Threading.Tasks.Task<bool> isGatekeeperAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetAdmin", ReplyAction="http://tempuri.org/IService1/canresetAdminResponse")]
+        bool canresetAdmin(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetAdmin", ReplyAction="http://tempuri.org/IService1/canresetAdminResponse")]
+        System.Threading.Tasks.Task<bool> canresetAdminAsync(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetgatekeeper", ReplyAction="http://tempuri.org/IService1/canresetgatekeeperResponse")]
+        bool canresetgatekeeper(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetgatekeeper", ReplyAction="http://tempuri.org/IService1/canresetgatekeeperResponse")]
+        System.Threading.Tasks.Task<bool> canresetgatekeeperAsync(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetstudent", ReplyAction="http://tempuri.org/IService1/canresetstudentResponse")]
+        bool canresetstudent(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetstudent", ReplyAction="http://tempuri.org/IService1/canresetstudentResponse")]
+        System.Threading.Tasks.Task<bool> canresetstudentAsync(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetrt", ReplyAction="http://tempuri.org/IService1/canresetrtResponse")]
+        bool canresetrt(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/canresetrt", ReplyAction="http://tempuri.org/IService1/canresetrtResponse")]
+        System.Threading.Tasks.Task<bool> canresetrtAsync(string n1, string q1, string a1, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/mutateStNotification", ReplyAction="http://tempuri.org/IService1/mutateStNotificationResponse")]
+        HostelManagmentProject.ServiceReference1.Cnotification[] mutateStNotification();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/mutateStNotification", ReplyAction="http://tempuri.org/IService1/mutateStNotificationResponse")]
+        System.Threading.Tasks.Task<HostelManagmentProject.ServiceReference1.Cnotification[]> mutateStNotificationAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/loggedstudent", ReplyAction="http://tempuri.org/IService1/loggedstudentResponse")]
+        string loggedstudent();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/loggedstudent", ReplyAction="http://tempuri.org/IService1/loggedstudentResponse")]
+        System.Threading.Tasks.Task<string> loggedstudentAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/mutateRtNotifications", ReplyAction="http://tempuri.org/IService1/mutateRtNotificationsResponse")]
+        HostelManagmentProject.ServiceReference1.Cnotification[] mutateRtNotifications();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/mutateRtNotifications", ReplyAction="http://tempuri.org/IService1/mutateRtNotificationsResponse")]
+        System.Threading.Tasks.Task<HostelManagmentProject.ServiceReference1.Cnotification[]> mutateRtNotificationsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/loggedRt", ReplyAction="http://tempuri.org/IService1/loggedRtResponse")]
+        string loggedRt();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/loggedRt", ReplyAction="http://tempuri.org/IService1/loggedRtResponse")]
+        System.Threading.Tasks.Task<string> loggedRtAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/mutateGKNotifications", ReplyAction="http://tempuri.org/IService1/mutateGKNotificationsResponse")]
+        HostelManagmentProject.ServiceReference1.Cnotification[] mutateGKNotifications();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/mutateGKNotifications", ReplyAction="http://tempuri.org/IService1/mutateGKNotificationsResponse")]
+        System.Threading.Tasks.Task<HostelManagmentProject.ServiceReference1.Cnotification[]> mutateGKNotificationsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/logged_Gatekeeper", ReplyAction="http://tempuri.org/IService1/logged_GatekeeperResponse")]
+        string logged_Gatekeeper();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/logged_Gatekeeper", ReplyAction="http://tempuri.org/IService1/logged_GatekeeperResponse")]
+        System.Threading.Tasks.Task<string> logged_GatekeeperAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addhostel", ReplyAction="http://tempuri.org/IService1/addhostelResponse")]
+        void addhostel(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/addhostel", ReplyAction="http://tempuri.org/IService1/addhostelResponse")]
+        System.Threading.Tasks.Task addhostelAsync(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/rtnames", ReplyAction="http://tempuri.org/IService1/rtnamesResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(HostelManagmentProject.ServiceReference1.Cnotification[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(HostelManagmentProject.ServiceReference1.Cnotification))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        object[] rtnames();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/rtnames", ReplyAction="http://tempuri.org/IService1/rtnamesResponse")]
+        System.Threading.Tasks.Task<object[]> rtnamesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,36 +213,164 @@ namespace HostelManagmentProject.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public void addst(string username, string password, string question, string answer) {
-            base.Channel.addst(username, password, question, answer);
+        public void regst(string username, string password, string question, string answer) {
+            base.Channel.regst(username, password, question, answer);
         }
         
-        public System.Threading.Tasks.Task addstAsync(string username, string password, string question, string answer) {
-            return base.Channel.addstAsync(username, password, question, answer);
+        public System.Threading.Tasks.Task regstAsync(string username, string password, string question, string answer) {
+            return base.Channel.regstAsync(username, password, question, answer);
         }
         
-        public void addgk(string username, string password, string question, string answer) {
-            base.Channel.addgk(username, password, question, answer);
+        public void reggk(string username, string password, string question, string answer) {
+            base.Channel.reggk(username, password, question, answer);
         }
         
-        public System.Threading.Tasks.Task addgkAsync(string username, string password, string question, string answer) {
-            return base.Channel.addgkAsync(username, password, question, answer);
+        public System.Threading.Tasks.Task reggkAsync(string username, string password, string question, string answer) {
+            return base.Channel.reggkAsync(username, password, question, answer);
         }
         
-        public void addrt(string username, string password, string question, string answer) {
-            base.Channel.addrt(username, password, question, answer);
+        public void regrt(string username, string password, string question, string answer) {
+            base.Channel.regrt(username, password, question, answer);
         }
         
-        public System.Threading.Tasks.Task addrtAsync(string username, string password, string question, string answer) {
-            return base.Channel.addrtAsync(username, password, question, answer);
+        public System.Threading.Tasks.Task regrtAsync(string username, string password, string question, string answer) {
+            return base.Channel.regrtAsync(username, password, question, answer);
         }
         
-        public void addadmin(string username, string password, string question, string answer) {
-            base.Channel.addadmin(username, password, question, answer);
+        public void regadmin(string username, string password, string question, string answer) {
+            base.Channel.regadmin(username, password, question, answer);
         }
         
-        public System.Threading.Tasks.Task addadminAsync(string username, string password, string question, string answer) {
-            return base.Channel.addadminAsync(username, password, question, answer);
+        public System.Threading.Tasks.Task regadminAsync(string username, string password, string question, string answer) {
+            return base.Channel.regadminAsync(username, password, question, answer);
+        }
+        
+        public bool isAdmin(string username, string password) {
+            return base.Channel.isAdmin(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isAdminAsync(string username, string password) {
+            return base.Channel.isAdminAsync(username, password);
+        }
+        
+        public bool isStudent(string username, string password) {
+            return base.Channel.isStudent(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isStudentAsync(string username, string password) {
+            return base.Channel.isStudentAsync(username, password);
+        }
+        
+        public bool isRT(string username, string password) {
+            return base.Channel.isRT(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isRTAsync(string username, string password) {
+            return base.Channel.isRTAsync(username, password);
+        }
+        
+        public bool isGatekeeper(string username, string password) {
+            return base.Channel.isGatekeeper(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isGatekeeperAsync(string username, string password) {
+            return base.Channel.isGatekeeperAsync(username, password);
+        }
+        
+        public bool canresetAdmin(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetAdmin(n1, q1, a1, pass);
+        }
+        
+        public System.Threading.Tasks.Task<bool> canresetAdminAsync(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetAdminAsync(n1, q1, a1, pass);
+        }
+        
+        public bool canresetgatekeeper(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetgatekeeper(n1, q1, a1, pass);
+        }
+        
+        public System.Threading.Tasks.Task<bool> canresetgatekeeperAsync(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetgatekeeperAsync(n1, q1, a1, pass);
+        }
+        
+        public bool canresetstudent(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetstudent(n1, q1, a1, pass);
+        }
+        
+        public System.Threading.Tasks.Task<bool> canresetstudentAsync(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetstudentAsync(n1, q1, a1, pass);
+        }
+        
+        public bool canresetrt(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetrt(n1, q1, a1, pass);
+        }
+        
+        public System.Threading.Tasks.Task<bool> canresetrtAsync(string n1, string q1, string a1, string pass) {
+            return base.Channel.canresetrtAsync(n1, q1, a1, pass);
+        }
+        
+        public HostelManagmentProject.ServiceReference1.Cnotification[] mutateStNotification() {
+            return base.Channel.mutateStNotification();
+        }
+        
+        public System.Threading.Tasks.Task<HostelManagmentProject.ServiceReference1.Cnotification[]> mutateStNotificationAsync() {
+            return base.Channel.mutateStNotificationAsync();
+        }
+        
+        public string loggedstudent() {
+            return base.Channel.loggedstudent();
+        }
+        
+        public System.Threading.Tasks.Task<string> loggedstudentAsync() {
+            return base.Channel.loggedstudentAsync();
+        }
+        
+        public HostelManagmentProject.ServiceReference1.Cnotification[] mutateRtNotifications() {
+            return base.Channel.mutateRtNotifications();
+        }
+        
+        public System.Threading.Tasks.Task<HostelManagmentProject.ServiceReference1.Cnotification[]> mutateRtNotificationsAsync() {
+            return base.Channel.mutateRtNotificationsAsync();
+        }
+        
+        public string loggedRt() {
+            return base.Channel.loggedRt();
+        }
+        
+        public System.Threading.Tasks.Task<string> loggedRtAsync() {
+            return base.Channel.loggedRtAsync();
+        }
+        
+        public HostelManagmentProject.ServiceReference1.Cnotification[] mutateGKNotifications() {
+            return base.Channel.mutateGKNotifications();
+        }
+        
+        public System.Threading.Tasks.Task<HostelManagmentProject.ServiceReference1.Cnotification[]> mutateGKNotificationsAsync() {
+            return base.Channel.mutateGKNotificationsAsync();
+        }
+        
+        public string logged_Gatekeeper() {
+            return base.Channel.logged_Gatekeeper();
+        }
+        
+        public System.Threading.Tasks.Task<string> logged_GatekeeperAsync() {
+            return base.Channel.logged_GatekeeperAsync();
+        }
+        
+        public void addhostel(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2) {
+            base.Channel.addhostel(hostname, roomcapcity, nuofrooms, r1, r2, g1, g2);
+        }
+        
+        public System.Threading.Tasks.Task addhostelAsync(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2) {
+            return base.Channel.addhostelAsync(hostname, roomcapcity, nuofrooms, r1, r2, g1, g2);
+        }
+        
+        public object[] rtnames() {
+            return base.Channel.rtnames();
+        }
+        
+        public System.Threading.Tasks.Task<object[]> rtnamesAsync() {
+            return base.Channel.rtnamesAsync();
         }
     }
 }

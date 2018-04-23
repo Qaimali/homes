@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace HostelManagmentProject
 {
@@ -65,18 +66,30 @@ namespace HostelManagmentProject
             if (admin)
             {
                 MessageBox.Show("welcocme admin");
+                AddHostel sh = new AddHostel();
+                sh.Show();
+                this.Hide();
             }
             else if (student)
             {
                 MessageBox.Show("welcocme student");
+                Stnotification stn = new Stnotification();
+                stn.Show();
+                this.Hide();
             }
             else if (rt)
             {
                 MessageBox.Show("wellcocme RT");
+                rtNotifications rtn = new rtNotifications();
+                rtn.Show();
+                this.Hide();
             }
             else if (gatekeeper)
             {
                 MessageBox.Show("wellcocme gatekeeper");
+                gkNotifications gkn = new gkNotifications();
+                gkn.Show();
+                this.Hide();
             }
             else
             {
@@ -97,6 +110,14 @@ namespace HostelManagmentProject
             log.Show();
             this.Hide();
         }
+        //DataTable t = new DataTable();
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //t.Columns.Add("RT name", typeof(string));
+            //dataGridView1.DataSource = t;
+            
+        }
+        
     }
 
 }

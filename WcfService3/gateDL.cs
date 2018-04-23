@@ -8,9 +8,22 @@ namespace WcfService3
     public class gatekDL
     {
         public static List<Cgatek> gatekList = new List<Cgatek>();
+        public static ArrayList gatearr = new ArrayList();
+        public ArrayList gknames()
+        {
+            foreach (Cgatek cr in gatekDL.gatekList)
+            {
+                gatekDL.gatearr.Add(cr.Name);
+            }
+            return gatearr;
+        }
         public void addgatekeeper(Cgatek gk)
         {
             gatekList.Add(gk);
+        }
+        public void addNotification(Cnotification not)
+        {
+            myutilGateKeeper.logingatkeeper.Notificationlist.Add(not);
         }
         public bool isgatekeeper(string username, string password)
         {
@@ -20,6 +33,7 @@ namespace WcfService3
                 if (cg.Name == username && cg.Password == password)
                 {
                     isfound = true;
+                    myutilGateKeeper.logingatkeeper = cg;
                 }
             }
             return isfound;

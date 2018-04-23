@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Collections;
 
 namespace WcfService3
 {
@@ -36,5 +37,25 @@ namespace WcfService3
         bool canresetstudent(string n1, string q1, string a1, string pass);
         [OperationContract]
         bool canresetrt(string n1, string q1, string a1, string pass);
+        [OperationContract]
+        List<Cnotification> mutateStNotification();
+        [OperationContract]
+        string loggedstudent();
+        [OperationContract]
+        List<Cnotification> mutateRtNotifications();
+        [OperationContract]
+        string loggedRt();
+        [OperationContract]
+        List<Cnotification> mutateGKNotifications();
+        [OperationContract]
+        string logged_Gatekeeper();
+        [OperationContract]
+        void addhostel(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2);
+        [OperationContract]
+        ArrayList rtnames();
+        [OperationContract]
+        List<Hostel> hostels();
+        [OperationContract]
+        ArrayList gknames();
     }
 }

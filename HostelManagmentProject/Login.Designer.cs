@@ -118,7 +118,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project2;
+            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.project;
             this.pictureBox1.Location = new System.Drawing.Point(-138, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(620, 234);
@@ -154,6 +154,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

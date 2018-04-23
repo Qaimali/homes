@@ -73,9 +73,16 @@
     <Compile Include="adminDL.cs" />
     <Compile Include="Cadmin.cs" />
     <Compile Include="cgatekeeper.cs" />
+    <Compile Include="Cnotification.cs" />
     <Compile Include="CRT.cs" />
     <Compile Include="Cstudent.cs" />
     <Compile Include="gateDL.cs" />
+    <Compile Include="Hostel.cs" />
+    <Compile Include="hostelDL.cs" />
+    <Compile Include="myutilGateKeeper.cs" />
+    <Compile Include="myutilRT.cs" />
+    <Compile Include="myutilStudent.cs" />
+    <Compile Include="room.cs" />
     <Compile Include="rtDL.cs" />
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>

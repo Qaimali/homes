@@ -45,30 +45,23 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.studentHostelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hostelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.menuStrip2.SuspendLayout();
+            this.studentHostelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -224,16 +217,6 @@
             this.textBox10.Size = new System.Drawing.Size(137, 20);
             this.textBox10.TabIndex = 25;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(494, 329);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Status";
-            // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(197, 76);
@@ -243,61 +226,31 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(666, 373);
+            this.textBox1.Location = new System.Drawing.Point(666, 329);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(269, 115);
             this.textBox1.TabIndex = 29;
             // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(197, 407);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(137, 24);
-            this.textBox11.TabIndex = 30;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(494, 407);
+            this.label5.Location = new System.Drawing.Point(494, 329);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 31;
             this.label5.Text = "Address";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 381);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 16);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Room mate Prefrence";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Applicant",
-            "Member",
-            "In progresss"});
-            this.comboBox1.Location = new System.Drawing.Point(666, 324);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 21);
-            this.comboBox1.TabIndex = 34;
-            this.comboBox1.Text = "Aplicant";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(412, 465);
+            this.button1.Location = new System.Drawing.Point(452, 457);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 35;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox1
             // 
@@ -318,40 +271,6 @@
             this.checkBox2.TabIndex = 37;
             this.checkBox2.Text = "Female";
             this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.BackColor = System.Drawing.Color.White;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentHostelApplicationToolStripMenuItem,
-            this.reToolStripMenuItem,
-            this.toolStripMenuItem1});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1022, 24);
-            this.menuStrip2.TabIndex = 38;
-            this.menuStrip2.Text = "menuStrip2";
-            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
-            // 
-            // studentHostelApplicationToolStripMenuItem
-            // 
-            this.studentHostelApplicationToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.studentHostelApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.studentHostelApplicationToolStripMenuItem.Name = "studentHostelApplicationToolStripMenuItem";
-            this.studentHostelApplicationToolStripMenuItem.Size = new System.Drawing.Size(161, 20);
-            this.studentHostelApplicationToolStripMenuItem.Text = "Student Hostel Application";
-            // 
-            // reToolStripMenuItem
-            // 
-            this.reToolStripMenuItem.Name = "reToolStripMenuItem";
-            this.reToolStripMenuItem.Size = new System.Drawing.Size(142, 20);
-            this.reToolStripMenuItem.Text = "Application Request ID:";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(49, 20);
-            this.toolStripMenuItem1.Text = "40001";
             // 
             // hostelApplicationToolStripMenuItem
             // 
@@ -377,15 +296,15 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // label14
+            // checkBox3
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(13, 425);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(117, 16);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Enter Roll Number";
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(309, 105);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(52, 17);
+            this.checkBox3.TabIndex = 41;
+            this.checkBox3.Text = "Other";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -401,45 +320,50 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.circle_checkmark_clip_art_17451;
+            this.pictureBox1.Image = global::HostelManagmentProject.Properties.Resources.okBD1;
             this.pictureBox1.Location = new System.Drawing.Point(666, 76);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 133);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // checkBox3
+            // studentHostelApplicationToolStripMenuItem
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(309, 105);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(52, 17);
-            this.checkBox3.TabIndex = 41;
-            this.checkBox3.Text = "Other";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.studentHostelApplicationToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
+            this.studentHostelApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.studentHostelApplicationToolStripMenuItem.Name = "studentHostelApplicationToolStripMenuItem";
+            this.studentHostelApplicationToolStripMenuItem.Size = new System.Drawing.Size(161, 20);
+            this.studentHostelApplicationToolStripMenuItem.Text = "Student Hostel Application";
             // 
-            // Form1
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.White;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentHostelApplicationToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1022, 24);
+            this.menuStrip2.TabIndex = 38;
+            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
+            // 
+            // Stregistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1022, 516);
             this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox6);
@@ -460,16 +384,16 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Stregistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "`";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,26 +418,19 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem studentHostelApplicationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem hostelApplicationToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.ToolStripMenuItem studentHostelApplicationToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip2;
 
     }
     

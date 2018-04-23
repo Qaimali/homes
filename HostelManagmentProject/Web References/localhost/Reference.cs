@@ -27,6 +27,7 @@ namespace HostelManagmentProject.localhost {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(object[]))]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback regstOperationCompleted;
@@ -52,6 +53,26 @@ namespace HostelManagmentProject.localhost {
         private System.Threading.SendOrPostCallback canresetstudentOperationCompleted;
         
         private System.Threading.SendOrPostCallback canresetrtOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mutateStNotificationOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback loggedstudentOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mutateRtNotificationsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback loggedRtOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mutateGKNotificationsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback logged_GatekeeperOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addhostelOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback rtnamesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback hostelsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback gknamesOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -126,6 +147,36 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public event canresetrtCompletedEventHandler canresetrtCompleted;
+        
+        /// <remarks/>
+        public event mutateStNotificationCompletedEventHandler mutateStNotificationCompleted;
+        
+        /// <remarks/>
+        public event loggedstudentCompletedEventHandler loggedstudentCompleted;
+        
+        /// <remarks/>
+        public event mutateRtNotificationsCompletedEventHandler mutateRtNotificationsCompleted;
+        
+        /// <remarks/>
+        public event loggedRtCompletedEventHandler loggedRtCompleted;
+        
+        /// <remarks/>
+        public event mutateGKNotificationsCompletedEventHandler mutateGKNotificationsCompleted;
+        
+        /// <remarks/>
+        public event logged_GatekeeperCompletedEventHandler logged_GatekeeperCompleted;
+        
+        /// <remarks/>
+        public event addhostelCompletedEventHandler addhostelCompleted;
+        
+        /// <remarks/>
+        public event rtnamesCompletedEventHandler rtnamesCompleted;
+        
+        /// <remarks/>
+        public event hostelsCompletedEventHandler hostelsCompleted;
+        
+        /// <remarks/>
+        public event gknamesCompletedEventHandler gknamesCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -536,6 +587,308 @@ namespace HostelManagmentProject.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/mutateStNotification", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public Cnotification[] mutateStNotification() {
+            object[] results = this.Invoke("mutateStNotification", new object[0]);
+            return ((Cnotification[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mutateStNotificationAsync() {
+            this.mutateStNotificationAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mutateStNotificationAsync(object userState) {
+            if ((this.mutateStNotificationOperationCompleted == null)) {
+                this.mutateStNotificationOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmutateStNotificationOperationCompleted);
+            }
+            this.InvokeAsync("mutateStNotification", new object[0], this.mutateStNotificationOperationCompleted, userState);
+        }
+        
+        private void OnmutateStNotificationOperationCompleted(object arg) {
+            if ((this.mutateStNotificationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mutateStNotificationCompleted(this, new mutateStNotificationCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/loggedstudent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string loggedstudent() {
+            object[] results = this.Invoke("loggedstudent", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void loggedstudentAsync() {
+            this.loggedstudentAsync(null);
+        }
+        
+        /// <remarks/>
+        public void loggedstudentAsync(object userState) {
+            if ((this.loggedstudentOperationCompleted == null)) {
+                this.loggedstudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnloggedstudentOperationCompleted);
+            }
+            this.InvokeAsync("loggedstudent", new object[0], this.loggedstudentOperationCompleted, userState);
+        }
+        
+        private void OnloggedstudentOperationCompleted(object arg) {
+            if ((this.loggedstudentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.loggedstudentCompleted(this, new loggedstudentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/mutateRtNotifications", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public Cnotification[] mutateRtNotifications() {
+            object[] results = this.Invoke("mutateRtNotifications", new object[0]);
+            return ((Cnotification[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mutateRtNotificationsAsync() {
+            this.mutateRtNotificationsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mutateRtNotificationsAsync(object userState) {
+            if ((this.mutateRtNotificationsOperationCompleted == null)) {
+                this.mutateRtNotificationsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmutateRtNotificationsOperationCompleted);
+            }
+            this.InvokeAsync("mutateRtNotifications", new object[0], this.mutateRtNotificationsOperationCompleted, userState);
+        }
+        
+        private void OnmutateRtNotificationsOperationCompleted(object arg) {
+            if ((this.mutateRtNotificationsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mutateRtNotificationsCompleted(this, new mutateRtNotificationsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/loggedRt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string loggedRt() {
+            object[] results = this.Invoke("loggedRt", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void loggedRtAsync() {
+            this.loggedRtAsync(null);
+        }
+        
+        /// <remarks/>
+        public void loggedRtAsync(object userState) {
+            if ((this.loggedRtOperationCompleted == null)) {
+                this.loggedRtOperationCompleted = new System.Threading.SendOrPostCallback(this.OnloggedRtOperationCompleted);
+            }
+            this.InvokeAsync("loggedRt", new object[0], this.loggedRtOperationCompleted, userState);
+        }
+        
+        private void OnloggedRtOperationCompleted(object arg) {
+            if ((this.loggedRtCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.loggedRtCompleted(this, new loggedRtCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/mutateGKNotifications", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public Cnotification[] mutateGKNotifications() {
+            object[] results = this.Invoke("mutateGKNotifications", new object[0]);
+            return ((Cnotification[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mutateGKNotificationsAsync() {
+            this.mutateGKNotificationsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mutateGKNotificationsAsync(object userState) {
+            if ((this.mutateGKNotificationsOperationCompleted == null)) {
+                this.mutateGKNotificationsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmutateGKNotificationsOperationCompleted);
+            }
+            this.InvokeAsync("mutateGKNotifications", new object[0], this.mutateGKNotificationsOperationCompleted, userState);
+        }
+        
+        private void OnmutateGKNotificationsOperationCompleted(object arg) {
+            if ((this.mutateGKNotificationsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mutateGKNotificationsCompleted(this, new mutateGKNotificationsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/logged_Gatekeeper", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string logged_Gatekeeper() {
+            object[] results = this.Invoke("logged_Gatekeeper", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void logged_GatekeeperAsync() {
+            this.logged_GatekeeperAsync(null);
+        }
+        
+        /// <remarks/>
+        public void logged_GatekeeperAsync(object userState) {
+            if ((this.logged_GatekeeperOperationCompleted == null)) {
+                this.logged_GatekeeperOperationCompleted = new System.Threading.SendOrPostCallback(this.Onlogged_GatekeeperOperationCompleted);
+            }
+            this.InvokeAsync("logged_Gatekeeper", new object[0], this.logged_GatekeeperOperationCompleted, userState);
+        }
+        
+        private void Onlogged_GatekeeperOperationCompleted(object arg) {
+            if ((this.logged_GatekeeperCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.logged_GatekeeperCompleted(this, new logged_GatekeeperCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addhostel", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addhostel([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string hostname, int roomcapcity, [System.Xml.Serialization.XmlIgnoreAttribute()] bool roomcapcitySpecified, int nuofrooms, [System.Xml.Serialization.XmlIgnoreAttribute()] bool nuofroomsSpecified, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string r1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string r2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string g1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string g2) {
+            this.Invoke("addhostel", new object[] {
+                        hostname,
+                        roomcapcity,
+                        roomcapcitySpecified,
+                        nuofrooms,
+                        nuofroomsSpecified,
+                        r1,
+                        r2,
+                        g1,
+                        g2});
+        }
+        
+        /// <remarks/>
+        public void addhostelAsync(string hostname, int roomcapcity, bool roomcapcitySpecified, int nuofrooms, bool nuofroomsSpecified, string r1, string r2, string g1, string g2) {
+            this.addhostelAsync(hostname, roomcapcity, roomcapcitySpecified, nuofrooms, nuofroomsSpecified, r1, r2, g1, g2, null);
+        }
+        
+        /// <remarks/>
+        public void addhostelAsync(string hostname, int roomcapcity, bool roomcapcitySpecified, int nuofrooms, bool nuofroomsSpecified, string r1, string r2, string g1, string g2, object userState) {
+            if ((this.addhostelOperationCompleted == null)) {
+                this.addhostelOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddhostelOperationCompleted);
+            }
+            this.InvokeAsync("addhostel", new object[] {
+                        hostname,
+                        roomcapcity,
+                        roomcapcitySpecified,
+                        nuofrooms,
+                        nuofroomsSpecified,
+                        r1,
+                        r2,
+                        g1,
+                        g2}, this.addhostelOperationCompleted, userState);
+        }
+        
+        private void OnaddhostelOperationCompleted(object arg) {
+            if ((this.addhostelCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addhostelCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/rtnames", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+        public object[] rtnames() {
+            object[] results = this.Invoke("rtnames", new object[0]);
+            return ((object[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void rtnamesAsync() {
+            this.rtnamesAsync(null);
+        }
+        
+        /// <remarks/>
+        public void rtnamesAsync(object userState) {
+            if ((this.rtnamesOperationCompleted == null)) {
+                this.rtnamesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnrtnamesOperationCompleted);
+            }
+            this.InvokeAsync("rtnames", new object[0], this.rtnamesOperationCompleted, userState);
+        }
+        
+        private void OnrtnamesOperationCompleted(object arg) {
+            if ((this.rtnamesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.rtnamesCompleted(this, new rtnamesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/hostels", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public Hostel[] hostels() {
+            object[] results = this.Invoke("hostels", new object[0]);
+            return ((Hostel[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void hostelsAsync() {
+            this.hostelsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void hostelsAsync(object userState) {
+            if ((this.hostelsOperationCompleted == null)) {
+                this.hostelsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnhostelsOperationCompleted);
+            }
+            this.InvokeAsync("hostels", new object[0], this.hostelsOperationCompleted, userState);
+        }
+        
+        private void OnhostelsOperationCompleted(object arg) {
+            if ((this.hostelsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.hostelsCompleted(this, new hostelsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/gknames", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+        public object[] gknames() {
+            object[] results = this.Invoke("gknames", new object[0]);
+            return ((object[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void gknamesAsync() {
+            this.gknamesAsync(null);
+        }
+        
+        /// <remarks/>
+        public void gknamesAsync(object userState) {
+            if ((this.gknamesOperationCompleted == null)) {
+                this.gknamesOperationCompleted = new System.Threading.SendOrPostCallback(this.OngknamesOperationCompleted);
+            }
+            this.InvokeAsync("gknames", new object[0], this.gknamesOperationCompleted, userState);
+        }
+        
+        private void OngknamesOperationCompleted(object arg) {
+            if ((this.gknamesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.gknamesCompleted(this, new gknamesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -551,6 +904,346 @@ namespace HostelManagmentProject.localhost {
                 return true;
             }
             return false;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    public partial class Cnotification {
+        
+        private string notificationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Notification {
+            get {
+                return this.notificationField;
+            }
+            set {
+                this.notificationField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    public partial class CRT {
+        
+        private string answerField;
+        
+        private string nameField;
+        
+        private Cnotification[] notificationlistField;
+        
+        private string passwordField;
+        
+        private string questionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Answer {
+            get {
+                return this.answerField;
+            }
+            set {
+                this.answerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public Cnotification[] Notificationlist {
+            get {
+                return this.notificationlistField;
+            }
+            set {
+                this.notificationlistField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Question {
+            get {
+                return this.questionField;
+            }
+            set {
+                this.questionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    public partial class room {
+        
+        private int alloteesField;
+        
+        private bool alloteesFieldSpecified;
+        
+        private int capacityField;
+        
+        private bool capacityFieldSpecified;
+        
+        private int roomnumberField;
+        
+        private bool roomnumberFieldSpecified;
+        
+        /// <remarks/>
+        public int Allotees {
+            get {
+                return this.alloteesField;
+            }
+            set {
+                this.alloteesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AlloteesSpecified {
+            get {
+                return this.alloteesFieldSpecified;
+            }
+            set {
+                this.alloteesFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Capacity {
+            get {
+                return this.capacityField;
+            }
+            set {
+                this.capacityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CapacitySpecified {
+            get {
+                return this.capacityFieldSpecified;
+            }
+            set {
+                this.capacityFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Roomnumber {
+            get {
+                return this.roomnumberField;
+            }
+            set {
+                this.roomnumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool RoomnumberSpecified {
+            get {
+                return this.roomnumberFieldSpecified;
+            }
+            set {
+                this.roomnumberFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    public partial class Cgatek {
+        
+        private string answerField;
+        
+        private string nameField;
+        
+        private Cnotification[] notificationlistField;
+        
+        private string passwordField;
+        
+        private string questionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Answer {
+            get {
+                return this.answerField;
+            }
+            set {
+                this.answerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public Cnotification[] Notificationlist {
+            get {
+                return this.notificationlistField;
+            }
+            set {
+                this.notificationlistField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Question {
+            get {
+                return this.questionField;
+            }
+            set {
+                this.questionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    public partial class Hostel {
+        
+        private Cgatek[] gatekeeperListField;
+        
+        private string hostelNameField;
+        
+        private int numberOfRoomsField;
+        
+        private bool numberOfRoomsFieldSpecified;
+        
+        private room[] roomlistField;
+        
+        private CRT[] rtListField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public Cgatek[] GatekeeperList {
+            get {
+                return this.gatekeeperListField;
+            }
+            set {
+                this.gatekeeperListField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string HostelName {
+            get {
+                return this.hostelNameField;
+            }
+            set {
+                this.hostelNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int NumberOfRooms {
+            get {
+                return this.numberOfRoomsField;
+            }
+            set {
+                this.numberOfRoomsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NumberOfRoomsSpecified {
+            get {
+                return this.numberOfRoomsFieldSpecified;
+            }
+            set {
+                this.numberOfRoomsFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public room[] Roomlist {
+            get {
+                return this.roomlistField;
+            }
+            set {
+                this.roomlistField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public CRT[] RtList {
+            get {
+                return this.rtListField;
+            }
+            set {
+                this.rtListField = value;
+            }
         }
     }
     
@@ -838,6 +1531,244 @@ namespace HostelManagmentProject.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mutateStNotificationCompletedEventHandler(object sender, mutateStNotificationCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mutateStNotificationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mutateStNotificationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Cnotification[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Cnotification[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void loggedstudentCompletedEventHandler(object sender, loggedstudentCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class loggedstudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal loggedstudentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mutateRtNotificationsCompletedEventHandler(object sender, mutateRtNotificationsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mutateRtNotificationsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mutateRtNotificationsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Cnotification[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Cnotification[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void loggedRtCompletedEventHandler(object sender, loggedRtCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class loggedRtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal loggedRtCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void mutateGKNotificationsCompletedEventHandler(object sender, mutateGKNotificationsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mutateGKNotificationsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mutateGKNotificationsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Cnotification[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Cnotification[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void logged_GatekeeperCompletedEventHandler(object sender, logged_GatekeeperCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class logged_GatekeeperCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal logged_GatekeeperCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void addhostelCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void rtnamesCompletedEventHandler(object sender, rtnamesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class rtnamesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal rtnamesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public object[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((object[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void hostelsCompletedEventHandler(object sender, hostelsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class hostelsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal hostelsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Hostel[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Hostel[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void gknamesCompletedEventHandler(object sender, gknamesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class gknamesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal gknamesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public object[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((object[])(this.results[0]));
             }
         }
     }

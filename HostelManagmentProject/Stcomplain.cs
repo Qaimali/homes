@@ -21,5 +21,29 @@ namespace HostelManagmentProject
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stnotification stn = new Stnotification();
+            stn.Show();
+            this.Hide();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPage mp = new MainPage();
+            mp.Show();
+            this.Hide();
+        }
     }
 }

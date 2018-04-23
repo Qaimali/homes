@@ -54,11 +54,59 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddHostel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddHostel.Designer.cs">
+      <DependentUpon>AddHostel.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotpas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forgotpas.Designer.cs">
       <DependentUpon>forgotpas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gkNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gkNotifications.Designer.cs">
+      <DependentUpon>gkNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk_Stdetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk_Stdetails.Designer.cs">
+      <DependentUpon>gk_Stdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk_StCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk_StCheckin.Designer.cs">
+      <DependentUpon>gk_StCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk_stcheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk_stcheckout.Designer.cs">
+      <DependentUpon>gk_stcheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk_Stvisitorscheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk_Stvisitorscheckin.Designer.cs">
+      <DependentUpon>gk_Stvisitorscheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk_Stvisitorscheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk_Stvisitorscheckout.Designer.cs">
+      <DependentUpon>gk_Stvisitorscheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk_StVisitorsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk_StVisitorsDetails.Designer.cs">
+      <DependentUpon>gk_StVisitorsDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -78,10 +126,46 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="rtNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rtNotifications.Designer.cs">
+      <DependentUpon>rtNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rtReadCompliants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rtReadCompliants.Designer.cs">
+      <DependentUpon>rtReadCompliants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rtReceievedComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rtReceievedComplaints.Designer.cs">
+      <DependentUpon>rtReceievedComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rtWriteComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rtWriteComplaints.Designer.cs">
+      <DependentUpon>rtWriteComplaints.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="showhostels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showhostels.Designer.cs">
+      <DependentUpon>showhostels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stnotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stnotification.Designer.cs">
+      <DependentUpon>Stnotification.cs</DependentUpon>
     </Compile>
     <Compile Include="Stregistration.cs">
       <SubType>Form</SubType>
@@ -106,18 +190,6 @@
     </Compile>
     <Compile Include="Adcomplaintsread.Designer.cs">
       <DependentUpon>Adcomplaintsread.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gpcheckinst.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gpcheckinst.Designer.cs">
-      <DependentUpon>Gpcheckinst.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gpcheckoutst.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gpcheckoutst.Designer.cs">
-      <DependentUpon>Gpcheckoutst.cs</DependentUpon>
     </Compile>
     <Compile Include="StFormSubmission.cs">
       <SubType>Form</SubType>
@@ -144,8 +216,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddHostel.resx">
+      <DependentUpon>AddHostel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forgotpas.resx">
       <DependentUpon>forgotpas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gkNotifications.resx">
+      <DependentUpon>gkNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk_StCheckin.resx">
+      <DependentUpon>gk_StCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk_Stdetails.resx">
+      <DependentUpon>gk_Stdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk_stcheckout.resx">
+      <DependentUpon>gk_stcheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk_Stvisitorscheckin.resx">
+      <DependentUpon>gk_Stvisitorscheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk_Stvisitorscheckout.resx">
+      <DependentUpon>gk_Stvisitorscheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk_StVisitorsDetails.resx">
+      <DependentUpon>gk_StVisitorsDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -155,6 +251,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rtNotifications.resx">
+      <DependentUpon>rtNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rtReadCompliants.resx">
+      <DependentUpon>rtReadCompliants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rtReceievedComplaints.resx">
+      <DependentUpon>rtReceievedComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rtWriteComplaints.resx">
+      <DependentUpon>rtWriteComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showhostels.resx">
+      <DependentUpon>showhostels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stnotification.resx">
+      <DependentUpon>Stnotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stregistration.resx">
       <DependentUpon>Stregistration.cs</DependentUpon>
@@ -167,12 +281,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adcomplaintsread.resx">
       <DependentUpon>Adcomplaintsread.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gpcheckinst.resx">
-      <DependentUpon>Gpcheckinst.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gpcheckoutst.resx">
-      <DependentUpon>Gpcheckoutst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StFormSubmission.resx">
       <DependentUpon>StFormSubmission.cs</DependentUpon>
@@ -202,12 +310,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\ServiceReference1\HostelManagmentProject.ServiceReference1.Cnotification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference1\Service1.wsdl" />
     <None Include="Service References\ServiceReference1\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference1\Service11.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service121.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\Cnotification.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\localhost\Hostel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\localhost\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -218,6 +341,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\localhost\Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

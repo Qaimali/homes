@@ -8,9 +8,24 @@ namespace WcfService3
     public class rtDL
     {
         public static List<CRT> rtlist = new List<CRT>();
-        void addRT(CRT rt)
+        
+        public void addRT(CRT rt)
         {
             rtlist.Add(rt);
+        }
+        public static ArrayList arr = new ArrayList();
+        public void addNotification(Cnotification not)
+        {
+            myutilRT.loginRT.Notificationlist.Add(not);
+        }
+
+        public ArrayList rtnames() 
+        {
+            foreach (CRT cr in rtDL.rtlist) 
+            {
+                rtDL.arr.Add(cr.Name);
+            }
+            return arr;
         }
         public bool isRT(string username, string password)
         {
@@ -20,6 +35,7 @@ namespace WcfService3
                 if (cr.Name == username && cr.Password == password)
                 {
                     isfound = true;
+                    myutilRT.loginRT = cr;
                 }
             }
             return isfound;

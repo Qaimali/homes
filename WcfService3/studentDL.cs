@@ -8,9 +8,14 @@ namespace WcfService3
     public class studentDL
     {
         public static List<Cstudent> stdList = new List<Cstudent>();
+        
         public void addstudent(Cstudent st)
         {
             stdList.Add(st);
+        }
+        public void addNotification(Cnotification not) 
+        {
+            myutilStudent.loginstudents.Notificationlist.Add(not);
         }
         public bool isstudent(string u1, string p1)
         {
@@ -20,10 +25,12 @@ namespace WcfService3
                 if (cst.Userid == u1 && cst.Password == p1)
                 {
                     isfound = true;
+                    myutilStudent.loginstudents = cst;
                 }
             }
             return isfound;
         }
+       
         public bool resetStudentPass(string u1, string q1, string a1, string p1)
         {
             bool isfound = false;
