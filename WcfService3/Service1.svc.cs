@@ -213,23 +213,30 @@ namespace WcfService3
                     not.Notification = "Mr,you are alloted to take your positions";
                     cg.Notificationlist.Add(not);
                     g.GatekeeperList.Add(cg);
+
                 }
             }
+            hdl.addhostel(g);
         }
         public ArrayList  rtnames() 
         {
             rtDL n = new rtDL();
             return n.rtnames();
         }
-        public List<Hostel> hostels() 
+        public Hostel hostels(int index) 
         {
-            return hostelDL.hostellist;
+            return hostelDL.hostellist[index];
         }
-        public ArrayList gknames() 
+        public ArrayList gknames()
         {
             gatekDL g = new gatekDL();
             return g.gknames();
         }
+        public List<Hostel> showallhostel()
+        {
+            return hostelDL.hostellist;
+        }
+        
     }
    
 }

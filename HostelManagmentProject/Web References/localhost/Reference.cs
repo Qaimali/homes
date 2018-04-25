@@ -74,6 +74,8 @@ namespace HostelManagmentProject.localhost {
         
         private System.Threading.SendOrPostCallback gknamesOperationCompleted;
         
+        private System.Threading.SendOrPostCallback showallhostelOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -177,6 +179,9 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public event gknamesCompletedEventHandler gknamesCompleted;
+        
+        /// <remarks/>
+        public event showallhostelCompletedEventHandler showallhostelCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -832,24 +837,27 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/hostels", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
-        public Hostel[] hostels() {
-            object[] results = this.Invoke("hostels", new object[0]);
-            return ((Hostel[])(results[0]));
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Hostel hostels(int index, [System.Xml.Serialization.XmlIgnoreAttribute()] bool indexSpecified) {
+            object[] results = this.Invoke("hostels", new object[] {
+                        index,
+                        indexSpecified});
+            return ((Hostel)(results[0]));
         }
         
         /// <remarks/>
-        public void hostelsAsync() {
-            this.hostelsAsync(null);
+        public void hostelsAsync(int index, bool indexSpecified) {
+            this.hostelsAsync(index, indexSpecified, null);
         }
         
         /// <remarks/>
-        public void hostelsAsync(object userState) {
+        public void hostelsAsync(int index, bool indexSpecified, object userState) {
             if ((this.hostelsOperationCompleted == null)) {
                 this.hostelsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnhostelsOperationCompleted);
             }
-            this.InvokeAsync("hostels", new object[0], this.hostelsOperationCompleted, userState);
+            this.InvokeAsync("hostels", new object[] {
+                        index,
+                        indexSpecified}, this.hostelsOperationCompleted, userState);
         }
         
         private void OnhostelsOperationCompleted(object arg) {
@@ -885,6 +893,35 @@ namespace HostelManagmentProject.localhost {
             if ((this.gknamesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.gknamesCompleted(this, new gknamesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/showallhostel", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public Hostel[] showallhostel() {
+            object[] results = this.Invoke("showallhostel", new object[0]);
+            return ((Hostel[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void showallhostelAsync() {
+            this.showallhostelAsync(null);
+        }
+        
+        /// <remarks/>
+        public void showallhostelAsync(object userState) {
+            if ((this.showallhostelOperationCompleted == null)) {
+                this.showallhostelOperationCompleted = new System.Threading.SendOrPostCallback(this.OnshowallhostelOperationCompleted);
+            }
+            this.InvokeAsync("showallhostel", new object[0], this.showallhostelOperationCompleted, userState);
+        }
+        
+        private void OnshowallhostelOperationCompleted(object arg) {
+            if ((this.showallhostelCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.showallhostelCompleted(this, new showallhostelCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1739,10 +1776,10 @@ namespace HostelManagmentProject.localhost {
         }
         
         /// <remarks/>
-        public Hostel[] Result {
+        public Hostel Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((Hostel[])(this.results[0]));
+                return ((Hostel)(this.results[0]));
             }
         }
     }
@@ -1769,6 +1806,32 @@ namespace HostelManagmentProject.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((object[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void showallhostelCompletedEventHandler(object sender, showallhostelCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class showallhostelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal showallhostelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Hostel[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Hostel[])(this.results[0]));
             }
         }
     }

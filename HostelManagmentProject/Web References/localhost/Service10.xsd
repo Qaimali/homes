@@ -12,12 +12,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cnotification" nillable="true" type="tns:Cnotification" />
-  <xs:complexType name="ArrayOfHostel">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hostel" nillable="true" type="tns:Hostel" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfHostel" nillable="true" type="tns:ArrayOfHostel" />
   <xs:complexType name="Hostel">
     <xs:sequence>
       <xs:element minOccurs="0" name="GatekeeperList" nillable="true" type="tns:ArrayOfCgatek" />
@@ -74,4 +68,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CRT" nillable="true" type="tns:CRT" />
+  <xs:complexType name="ArrayOfHostel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hostel" nillable="true" type="tns:Hostel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHostel" nillable="true" type="tns:ArrayOfHostel" />
 </xs:schema>

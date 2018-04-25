@@ -54,8 +54,12 @@ namespace WcfService3
         [OperationContract]
         ArrayList rtnames();
         [OperationContract]
-        List<Hostel> hostels();
+        Hostel hostels(int index);
         [OperationContract]
         ArrayList gknames();
+        [OperationContract]
+        List<Hostel> showallhostel();
+        
+
     }
 }

@@ -140,6 +140,12 @@
   <wsdl:message name="IService1_gknames_OutputMessage">
     <wsdl:part name="parameters" element="tns:gknamesResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_showallhostel_InputMessage">
+    <wsdl:part name="parameters" element="tns:showallhostel" />
+  </wsdl:message>
+  <wsdl:message name="IService1_showallhostel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showallhostelResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="regst">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/regst" message="tns:IService1_regst_InputMessage" />
@@ -228,6 +234,10 @@
     <wsdl:operation name="gknames">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/gknames" message="tns:IService1_gknames_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/gknamesResponse" message="tns:IService1_gknames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showallhostel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/showallhostel" message="tns:IService1_showallhostel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/showallhostelResponse" message="tns:IService1_showallhostel_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -423,6 +433,15 @@
     </wsdl:operation>
     <wsdl:operation name="gknames">
       <soap:operation soapAction="http://tempuri.org/IService1/gknames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showallhostel">
+      <soap:operation soapAction="http://tempuri.org/IService1/showallhostel" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
