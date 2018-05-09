@@ -16,10 +16,14 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+        
 
         private void gk_StVisitorsDetails_Load(object sender, EventArgs e)
         {
-
+            localhost.Service1 sc = new localhost.Service1();
+            localhost.Cgatek keeper = sc.logged_Gatekeeper();
+            labelkeepername.Text = keeper.Name;
+            labelhostelname.Text = keeper.AllotedHostel;
         }
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -77,17 +81,34 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            foreach (localhost.Cstudent cs in sc.allotedStudentsforhostel())
+            if (txtStiname.Text == "" || txtstregno.Text == "" || txtstroomnu.Text == "")
             {
-                if (cs.Name == txtStiname.Text && cs.RegistrationNumber == txtstregno.Text && cs.RoomNumber == txtstroomnu.Text)
+                MessageBox.Show("Fill the Search  Form Completly");
+            }
+            else if (txtStiname.Text != "" && txtstregno.Text != "" && txtstroomnu.Text != "")
+            {
+                localhost.Service1 sc = new localhost.Service1();
+                foreach (localhost.Cstudent student in sc.listOfAllotedStudent())
                 {
-                    BindingSource s = new BindingSource();
-                    s.DataSource = cs.Visitors;
-                    gvvheckin.DataSource = s;
-                    gvcheckout.DataSource = s;
+                    if (student.Name == txtStiname.Text && student.RegistrationNumber == txtstregno.Text && student.RoomNumber == txtstroomnu.Text)
+                    {
+                        BindingSource s = new BindingSource();
+                        s.DataSource = student.Visitors;
+                        gvvheckin.DataSource = s;
+                        //gvvheckin.Columns[0].Visible = false;
+                        gvvheckin.Columns[1].Visible = false;
+                        gvvheckin.Columns[3].Visible = false;
+                        gvvheckin.Columns[2].Visible = false;
+                        gvcheckout.DataSource = s;
+                        gvcheckout.Columns[0].Visible = false;
+                        gvcheckout.Columns[1].Visible = false;
+                        gvcheckout.Columns[2].Visible = false;
 
+                    }
                 }
+                txtStiname.Text = "";
+                txtstregno.Text = "";
+                txtstroomnu.Text = "";
             }
         }
 
@@ -138,6 +159,11 @@ namespace HostelManagmentProject
             MainPage gk = new MainPage();
             gk.Show();
             this.Hide();
+        }
+
+        private void studentVisitorDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

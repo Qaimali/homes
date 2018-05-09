@@ -16,48 +16,65 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+        
 
         private void cmdregister_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            string st = "student";
-            string admin = "admin";
-            string rt = "rt";
-            string gk = "gatekeeper";
-            if (comboBox2.GetItemText(comboBox2.SelectedItem) == st)
+            if (txtanswer.Text == "" || txtusername.Text == "" || txtpassword.Text == "" || comboBox1.Text == "" || comboBox2.Text == "")
             {
-                sc.regst(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
-
-                MessageBox.Show("Dear student you are signed up");
+                MessageBox.Show("Fill the Form Completely");
             }
-            else if (comboBox2.GetItemText(comboBox2.SelectedItem) == admin)
+            else if ((txtanswer.Text != "" && txtusername.Text != "" && txtpassword.Text != "" && comboBox1.Text != "" && comboBox2.Text != ""))
             {
-                sc.regadmin(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
-                MessageBox.Show("admin you are registered");
-            }
-            else if (comboBox2.GetItemText(comboBox2.SelectedItem) == rt)
-            {
-                sc.regrt(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
+                localhost.Service1 service = new localhost.Service1();
+                string st = "student";
+                string admin = "admin";
+                string rt = "rt";
+                string gk = "gatekeeper";
+                if (comboBox2.GetItemText(comboBox2.SelectedItem) == st)
+                {
+                    bool student = true;
+                    bool studentSpecified = true;
+                    service.uniqueStudentid(txtusername.Text, out student, out studentSpecified);
+                    if (student)
+                    {
+                        service.registerStudent(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
+                        MessageBox.Show("Dear " + txtusername.Text + "  you are signed up");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username already exists .Please enter another username! ");
+                    }
+                                       
+                }
+                else if (comboBox2.GetItemText(comboBox2.SelectedItem) == admin)
+                {
+                    service.registerAdmin(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
+                    MessageBox.Show("admin " + txtusername.Text +" you are registered");
+                }
+                else if (comboBox2.GetItemText(comboBox2.SelectedItem) == rt)
+                {
+                    service.registerRt(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
 
-                MessageBox.Show("rt you are registered");
-            }
-            else if (comboBox2.GetItemText(comboBox2.SelectedItem) == gk)
-            {
-                sc.reggk(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
+                    MessageBox.Show("rt  " + txtusername.Text + " you are registered");
+                }
+                else if (comboBox2.GetItemText(comboBox2.SelectedItem) == gk)
+                {
+                    service.registerGatekeeper(txtusername.Text, txtpassword.Text, comboBox1.GetItemText(comboBox1.SelectedItem), txtanswer.Text);
+                    MessageBox.Show("Gatekeeper  " + txtusername.Text + "  you are registered");
 
-                MessageBox.Show("gk you are registered");
+                    MessageBox.Show("gk you are registered");
+                }
+                else
+                {
+                    MessageBox.Show("selectdesignation");
+                }
+                txtusername.Text = "";
+                txtpassword.Text = "";
+                txtanswer.Text = "";
+                comboBox1.Text = "";
+                comboBox2.Text = "";
             }
-            else
-            {
-                MessageBox.Show("selectdesignation");
-            }
-            txtusername.Text = "";
-            txtpassword.Text = "";
-            txtanswer.Text = "";
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-
-
         }
 
         private void txtusername_TextChanged(object sender, EventArgs e)

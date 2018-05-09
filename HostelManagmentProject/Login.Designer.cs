@@ -47,7 +47,7 @@
             this.button1.Location = new System.Drawing.Point(365, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 23);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Forgot Password";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -57,7 +57,7 @@
             this.cmdlogin.Location = new System.Drawing.Point(621, 379);
             this.cmdlogin.Name = "cmdlogin";
             this.cmdlogin.Size = new System.Drawing.Size(75, 23);
-            this.cmdlogin.TabIndex = 5;
+            this.cmdlogin.TabIndex = 2;
             this.cmdlogin.Text = "Login";
             this.cmdlogin.UseVisualStyleBackColor = true;
             this.cmdlogin.Click += new System.EventHandler(this.cmdlogin_Click);
@@ -87,7 +87,7 @@
             this.txtpassword.Location = new System.Drawing.Point(570, 325);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(178, 20);
-            this.txtpassword.TabIndex = 203;
+            this.txtpassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -104,7 +104,7 @@
             this.txtusername.Location = new System.Drawing.Point(570, 266);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(178, 20);
-            this.txtusername.TabIndex = 205;
+            this.txtusername.TabIndex = 0;
             // 
             // label1
             // 
@@ -131,10 +131,10 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(71, 389);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(33, 13);
-            this.linkLabel1.TabIndex = 210;
+            this.linkLabel1.Size = new System.Drawing.Size(35, 13);
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "home";
+            this.linkLabel1.Text = "Home";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Login

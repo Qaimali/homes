@@ -20,24 +20,25 @@ namespace HostelManagmentProject
 
         private void rtReceievedComplaints_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             BindingSource s = new BindingSource();
             s.DataSource = null;
             GVRtcomplaints.DataSource = s;
             BindingSource su = new BindingSource();
             localhost.CRT rt = new localhost.CRT();
-            rt = sc.loggedRt();
-            foreach (localhost.CRT si in sc.allotedRT())
+            rt = service.loggedRt();
+            foreach (localhost.CRT rtO in service.listOfallotedRT())
             {
-                if (si.AllotedHostel == rt.AllotedHostel)
+                if (rtO.AllotedHostel == rt.AllotedHostel)
                 {
-                    txthostelName.Text = si.AllotedHostel;
-                    su.DataSource = si.ComplaintsforRT;
+                    txthostelName.Text = rtO.AllotedHostel;
+                    su.DataSource = rtO.ComplaintsforRT;
                     GVRtcomplaints.DataSource = su;
-                    temprt.ComplaintsforRT = si.ComplaintsforRT;
-                    GVRtcomplaints.Columns[2].Visible = false;
-                    GVRtcomplaints.Columns[4].Visible = false;
+                    temprt.ComplaintsforRT = rtO.ComplaintsforRT;
                     GVRtcomplaints.Columns[5].Visible = false;
+                    GVRtcomplaints.Columns[6].Visible = false;
+
+                    GVRtcomplaints.Columns[7].Visible = false;
                 }
                 else
                 {
@@ -68,14 +69,14 @@ namespace HostelManagmentProject
                 BindingSource su = new BindingSource();
                 localhost.CRT rt = new localhost.CRT();
                 rt = sc.loggedRt();
-                foreach (localhost.CRT si in sc.allotedRT())
+                foreach (localhost.CRT rtO in sc.listOfallotedRT())
                 {
-                    if (si.AllotedHostel == rt.AllotedHostel)
+                    if (rtO.AllotedHostel == rt.AllotedHostel)
                     {
-                        txthostelName.Text = si.AllotedHostel;
-                        su.DataSource = si.ComplaintsforRT;
+                        txthostelName.Text = rtO.AllotedHostel;
+                        su.DataSource = rtO.ComplaintsforRT;
                         GVRtcomplaints.DataSource = su;
-                        temprt.ComplaintsforRT = si.ComplaintsforRT;
+                        temprt.ComplaintsforRT = rtO.ComplaintsforRT;
                         GVRtcomplaints.Columns[2].Visible = false;
                         GVRtcomplaints.Columns[4].Visible = false;
                         GVRtcomplaints.Columns[5].Visible = false;

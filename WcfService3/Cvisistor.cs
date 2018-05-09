@@ -11,7 +11,7 @@ namespace WcfService3
         string name;
         string checkIn = null;
         string checkOut = null;
-
+        bool checkInbool = false;
         string cnic;
         
         [DataMember]
@@ -64,6 +64,20 @@ namespace WcfService3
             set
             {
                 name = value;
+            }
+        }
+
+        [DataMember]
+        public bool CheckInbool
+        {
+            get
+            {
+                return checkInbool;
+            }
+
+            set
+            {
+                checkInbool = value;
             }
         }
     }

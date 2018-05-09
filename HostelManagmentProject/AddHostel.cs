@@ -16,6 +16,9 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+       
+        
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -24,58 +27,76 @@ namespace HostelManagmentProject
 
         private void AddHostel_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            comboIstRT.DataSource = sc.rtnames();
-            comboIstRT.DisplayMember = "name";
-            List<object> list = new List<object>();
-            foreach (object o in comboIstRT.Items)
+
+            localhost.Service1 service = new localhost.Service1();
+            foreach (localhost.CRT rt in service.listOfavailableRT())
             {
-                if (!list.Contains(o))
-                {
-                    list.Add(o);
-                }
+                comboIstRT.Items.Add(rt.Name);
             }
-            comboIstRT.DataSource = null;
-            comboIstRT.Items.AddRange(list.ToArray());
-            combo2ndRT.Items.AddRange(list.ToArray());
-            comboIstGK.DataSource = sc.gknames();
-            comboIstGK.DisplayMember = "name";
-            List<object> listgk = new List<object>();
-            foreach (object o in comboIstGK.Items)
+
+            foreach (localhost.Cgatek keeper in service.listOfavailableGateKeeper())
             {
-                if (!listgk.Contains(o))
-                {
-                    listgk.Add(o);
-                }
+                comboIstGK.Items.Add(keeper.Name);
             }
-            comboIstGK.DataSource = null;
-            comboIstGK.Items.AddRange(listgk.ToArray());
-            combo2ndGK.Items.AddRange(listgk.ToArray());
+
         }
-       
+        public void load()
+        {
+            
+        }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt2ndrt.Text = combo2ndRT.GetItemText(combo2ndRT.SelectedItem);
+            
+            
         }
 
         private void comboIstRT_SelectedIndexChanged(object sender, EventArgs e)
         {
+            localhost.Service1 service = new localhost.Service1();
             txt1strt.Text = comboIstRT.GetItemText(comboIstRT.SelectedItem);
-            
+            comboIstRT.Items.Remove(txt1strt.Text);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            bool yes=true;
-            sc.addhostel(txthostelname.Text,int.Parse(txtroomcapacity.Text),yes,int.Parse(txtnoofrooms.Text),yes, txt1strt.Text, txt2ndrt.Text, txt1stGK.Text, txt2ndGK.Text);
-            MessageBox.Show("Hostel Is added To xxxx");
+            bool yes = true;
+            int p = 0;
+            if (txthostelname.Text == "")
+            {
+                MessageBox.Show("Enter Hostel Name");
+            }
+            else if (int.TryParse(txtnoofrooms.Text, out p) == false)
+            {
+                MessageBox.Show("enter correct number of Rooms");
+            }
+            else if (int.TryParse(txtroomcapacity.Text, out p) == false)
+            {
+                MessageBox.Show("enter correct number of Capacity");
+            }
+            else if (int.TryParse(txtroomcapacity.Text, out p) && (int.TryParse(txtnoofrooms.Text, out p) && txthostelname.Text != ""))
+            {
+                localhost.Service1 sc = new localhost.Service1();
+
+                sc.addhostel(txthostelname.Text, int.Parse(txtroomcapacity.Text), yes, int.Parse(txtnoofrooms.Text), yes, txt1strt.Text, txt1stGK.Text);
+
+                MessageBox.Show("Hostel Is added To xxxx");
+                txthostelname.Text = "";
+                txtroomcapacity.Text = "";
+                txtnoofrooms.Text = "";
+                txt1strt.Text = "";
+                txt1stGK.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Fill the Form Completly");
+            }
         }
 
         private void messBillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainPage mp = new MainPage();
+            MainPage mp =new MainPage();
             mp.Show();
             this.Hide();
         }
@@ -94,7 +115,7 @@ namespace HostelManagmentProject
 
         private void combo2ndGK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt2ndGK.Text = combo2ndGK.GetItemText(combo2ndGK.SelectedItem);
+            
         }
 
         private void registeredStudentsToolStripMenuItem_Click(object sender, EventArgs e)

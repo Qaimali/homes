@@ -14,40 +14,40 @@ namespace WcfService3
     public interface IService1
     {
         [OperationContract]
-        void regst(string username, string password, string question, string answer);//student signup
+        void registerStudent(string username, string password, string question, string answer);//student signup
 
         [OperationContract]
-        void reggk(string username, string password, string question, string answer);//gatekeeper signup
+        void registerGatekeeper(string username, string password, string question, string answer);//gatekeeper signup
 
         [OperationContract]
-        void regrt(string username, string password, string question, string answer);//RT signup
+        void registerRt(string username, string password, string question, string answer);//RT signup
 
         [OperationContract]
-        void regadmin(string username, string password, string question, string answer);//Admin Signup
+        void registerAdmin(string username, string password, string question, string answer);//Admin Signup
 
         [OperationContract]
-        bool isAdmin(string username, string password);//login of admin
+        bool AdminLogin(string username, string password);//login of admin
 
         [OperationContract]
-        bool isStudent(string username, string password);//login of student
+        bool StudentLogin(string username, string password);//login of student
 
         [OperationContract]
-        bool isRT(string username, string password);//login of RT
+        bool LoginRT(string username, string password);//login of RT
 
         [OperationContract]
-        bool isGatekeeper(string username, string password);//login of Gatekkeper
-
-        [OperationContract]
-
-        bool canresetAdmin(string n1,string q1,string a1,string pass);//change Password of admin
+        bool GatekeeperLogin(string username, string password);//login of Gatekkeper
 
         [OperationContract]
 
-        bool canresetgatekeeper(string n1, string q1, string a1, string pass);//change Password of Gatekeeper
+        bool changeAdminPassword(string n1,string q1,string a1,string pass);//change Password of admin
 
         [OperationContract]
 
-        bool canresetstudent(string n1, string q1, string a1, string pass);//change Password of Student
+        bool changeGateKeeperPassword(string n1, string q1, string a1, string pass);//change Password of Gatekeeper
+
+        [OperationContract]
+
+        bool changeStudentPassword(string n1, string q1, string a1, string pass);//change Password of Student
 
         [OperationContract]
 
@@ -67,27 +67,27 @@ namespace WcfService3
 
         [OperationContract]
 
-        void addhostel(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2);//Adding hostel
+        List<CRT> listOfavailableRT();
 
         [OperationContract]
 
-        ArrayList rtnames();//get the names of registered RT for Add hostel 
+        List<Cgatek> listOfavailableGateKeeper();
 
         [OperationContract]
 
-        Hostel hostels(int index);//get hostel object of given index from hostels list
+        void addhostel(string hostelName, int roomCapcity, int numberofRooms, string RT, string gateKeeperist);//Adding hostel
 
         [OperationContract]
 
-        ArrayList gknames();////get the names of registered Gatekeeper for Add hostel 
+        Hostel hostelIndex(int index);//get hostel object of given index from hostels list
 
         [OperationContract]
 
-        List<Hostel> showallhostel();//get list of hostel
+        List<Hostel> listOfAllHostel();//get list of hostel
 
         [OperationContract]
 
-        void registerforhostel(Cstudent s);//hostel form submission
+        void registerForHostel(Cstudent s);//hostel form submission
 
         [OperationContract]
 
@@ -95,15 +95,15 @@ namespace WcfService3
 
         [OperationContract]
 
-        List<Cstudent> registeredstudent();//list of registerd student that filled the hostel registration form
+        List<Cstudent> listOfRegisteredStudent();//list of registerd student that filled the hostel registration form
 
         [OperationContract]
 
-        Cstudent getregisteredstudent(int index);////get student object of given index from hostel registered students list
+        Cstudent registeredStudentIndex(int index);////get student object of given index from hostel registered students list
 
         [OperationContract]
 
-        List<Cstudent> allotedStudentsforhostel();//get list of studnets that is alloted for homes
+        List<Cstudent> listOfAllotedStudent();//get list of studnets that is alloted for homes
 
         [OperationContract]
 
@@ -111,15 +111,15 @@ namespace WcfService3
 
         [OperationContract]
 
-        void allotstudent(Cstudent std);// allot student 
+        void allotStudent(Cstudent std);// allot student 
 
         [OperationContract]
 
-        void addnotificationforsearch(string name, string regno, string not);// add notifcation for student whose registion number is "regno" and NAME is"name"
+        void addnotificationforStudent(string name, string regno, string not);// add notifcation for student whose registion number is "regno" and NAME is"name"
 
         [OperationContract]
 
-        void deletependingst(Cstudent st);//delete student from registerd students list 
+        void deletePendingStudent(Cstudent st);//delete student from registerd students list 
 
         [OperationContract]
 
@@ -131,15 +131,15 @@ namespace WcfService3
 
         [OperationContract]
 
-        bool visitor_checkIn(string host, string hostregno, string visitor_name, string visitor_cnic, string checkin,string room_number);
+        bool visitor_checkIn(string hostregno, string visitor_name, string visitor_cnic, string checkin);
 
         [OperationContract]
 
-        bool visitor_checkOut(string host, string hostregno, string visitor_name, string visitor_cnic, string checkout, string room_number);
+        bool visitor_checkOut(string hostregno, string visitor_name, string visitor_cnic, string checkout);
 
         [OperationContract]
 
-        List<CRT> allotedRT();
+        List<CRT> listOfallotedRT();
 
         [OperationContract]
 
@@ -151,7 +151,7 @@ namespace WcfService3
 
         [OperationContract]
 
-        List<Complaints> getComplainFromRt();
+        List<Complaints> listOfComplainFromRt();
 
         [OperationContract]
 
@@ -172,6 +172,18 @@ namespace WcfService3
         [OperationContract]
 
         void deleteAllotedStudent(Cstudent s);
+
+        [OperationContract]
+
+        Hostel AddNewRT(Hostel hostelP, String rtP);
+
+        [OperationContract]
+
+        Hostel AddNewGateKeeper(Hostel hostelP, string GateKeeperP);
+
+        [OperationContract]
+
+        bool uniqueStudentid(String id);
 
     }
 }

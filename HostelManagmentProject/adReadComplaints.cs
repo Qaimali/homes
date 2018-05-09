@@ -17,10 +17,10 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
-        public adReadComplaints(localhost.Complaints cs)
+        public adReadComplaints(localhost.Complaints complaintsP)
         {
             InitializeComponent();
-            complaints = cs;
+            complaints = complaintsP;
         }
 
         private void adReadComplaints_Load(object sender, EventArgs e)
@@ -29,9 +29,9 @@ namespace HostelManagmentProject
             txthostel.Text = complaints.Residencyofperson;
             txtname.Text = complaints.Name;
             txtsubject.Text = complaints.ComplaintSubject;
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             string not = "your complaints has been submitted .Soon we will take suitable actions";
-            sc.addNotificationForRt(complaints.Name,complaints.Residencyofperson,not);
+            service.addNotificationForRt(complaints.Name,complaints.Residencyofperson,not);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

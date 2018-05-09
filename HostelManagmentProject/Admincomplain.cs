@@ -12,18 +12,26 @@ namespace HostelManagmentProject
 {
     public partial class Admincomplain : Form
     {
-        localhost.Complaints com = new localhost.Complaints();
+        localhost.Complaints complaints = new localhost.Complaints();
         public Admincomplain()
         {
             InitializeComponent();
         }
+       
 
         private void Admincomplain_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             BindingSource su = new BindingSource();
-            su.DataSource = sc.getComplainFromRt();
+            su.DataSource = service.listOfComplainFromRt();
             GVRtcomplaints.DataSource = su;
+            GVRtcomplaints.Columns[4].Visible = false;
+            GVRtcomplaints.Columns[6].Visible = false;
+            GVRtcomplaints.Columns[7].Visible = false;
+        }
+        public void load()
+        {
+            
         }
 
         private void GVRtcomplaints_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -44,8 +52,9 @@ namespace HostelManagmentProject
                 s.DataSource = null;
                 GVRtcomplaints.DataSource = s;
                 BindingSource su = new BindingSource();
-                su.DataSource = sc.getComplainFromRt();
+                su.DataSource = sc.listOfComplainFromRt();
                 GVRtcomplaints.DataSource = su;
+
             }
             
         }

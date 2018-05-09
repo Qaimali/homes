@@ -16,7 +16,7 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
-
+        
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -24,9 +24,9 @@ namespace HostelManagmentProject
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             BindingSource s = new BindingSource();
-            s.DataSource = sc.registeredstudent();
+            s.DataSource = service.listOfRegisteredStudent();
             gvpendingrequest.DataSource = s;
             gvpendingrequest.Columns[1].Visible = false;
             gvpendingrequest.Columns[2].Visible = false;
@@ -37,11 +37,14 @@ namespace HostelManagmentProject
             gvpendingrequest.Columns[7].Visible = false;
             gvpendingrequest.Columns[8].Visible = false;
             gvpendingrequest.Columns[9].Visible = false;
+            gvpendingrequest.Columns[10].Visible = false;
             gvpendingrequest.Columns[11].Visible = false;
             gvpendingrequest.Columns[12].Visible = false;
             gvpendingrequest.Columns[13].Visible = false;
+            gvpendingrequest.Columns[14].Visible = false;
             gvpendingrequest.Columns[15].Visible = false;
             gvpendingrequest.Columns[16].Visible = false;
+            gvpendingrequest.Columns[17].Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -116,11 +119,11 @@ namespace HostelManagmentProject
 
         private void gvpendingrequest_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             bool specifie = true;
             if (e.ColumnIndex == 0)
             {
-                localhost.Cstudent student1 = sc.getregisteredstudent(e.RowIndex, specifie);
+                localhost.Cstudent student1 = service.registeredStudentIndex(e.RowIndex, specifie);
                 adpendingprofile ad = new adpendingprofile(student1);
                 ad.Show();
                 this.Hide();

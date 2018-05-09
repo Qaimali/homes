@@ -89,7 +89,7 @@
             // 
             // complaintsToolStripMenuItem
             // 
-            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.complaintsToolStripMenuItem.Text = "Notication";
@@ -97,6 +97,7 @@
             // 
             // compliantsToolStripMenuItem
             // 
+            this.compliantsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.compliantsToolStripMenuItem.Name = "compliantsToolStripMenuItem";
             this.compliantsToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.compliantsToolStripMenuItem.Text = "Comlpaints";

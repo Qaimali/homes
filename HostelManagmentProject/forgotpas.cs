@@ -16,6 +16,7 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+        
 
         private void forgotpas_Load(object sender, EventArgs e)
         {
@@ -24,38 +25,49 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            bool admin = true;
-            bool fail = true;
-            bool student = true;
-            bool notst = true;
-            bool rt = true;
-            bool notrt = true;
-            bool gatekeeper = true;
-            bool notgk = true;
-            sc.canresetAdmin(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text,txtnewpass.Text, out admin, out fail);
-            sc.canresetgatekeeper(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text,txtnewpass.Text, out gatekeeper, out notgk);
-            sc.canresetstudent(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text, txtnewpass.Text, out student, out notst);
-            sc.canresetrt(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text, txtnewpass.Text, out rt, out notrt);
-            if (admin)
+            if (txtusername.Text == "" || txtnewpass.Text == "" || txtanswer.Text == "")
             {
-                MessageBox.Show("welcocme admin new pass "+ txtnewpass.Text);
+                MessageBox.Show("Fill the Form Completly");
             }
-            else if (student)
+            else if (txtusername.Text != "" && txtnewpass.Text != "" && txtanswer.Text != "")
             {
-                MessageBox.Show("welcocme student new pass" + txtnewpass.Text);
-            }
-            else if (rt)
-            {
-                MessageBox.Show("wellcocme RT new pass" + txtnewpass.Text);
-            }
-            else if (gatekeeper)
-            {
-                MessageBox.Show("wellcocme gatekeeper new pass" + txtnewpass.Text);
-            }
-            else
-            {
-                MessageBox.Show("invalid");
+                localhost.Service1 service = new localhost.Service1();
+                bool admin = true;
+                bool fail = true;
+                bool student = true;
+                bool notst = true;
+                bool rt = true;
+                bool notrt = true;
+                bool gatekeeper = true;
+                bool notgk = true;
+                service.changeAdminPassword(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text, txtnewpass.Text, out admin, out fail);
+                service.changeGateKeeperPassword(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text, txtnewpass.Text, out gatekeeper, out notgk);
+                service.changeStudentPassword(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text, txtnewpass.Text, out student, out notst);
+                service.canresetrt(txtusername.Text, comboquestion.GetItemText(comboquestion.SelectedItem), txtanswer.Text, txtnewpass.Text, out rt, out notrt);
+                if (admin)
+                {
+                    MessageBox.Show("welcocme admin new pass " + txtnewpass.Text);
+                }
+                else if (student)
+                {
+                    MessageBox.Show("welcocme student new pass" + txtnewpass.Text);
+                }
+                else if (rt)
+                {
+                    MessageBox.Show("wellcocme RT new pass" + txtnewpass.Text);
+                }
+                else if (gatekeeper)
+                {
+                    MessageBox.Show("wellcocme gatekeeper new pass" + txtnewpass.Text);
+                }
+                else
+                {
+                    MessageBox.Show("invalid");
+                }
+                txtusername.Text = "";
+                txtnewpass.Text = "";
+                txtanswer.Text = "";
+                comboquestion.Text = "";
             }
         }
     }

@@ -19,8 +19,29 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            sc.complaintsfromRT(txtname.Text, txtsubject.Text, txtcomplaint.Text, txthostel.Text);
+            if (txtsubject.Text == "" || txtname.Text == "" || txthostel.Text == "" || txtcomplaint.Text == "")
+            {
+                MessageBox.Show("Fill the Form Completely");
+            }
+            else if (txtsubject.Text == "")
+            {
+                MessageBox.Show("Your Complain should have any Subject");
+            }
+            else if (txtcomplaint.Text == "")
+            {
+                MessageBox.Show("Your Complain text should not empty");
+            }
+            else if (txtsubject.Text == "" && txthostel.Text == "")
+            {
+                MessageBox.Show("Fill the Form Completely");
+            }
+            else
+            {
+                localhost.Service1 service = new localhost.Service1();
+                service.complaintsfromRT(txtname.Text, txtsubject.Text, txtcomplaint.Text, txthostel.Text);
+                txtsubject.Text = "";
+                txtcomplaint.Text = "";
+            }
         }
 
         private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,14 +68,14 @@ namespace HostelManagmentProject
         private void rtWriteComplaints_Load(object sender, EventArgs e)
         {
             localhost.Service1 sc = new localhost.Service1();
-            localhost.CRT cs = new localhost.CRT();
-            cs = sc.loggedRt();
-            foreach (localhost.CRT su in sc.allotedRT())
+            localhost.CRT rtP = new localhost.CRT();
+            rtP = sc.loggedRt();
+            foreach (localhost.CRT rtO in sc.listOfallotedRT())
             {
-                if (su.Name == cs.Name)
+                if (rtO.Name == rtP.Name)
                 {
-                    txthostel.Text = su.AllotedHostel;
-                    txtname.Text = su.Name;
+                    txthostel.Text = rtO.AllotedHostel;
+                    txtname.Text = rtO.Name;
                 }
             }
         }

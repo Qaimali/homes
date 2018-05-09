@@ -48,10 +48,27 @@ namespace WcfService3
             get { return password; }
             set { password = value; }
         }
+
+        [DataMember]
+        public string AllotedHostel
+        {
+            get
+            {
+                return allotedHostel;
+            }
+
+            set
+            {
+                allotedHostel = value;
+            }
+        }
+
         String question;
 
         
         String answer;
+
+        string allotedHostel;
 
         
         List<Cnotification> notificationlist = new List<Cnotification>();

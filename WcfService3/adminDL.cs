@@ -7,33 +7,33 @@ namespace WcfService3
 {
     public class adminDL
     {
-        public static List<Cadmin> admlist = new List<Cadmin>();
+        public static List<Cadmin> adminslist = new List<Cadmin>();
         public static List<Complaints> complaintsForAdmin = new List<Complaints>();
-        public static void addadmin(Cadmin ad)
+        public static void addadmin(Cadmin admin)
         {
-            admlist.Add(ad);
+            adminDL.adminslist.Add(admin);
         }
-        public static bool isadmin(string username, string password)
+        public static bool isAdmin(string username, string password)
         {
             bool isfound = false;
-            foreach (Cadmin ad in adminDL.admlist)
+            foreach (Cadmin admin in adminDL.adminslist)
             {
-                if (ad.Adminname == username && ad.Password == password)
+                if (admin.Adminname == username && admin.Password == password)
                 {
                     isfound = true;
                 }
             }
             return isfound;
         }
-        public static bool resetadminpass(string u1, string q1, string a1, string p1)
+        public static bool resetAdminPassword(string nameOfadmin, string qestion, string answer, string newPassword)
         {
             bool isfound = false;
-            foreach (Cadmin ad in adminDL.admlist)
+            foreach (Cadmin admin in adminDL.adminslist)
             {
-                if (ad.Adminname == u1 && ad.Question == q1 && ad.Answer == a1)
+                if (admin.Adminname == nameOfadmin && admin.Question == qestion && admin.Answer == answer)
                 {
                     isfound = true;
-                    ad.Password = p1;
+                    admin.Password = newPassword;
                 }
             }
             return isfound;

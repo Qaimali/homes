@@ -16,12 +16,12 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
-
+       
         private void Form5_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             BindingSource s = new BindingSource();
-            s.DataSource = sc.allotedStudentsforhostel();
+            s.DataSource = service.listOfAllotedStudent();
             gvregisteredstudents.DataSource = s;
             gvregisteredstudents.Columns[1].Visible = false;
             gvregisteredstudents.Columns[2].Visible = false;
@@ -31,10 +31,12 @@ namespace HostelManagmentProject
             gvregisteredstudents.Columns[6].Visible = false;
             gvregisteredstudents.Columns[7].Visible = false;
             gvregisteredstudents.Columns[8].Visible = false;
-            gvregisteredstudents.Columns[11].Visible = false;
-            gvregisteredstudents.Columns[12].Visible = false;
+            gvregisteredstudents.Columns[9].Visible = false;
+            gvregisteredstudents.Columns[10].Visible = false;
+            gvregisteredstudents.Columns[14].Visible = false;
+            gvregisteredstudents.Columns[17].Visible = false;
             gvregisteredstudents.Columns[13].Visible = false;
-            gvregisteredstudents.Columns[15].Visible = false;
+
         }
 
         private void textBox127_TextChanged(object sender, EventArgs e)

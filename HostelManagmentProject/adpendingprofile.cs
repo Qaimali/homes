@@ -13,32 +13,37 @@ namespace HostelManagmentProject
    
     public partial class adpendingprofile : Form
     {
-        private localhost.Cstudent studu;
+        private localhost.Cstudent studentO;
         public adpendingprofile()
         {
             InitializeComponent();
         }
-        public adpendingprofile(localhost.Cstudent st)
+        public adpendingprofile(localhost.Cstudent studentP)
         {
             InitializeComponent();
-            studu = st;
+            studentO = studentP;
         }
         private void adpendingprofile_Load(object sender, EventArgs e)
         {
-            txtstudentname.Text = studu.Name;
-            txtgender.Text = studu.Gender;
-            txtbllodgroup.Text = studu.BloodGroup;
-            txtfathername.Text = studu.FatherName;
-            txtfatherphone.Text = studu.FatherNumber;
-            txtguardianname.Text = studu.GuardianName;
-            txtguardianphone.Text = studu.GuardianNumber;
-            txtaddress.Text = studu.Address;
-            txtregistrtaionnumber.Text = studu.RegistrationNumber;
+            txtstudentname.Text = studentO.Name;
+            txtgender.Text = studentO.Gender;
+            txtbllodgroup.Text = studentO.BloodGroup;
+            txtfathername.Text = studentO.FatherName;
+            txtfatherphone.Text = studentO.FatherNumber;
+            txtguardianname.Text = studentO.GuardianName;
+            txtguardianphone.Text = studentO.GuardianNumber;
+            txtaddress.Text = studentO.Address;
+            txtregistrtaionnumber.Text = studentO.RegistrationNumber;
+
+        }
+        public void load()
+        {
+            
         }
 
         private void cmdallot_Click(object sender, EventArgs e)
         {
-            adrromallotment adr = new adrromallotment(studu);
+            adrromallotment adr = new adrromallotment(studentO);
             adr.Show();
             this.Hide();
         }

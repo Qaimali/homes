@@ -28,9 +28,9 @@ namespace HostelManagmentProject
             txthostel.Text = curr.Residencyofperson;
             txtsubject.Text = curr.ComplaintSubject;
             txtcomplaint.Text = curr.TextCompliants;
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             string not = "your complaints has been submitted .Soon we will take suitable actions";
-            sc.addnotificationforsearch(curr.Name, curr.Residencyofperson, not);
+            service.addnotificationforStudent(curr.Name, curr.RegistrationNumber, not);
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,7 +56,9 @@ namespace HostelManagmentProject
 
         private void compliantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            rtReceievedComplaints gk = new rtReceievedComplaints();
+            gk.Show();
+            this.Hide();
         }
     }
 }

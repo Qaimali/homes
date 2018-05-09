@@ -253,7 +253,9 @@
             // 
             // gvvheckin
             // 
+            this.gvvheckin.BackgroundColor = System.Drawing.Color.White;
             this.gvvheckin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvvheckin.GridColor = System.Drawing.Color.White;
             this.gvvheckin.Location = new System.Drawing.Point(43, 279);
             this.gvvheckin.Name = "gvvheckin";
             this.gvvheckin.Size = new System.Drawing.Size(219, 150);
@@ -261,7 +263,10 @@
             // 
             // gvcheckout
             // 
+            this.gvcheckout.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvcheckout.BackgroundColor = System.Drawing.Color.White;
             this.gvcheckout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvcheckout.GridColor = System.Drawing.Color.White;
             this.gvcheckout.Location = new System.Drawing.Point(268, 279);
             this.gvcheckout.Name = "gvcheckout";
             this.gvcheckout.Size = new System.Drawing.Size(240, 150);
@@ -270,7 +275,9 @@
             // 
             // gvvisitorsCheckIn
             // 
+            this.gvvisitorsCheckIn.BackgroundColor = System.Drawing.Color.White;
             this.gvvisitorsCheckIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvvisitorsCheckIn.GridColor = System.Drawing.Color.White;
             this.gvvisitorsCheckIn.Location = new System.Drawing.Point(525, 279);
             this.gvvisitorsCheckIn.Name = "gvvisitorsCheckIn";
             this.gvvisitorsCheckIn.Size = new System.Drawing.Size(240, 150);
@@ -278,7 +285,9 @@
             // 
             // gvVisitorsCheckOut
             // 
+            this.gvVisitorsCheckOut.BackgroundColor = System.Drawing.Color.White;
             this.gvVisitorsCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvVisitorsCheckOut.GridColor = System.Drawing.Color.White;
             this.gvVisitorsCheckOut.Location = new System.Drawing.Point(771, 279);
             this.gvVisitorsCheckOut.Name = "gvVisitorsCheckOut";
             this.gvVisitorsCheckOut.Size = new System.Drawing.Size(240, 150);
@@ -381,7 +390,7 @@
             this.cmdDelete.Location = new System.Drawing.Point(469, 481);
             this.cmdDelete.Name = "cmdDelete";
             this.cmdDelete.Size = new System.Drawing.Size(75, 23);
-            this.cmdDelete.TabIndex = 342;
+            this.cmdDelete.TabIndex = 0;
             this.cmdDelete.Text = "Delete";
             this.cmdDelete.UseVisualStyleBackColor = true;
             this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
@@ -392,7 +401,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(43, 460);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(105, 13);
-            this.linkLabel1.TabIndex = 343;
+            this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Go to Previous Page";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

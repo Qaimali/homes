@@ -7,46 +7,64 @@ namespace WcfService3
 {
     public class gatekDL
     {
-        public static List<Cgatek> gatekList = new List<Cgatek>();
-        public static ArrayList gatearr = new ArrayList();
-        public static ArrayList gknames()
+        public static List<Cgatek> availableGatekeepers = new List<Cgatek>();
+
+        public static List<Cgatek> allotedGatekeepers = new List<Cgatek>();
+
+        public static void deleteRegisteredGateKeeper(string gatekeeperP)
         {
-            foreach (Cgatek cr in gatekDL.gatekList)
+            int indexForDelete = 0;
+            foreach (Cgatek gatekeeperO in gatekDL.availableGatekeepers)
             {
-                gatekDL.gatearr.Add(cr.Name);
+                if (gatekeeperO.Name== gatekeeperP)
+                {
+                    indexForDelete =gatekDL.availableGatekeepers.IndexOf(gatekeeperO);
+                    gatekDL.availableGatekeepers.RemoveAt(indexForDelete);
+                    break;
+                }
             }
-            return gatearr;
+
+            
         }
-        public static void addgatekeeper(Cgatek gk)
+
+        public static void addgatekeeper(Cgatek gatekeeper)
         {
-            gatekList.Add(gk);
+            availableGatekeepers.Add(gatekeeper);
         }
-        public static void addNotification(Cnotification not)
-        {
-            myutilGateKeeper.logingatkeeper.Notificationlist.Add(not);
-        }
-        public static bool isgatekeeper(string username, string password)
+       
+        public static bool isGatekeeper(string username, string password)
         {
             bool isfound = false;
-            foreach (Cgatek cg in gatekDL.gatekList)
+            foreach (Cgatek gateKeeper in gatekDL.availableGatekeepers)
             {
-                if (cg.Name == username && cg.Password == password)
+                if (gateKeeper.Name == username && gateKeeper.Password == password)
                 {
                     isfound = true;
-                    myutilGateKeeper.logingatkeeper = cg;
+                    myutilGateKeeper.logingatkeeper = gateKeeper;
+                    return isfound;
+                }
+            }
+            foreach (Cgatek gateKeeper in gatekDL.allotedGatekeepers)
+            {
+                if (gateKeeper.Name == username && gateKeeper.Password == password)
+                {
+                    isfound = true;
+                    myutilGateKeeper.logingatkeeper = gateKeeper;
+                    return isfound;
                 }
             }
             return isfound;
+
         }
-        public static bool resetGatePass(string u1, string q1, string a1, string p1)
+        public static bool resetGatePass(string name, string question, string answer, string newPassword)
         {
             bool isfound = false;
-            foreach (Cgatek ad in gatekDL.gatekList)
+            foreach (Cgatek ad in gatekDL.availableGatekeepers)
             {
-                if (ad.Name == u1 && ad.Question == q1 && ad.Answer == a1)
+                if (ad.Name == name && ad.Question == question && ad.Answer == answer)
                 {
                     isfound = true;
-                    ad.Password = p1;
+                    ad.Password = newPassword;
                 }
             }
             return isfound;

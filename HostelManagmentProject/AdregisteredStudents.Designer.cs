@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.gvregisteredstudents = new System.Windows.Forms.DataGridView();
@@ -51,28 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvregisteredstudents)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(508, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
-            this.label4.TabIndex = 430;
-            this.label4.Text = "MH_";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(156, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 429;
-            this.label3.Text = "Mumtaz Hall";
             // 
             // menuStrip3
             // 
@@ -96,28 +70,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
             this.toolStripMenuItem1.Text = "Registered Students";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 316;
-            this.label2.Text = "Hostel Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(365, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 315;
-            this.label1.Text = "Hostel ID:";
             // 
             // menuStrip2
             // 
@@ -188,6 +140,7 @@
             // 
             // registeredStudentsToolStripMenuItem
             // 
+            this.registeredStudentsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.registeredStudentsToolStripMenuItem.Name = "registeredStudentsToolStripMenuItem";
             this.registeredStudentsToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
             this.registeredStudentsToolStripMenuItem.Text = "Registered Students";
@@ -195,7 +148,7 @@
             // 
             // complaintsToolStripMenuItem
             // 
-            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.complaintsToolStripMenuItem.Text = "Complaints";
@@ -238,11 +191,7 @@
             this.ClientSize = new System.Drawing.Size(1038, 516);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.gvregisteredstudents);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "AdregisteredStudents";
             this.Text = "Form5";
@@ -260,13 +209,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.DataGridView gvregisteredstudents;

@@ -16,17 +16,18 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+        
 
         private void rtNotifications_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             localhost.CRT rt = new localhost.CRT();
-            rt = sc.loggedRt();
+            rt = service.loggedRt();
             BindingSource s = new BindingSource();
             s.DataSource = rt.Notificationlist;
             GVRtNotification.DataSource = s;
             
-            foreach(localhost.CRT si in sc.allotedRT())
+            foreach(localhost.CRT si in service.listOfallotedRT())
             {
                 if(si.Name==rt.Name && si.AllotedHostel == rt.AllotedHostel)
                 {

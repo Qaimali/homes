@@ -43,19 +43,20 @@ namespace HostelManagmentProject
 
         private void Stnotification_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            localhost.Cstudent st = new localhost.Cstudent();
-            st = sc.loggedstudent();
-            txtstName.Text = st.Userid;
-            BindingSource s = new BindingSource();
-            s.DataSource = st.Notificationlist;
-            GVstNotifications.DataSource = s;
-            foreach (localhost.Cstudent csi in sc.allotedStudentsforhostel())
+            localhost.Service1 service = new localhost.Service1();
+            localhost.Cstudent studentP = new localhost.Cstudent();
+            studentP = service.loggedstudent();
+            txtstName.Text = studentP.Userid;
+            BindingSource source = new BindingSource();
+            source.DataSource = studentP.Notificationlist;
+            GVstNotifications.DataSource = source;
+            foreach (localhost.Cstudent student in service.listOfAllotedStudent())
             {
-                if(csi.Userid == st.Userid)
+                if(student.Userid == studentP.Userid)
                 {
-                    s.DataSource = csi.Notificationlist;
-                    GVstNotifications.DataSource = s;
+                    source.DataSource = student.Notificationlist;
+                    GVstNotifications.DataSource = source;
+                    
                 }
             }    
         }

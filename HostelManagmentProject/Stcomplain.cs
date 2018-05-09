@@ -17,13 +17,14 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+        
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             
-            cs = sc.loggedstudent();
-            foreach(localhost.Cstudent su in sc.allotedStudentsforhostel())
+            cs = service.loggedstudent();
+            foreach(localhost.Cstudent su in service.listOfAllotedStudent())
             {
                 if (su.Userid == cs.Userid)
                 {
@@ -31,6 +32,9 @@ namespace HostelManagmentProject
                     txtname.Text = su.Name;
                     txtRoomNum.Text = su.RoomNumber;
                     txtregNum.Text = su.RegistrationNumber;
+                    labelHostelname.Text = su.HostelName;
+                    labelRoomNumber.Text = su.RoomNumber;
+                    labelStudentName.Text = su.Name;
                     
                 }
             }
@@ -63,8 +67,34 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            sc.complaintsfromstudent(txtname.Text, txtsubject.Text,txtcomplaint.Text, txthostel.Text,txtregNum.Text,txtRoomNum.Text);
+            if (txtsubject.Text == "")
+            {
+                MessageBox.Show("Your Complain should have any Subject");
+            }
+            else if (txtcomplaint.Text == "")
+            {
+                MessageBox.Show("Your Complain text should not empty");
+            }
+            else if (txtsubject.Text == "" && txthostel.Text == "")
+            {
+                MessageBox.Show("Fill the Form Completely");
+            }
+            else if (txtsubject.Text == "" || txtname.Text == "" || txthostel.Text == "" || txtcomplaint.Text == "" || txtregNum.Text == "" || txtRoomNum.Text == "")
+            {
+                MessageBox.Show("Fill the Form Completely");
+            }
+            else
+            {
+                localhost.Service1 service = new localhost.Service1();
+                service.complaintsfromstudent(txtname.Text, txtsubject.Text, txtcomplaint.Text, txthostel.Text, txtregNum.Text, txtRoomNum.Text);
+                txtsubject.Text = "";
+                txtcomplaint.Text = "";
+            }
+        }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -370,9 +370,6 @@
     <None Include="Web References\localhost\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\localhost\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -414,9 +411,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\project.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -439,6 +433,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://localhost:5352/Service1.svc">

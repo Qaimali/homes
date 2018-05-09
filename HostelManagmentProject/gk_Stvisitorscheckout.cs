@@ -12,6 +12,7 @@ namespace HostelManagmentProject
 {
     public partial class gk_Stvisitorscheckout : Form
     {
+        List<localhost.Cvisistor> checkedInVisitors = null;
         public gk_Stvisitorscheckout()
         {
             InitializeComponent();
@@ -79,18 +80,70 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            bool st = false;
-            bool sts = false;
-            sc.visitor_checkOut(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text,datetimeVcheckout.Text,txtstroomnu.Text, out st,out  sts);
-            
-            if (st)
+           
+        }
+
+        private void gk_Stvisitorscheckout_Load(object sender, EventArgs e)
+        {
+            localhost.Service1 service = new localhost.Service1();
+            checkedInVisitors = new List<localhost.Cvisistor>();
+            foreach (localhost.Cstudent studentO in service.listOfAllotedStudent())
             {
-                MessageBox.Show("submitted");
+               foreach (localhost.Cvisistor visitorO in studentO.Visitors)
+                    {
+                        if (visitorO.CheckInbool)
+                        {
+                            checkedInVisitors.Add(visitorO);
+                        }
+                    }
             }
-            else
+            BindingSource source = new BindingSource();
+            source.DataSource = checkedInVisitors;
+            dataGridView1.DataSource = source;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            localhost.Service1 sc = new localhost.Service1();
+            localhost.Cgatek keeper = sc.logged_Gatekeeper();
+            labelkeepername.Text = keeper.Name;
+            labelhostelname.Text = keeper.AllotedHostel;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 service = new localhost.Service1();
+            checkedInVisitors = new List<localhost.Cvisistor>();
+            foreach(localhost.Cstudent studentO in service.listOfAllotedStudent())
             {
-                MessageBox.Show("inalid information");
+                if(studentO.RegistrationNumber == txtstregno.Text)
+                {
+                    foreach (localhost.Cvisistor visitorO in studentO.Visitors)
+                    {
+                        if (visitorO.CheckInbool)
+                        {
+                            checkedInVisitors.Add(visitorO);
+                        }
+                    }
+                }
+            }
+            BindingSource source = new BindingSource();
+            source.DataSource = checkedInVisitors;
+            dataGridView1.DataSource = source;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bool visitorResult = true;
+            bool visitorSpecified = true;
+            localhost.Service1 service = new localhost.Service1();
+            if (e.ColumnIndex == 0)
+            {
+                service.visitor_checkOut(txtstregno.Text, checkedInVisitors[e.RowIndex].Name, checkedInVisitors[e.RowIndex].Cnic, datetimeVcheckout.Text,out visitorResult,out visitorSpecified);
+                if (visitorResult)
+                {
+                    MessageBox.Show("check out by" + checkedInVisitors[e.RowIndex].Name+"from homes");
+                }
             }
         }
     }

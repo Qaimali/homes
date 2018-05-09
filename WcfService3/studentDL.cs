@@ -10,93 +10,97 @@ namespace WcfService3
         public static List<Cstudent> stdList = new List<Cstudent>();
         public static List<Cstudent> hostelRegistration = new List<Cstudent>();
         public static List<Cstudent> allotedstudents = new List<Cstudent>();
-        public static bool checkInS(string n1, string r1, string ro1,String dt)
+        public static bool checkInS(string name, string registrationNumber, string roomNumber,String checkIn_date)
         {
             bool isfound = false;
-            foreach(Cstudent cs in studentDL.allotedstudents)
+            foreach(Cstudent student in studentDL.allotedstudents)
             {
-                if(cs.Name== n1 && cs.RegistrationNumber == r1 && cs.RoomNumber == ro1)
+                if(student.Name== name && student.RegistrationNumber == registrationNumber && student.RoomNumber == roomNumber)
                 {
                     CDate d = new CDate();
-                    d.Date=dt;
-                    cs.Student_checkin.Add(d);
+                    d.Date=checkIn_date;
+                    student.Student_checkin.Add(d);
+                    student.CheckIn = true;
                     isfound =true;
                 }
             }
             return isfound;
         }
         
-        public static bool checkOutS(string n1, string r1, string ro1, string dt)
+        public static bool checkOutS(string name, string registrationNumber, string roomNumber, string checkOut_date)
         {
             bool isfound = false;
-            foreach (Cstudent cs in studentDL.allotedstudents)
+            foreach (Cstudent studentO in studentDL.allotedstudents)
             {
-                if (cs.Name == n1 && cs.RegistrationNumber == r1 && cs.RoomNumber == ro1)
-                {
+                if (studentO.Name == name && studentO.RegistrationNumber == registrationNumber && studentO.RoomNumber == roomNumber && studentO.CheckIn )
+                { 
                     CDate d = new CDate();
-                    d.Date = dt;
-                    cs.Student_checkout.Add(d);
+                    d.Date = checkOut_date;
+                    studentO.Student_checkout.Add(d);
                     isfound = true;
+                    studentO.CheckIn = false;
                 }
             }
             return isfound;
         }
-        public static bool CheckInVisitor(string h1,string r1,string v1,string room, string checkin,string cnic)
+        public static bool CheckInVisitor(string registrationNumber,string visitor_name, string checkin,string cnic)
         {
             bool isfound = false;
             foreach(Cstudent c in studentDL.allotedstudents)
             {
-                if(c.Name == h1 && c.RegistrationNumber == r1 && c.RoomNumber == room)
+                if(c.RegistrationNumber == registrationNumber )
                 {
-                    Cvisistor vi = new Cvisistor();
-                    vi.Name = v1;
-                    vi.CheckIn = checkin;
-                    vi.Cnic = cnic;
-                    c.addvisitors(vi);
+                    Cvisistor visitorO = new Cvisistor();
+                    visitorO.Name = visitor_name;
+                    visitorO.CheckIn = checkin;
+                    visitorO.Cnic = cnic;
+                    visitorO.CheckInbool = true;
+                    c.addvisitors(visitorO);
                     isfound = true;
                 }
             }
             return isfound;
         }
-        public static bool CheckOutVisitor(string h1, string r1, string v1, string room, string checkout, string cnic)
+        public static bool CheckOutVisitor(string registrationNumber, string visitor_name, string checkout, string cnic)
         {
             bool isfound = false;
-            foreach (Cstudent c in studentDL.allotedstudents)
+            foreach (Cstudent student in studentDL.allotedstudents)
             {
-                if (c.Name == h1 && c.RegistrationNumber == r1 && c.RoomNumber == room)
+                if (student.RegistrationNumber == registrationNumber)
                 {
-                    foreach(Cvisistor vo in c.Visitors)
+                    foreach(Cvisistor visitorO in student.Visitors)
                     {
-                        if(vo.Name==v1 && vo.Cnic == cnic)
+                        if(visitorO.Name==visitor_name && visitorO.Cnic == cnic)
                         {
-                            vo.CheckOut = checkout;
-                            c.addvisitors(vo);
+                            visitorO.CheckOut = checkout;
+                            visitorO.CheckInbool = false;
                             isfound = true;
+                            return isfound;
                         }
                     }   
                 }
             }
             return isfound;
         }
-        public static void addstudent(Cstudent st)
+        public static void addstudent(Cstudent student)
         {
-            stdList.Add(st);
+            stdList.Add(student);
         }
-        public static void getHostelRegistration(Cstudent st)
+        public static void getHostelRegistration(Cstudent student)
         {
-            hostelRegistration.Add(st);
+            hostelRegistration.Add(student);
         }
-        public static void allotment(Cstudent s)
+        public static void allotment(Cstudent student)
         {
             int p = 0;
             foreach(Hostel h in hostelDL.hostellist)
             {
-                if (h.HostelName == s.HostelName)
+                if (h.HostelName == student.HostelName)
                 {
-                    p = Convert.ToInt32(s.RoomNumber)-1;
+                    p = Convert.ToInt32(student.RoomNumber)-1;
                     if (h.Roomlist[p].Allotees < h.Roomlist[p].Capacity)
                     {
-                        allotedstudents.Add(s);
+                        allotedstudents.Add(student);
                         h.Roomlist[p].Allotees++;
                     }
                 }
@@ -107,7 +111,7 @@ namespace WcfService3
         {
             myutilStudent.loginstudents.Notificationlist.Add(not);
         }
-        public static bool isstudent(string u1, string p1)
+        public static bool isStudent(string u1, string p1)
         {
             bool isfound = false;
             foreach (Cstudent cst in studentDL.stdList)

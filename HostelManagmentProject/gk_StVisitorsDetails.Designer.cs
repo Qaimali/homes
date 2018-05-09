@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +54,10 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.gvcheckout = new System.Windows.Forms.DataGridView();
             this.gvvheckin = new System.Windows.Forms.DataGridView();
+            this.labelkeepername = new System.Windows.Forms.Label();
+            this.labelhostelname = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip5.SuspendLayout();
@@ -66,50 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvcheckout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(508, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 16);
-            this.label4.TabIndex = 565;
-            this.label4.Text = "**";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(156, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 16);
-            this.label3.TabIndex = 564;
-            this.label3.Text = "**";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 563;
-            this.label2.Text = "Hostel Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(365, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 562;
-            this.label1.Text = "Name";
             // 
             // menuStrip1
             // 
@@ -143,7 +99,7 @@
             // 
             // checkOutToolStripMenuItem
             // 
-            this.checkOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
             this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.checkOutToolStripMenuItem.Text = "Check Out";
@@ -179,9 +135,11 @@
             // 
             // studentVisitorDetailToolStripMenuItem
             // 
+            this.studentVisitorDetailToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.studentVisitorDetailToolStripMenuItem.Name = "studentVisitorDetailToolStripMenuItem";
             this.studentVisitorDetailToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.studentVisitorDetailToolStripMenuItem.Text = "Student Visitor Detail";
+            this.studentVisitorDetailToolStripMenuItem.Click += new System.EventHandler(this.studentVisitorDetailToolStripMenuItem_Click_1);
             // 
             // logOutToolStripMenuItem
             // 
@@ -214,7 +172,7 @@
             this.button1.Location = new System.Drawing.Point(778, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 23);
-            this.button1.TabIndex = 611;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -248,21 +206,21 @@
             this.txtStiname.Location = new System.Drawing.Point(318, 147);
             this.txtStiname.Name = "txtStiname";
             this.txtStiname.Size = new System.Drawing.Size(200, 20);
-            this.txtStiname.TabIndex = 609;
+            this.txtStiname.TabIndex = 0;
             // 
             // txtstregno
             // 
             this.txtstregno.Location = new System.Drawing.Point(706, 147);
             this.txtstregno.Name = "txtstregno";
             this.txtstregno.Size = new System.Drawing.Size(200, 20);
-            this.txtstregno.TabIndex = 608;
+            this.txtstregno.TabIndex = 1;
             // 
             // txtstroomnu
             // 
             this.txtstroomnu.Location = new System.Drawing.Point(317, 195);
             this.txtstroomnu.Name = "txtstroomnu";
             this.txtstroomnu.Size = new System.Drawing.Size(200, 20);
-            this.txtstroomnu.TabIndex = 607;
+            this.txtstroomnu.TabIndex = 2;
             // 
             // label12
             // 
@@ -343,6 +301,7 @@
             // gvcheckout
             // 
             this.gvcheckout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvcheckout.GridColor = System.Drawing.Color.White;
             this.gvcheckout.Location = new System.Drawing.Point(538, 266);
             this.gvcheckout.Name = "gvcheckout";
             this.gvcheckout.Size = new System.Drawing.Size(368, 150);
@@ -351,10 +310,55 @@
             // gvvheckin
             // 
             this.gvvheckin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvvheckin.GridColor = System.Drawing.Color.White;
             this.gvvheckin.Location = new System.Drawing.Point(135, 266);
             this.gvvheckin.Name = "gvvheckin";
             this.gvvheckin.Size = new System.Drawing.Size(346, 150);
             this.gvvheckin.TabIndex = 600;
+            // 
+            // labelkeepername
+            // 
+            this.labelkeepername.AutoSize = true;
+            this.labelkeepername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelkeepername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelkeepername.Location = new System.Drawing.Point(540, 50);
+            this.labelkeepername.Name = "labelkeepername";
+            this.labelkeepername.Size = new System.Drawing.Size(18, 16);
+            this.labelkeepername.TabIndex = 621;
+            this.labelkeepername.Text = "**";
+            // 
+            // labelhostelname
+            // 
+            this.labelhostelname.AutoSize = true;
+            this.labelhostelname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelhostelname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelhostelname.Location = new System.Drawing.Point(188, 50);
+            this.labelhostelname.Name = "labelhostelname";
+            this.labelhostelname.Size = new System.Drawing.Size(18, 16);
+            this.labelhostelname.TabIndex = 620;
+            this.labelhostelname.Text = "**";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(44, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.TabIndex = 619;
+            this.label2.Text = "Hostel Name:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(397, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 618;
+            this.label1.Text = "Name";
             // 
             // gk_StVisitorsDetails
             // 
@@ -362,6 +366,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.labelkeepername);
+            this.Controls.Add(this.labelhostelname);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip5);
             this.Controls.Add(this.txtStiname);
@@ -374,10 +382,6 @@
             this.Controls.Add(this.menuStrip4);
             this.Controls.Add(this.gvcheckout);
             this.Controls.Add(this.gvvheckin);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "gk_StVisitorsDetails";
@@ -401,11 +405,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
@@ -432,5 +431,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.DataGridView gvcheckout;
         private System.Windows.Forms.DataGridView gvvheckin;
+        private System.Windows.Forms.Label labelkeepername;
+        private System.Windows.Forms.Label labelhostelname;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -71,7 +71,7 @@
             this.txtusername.Location = new System.Drawing.Point(370, 260);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(178, 20);
-            this.txtusername.TabIndex = 202;
+            this.txtusername.TabIndex = 0;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // txtpassword
@@ -79,7 +79,7 @@
             this.txtpassword.Location = new System.Drawing.Point(804, 263);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(178, 20);
-            this.txtpassword.TabIndex = 201;
+            this.txtpassword.TabIndex = 1;
             // 
             // label2
             // 
@@ -106,7 +106,7 @@
             this.cmdregister.Location = new System.Drawing.Point(532, 415);
             this.cmdregister.Name = "cmdregister";
             this.cmdregister.Size = new System.Drawing.Size(75, 23);
-            this.cmdregister.TabIndex = 203;
+            this.cmdregister.TabIndex = 5;
             this.cmdregister.Text = "Register";
             this.cmdregister.UseVisualStyleBackColor = true;
             this.cmdregister.Click += new System.EventHandler(this.cmdregister_Click);
@@ -131,14 +131,14 @@
             this.comboBox1.Location = new System.Drawing.Point(370, 322);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(178, 21);
-            this.comboBox1.TabIndex = 205;
+            this.comboBox1.TabIndex = 2;
             // 
             // txtanswer
             // 
             this.txtanswer.Location = new System.Drawing.Point(804, 323);
             this.txtanswer.Name = "txtanswer";
             this.txtanswer.Size = new System.Drawing.Size(178, 20);
-            this.txtanswer.TabIndex = 207;
+            this.txtanswer.TabIndex = 3;
             // 
             // label4
             // 
@@ -161,7 +161,7 @@
             this.comboBox2.Location = new System.Drawing.Point(804, 379);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 208;
+            this.comboBox2.TabIndex = 4;
             // 
             // linkLabel1
             // 
@@ -169,7 +169,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(41, 415);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(33, 13);
-            this.linkLabel1.TabIndex = 209;
+            this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "home";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

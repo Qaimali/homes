@@ -5,74 +5,73 @@
       <xsd:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService3" />
-      <xsd:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_regst_InputMessage">
-    <wsdl:part name="parameters" element="tns:regst" />
+  <wsdl:message name="IService1_registerStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerStudent" />
   </wsdl:message>
-  <wsdl:message name="IService1_regst_OutputMessage">
-    <wsdl:part name="parameters" element="tns:regstResponse" />
+  <wsdl:message name="IService1_registerStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_reggk_InputMessage">
-    <wsdl:part name="parameters" element="tns:reggk" />
+  <wsdl:message name="IService1_registerGatekeeper_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerGatekeeper" />
   </wsdl:message>
-  <wsdl:message name="IService1_reggk_OutputMessage">
-    <wsdl:part name="parameters" element="tns:reggkResponse" />
+  <wsdl:message name="IService1_registerGatekeeper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerGatekeeperResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_regrt_InputMessage">
-    <wsdl:part name="parameters" element="tns:regrt" />
+  <wsdl:message name="IService1_registerRt_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerRt" />
   </wsdl:message>
-  <wsdl:message name="IService1_regrt_OutputMessage">
-    <wsdl:part name="parameters" element="tns:regrtResponse" />
+  <wsdl:message name="IService1_registerRt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerRtResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_regadmin_InputMessage">
-    <wsdl:part name="parameters" element="tns:regadmin" />
+  <wsdl:message name="IService1_registerAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerAdmin" />
   </wsdl:message>
-  <wsdl:message name="IService1_regadmin_OutputMessage">
-    <wsdl:part name="parameters" element="tns:regadminResponse" />
+  <wsdl:message name="IService1_registerAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerAdminResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_isAdmin_InputMessage">
-    <wsdl:part name="parameters" element="tns:isAdmin" />
+  <wsdl:message name="IService1_AdminLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminLogin" />
   </wsdl:message>
-  <wsdl:message name="IService1_isAdmin_OutputMessage">
-    <wsdl:part name="parameters" element="tns:isAdminResponse" />
+  <wsdl:message name="IService1_AdminLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminLoginResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_isStudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:isStudent" />
+  <wsdl:message name="IService1_StudentLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:StudentLogin" />
   </wsdl:message>
-  <wsdl:message name="IService1_isStudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:isStudentResponse" />
+  <wsdl:message name="IService1_StudentLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StudentLoginResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_isRT_InputMessage">
-    <wsdl:part name="parameters" element="tns:isRT" />
+  <wsdl:message name="IService1_LoginRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginRT" />
   </wsdl:message>
-  <wsdl:message name="IService1_isRT_OutputMessage">
-    <wsdl:part name="parameters" element="tns:isRTResponse" />
+  <wsdl:message name="IService1_LoginRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginRTResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_isGatekeeper_InputMessage">
-    <wsdl:part name="parameters" element="tns:isGatekeeper" />
+  <wsdl:message name="IService1_GatekeeperLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GatekeeperLogin" />
   </wsdl:message>
-  <wsdl:message name="IService1_isGatekeeper_OutputMessage">
-    <wsdl:part name="parameters" element="tns:isGatekeeperResponse" />
+  <wsdl:message name="IService1_GatekeeperLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GatekeeperLoginResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_canresetAdmin_InputMessage">
-    <wsdl:part name="parameters" element="tns:canresetAdmin" />
+  <wsdl:message name="IService1_changeAdminPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeAdminPassword" />
   </wsdl:message>
-  <wsdl:message name="IService1_canresetAdmin_OutputMessage">
-    <wsdl:part name="parameters" element="tns:canresetAdminResponse" />
+  <wsdl:message name="IService1_changeAdminPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeAdminPasswordResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_canresetgatekeeper_InputMessage">
-    <wsdl:part name="parameters" element="tns:canresetgatekeeper" />
+  <wsdl:message name="IService1_changeGateKeeperPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeGateKeeperPassword" />
   </wsdl:message>
-  <wsdl:message name="IService1_canresetgatekeeper_OutputMessage">
-    <wsdl:part name="parameters" element="tns:canresetgatekeeperResponse" />
+  <wsdl:message name="IService1_changeGateKeeperPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeGateKeeperPasswordResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_canresetstudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:canresetstudent" />
+  <wsdl:message name="IService1_changeStudentPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeStudentPassword" />
   </wsdl:message>
-  <wsdl:message name="IService1_canresetstudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:canresetstudentResponse" />
+  <wsdl:message name="IService1_changeStudentPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeStudentPasswordResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_canresetrt_InputMessage">
     <wsdl:part name="parameters" element="tns:canresetrt" />
@@ -98,41 +97,41 @@
   <wsdl:message name="IService1_logged_Gatekeeper_OutputMessage">
     <wsdl:part name="parameters" element="tns:logged_GatekeeperResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_listOfavailableRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfavailableRT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listOfavailableRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfavailableRTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listOfavailableGateKeeper_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfavailableGateKeeper" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listOfavailableGateKeeper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfavailableGateKeeperResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_addhostel_InputMessage">
     <wsdl:part name="parameters" element="tns:addhostel" />
   </wsdl:message>
   <wsdl:message name="IService1_addhostel_OutputMessage">
     <wsdl:part name="parameters" element="tns:addhostelResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_rtnames_InputMessage">
-    <wsdl:part name="parameters" element="tns:rtnames" />
+  <wsdl:message name="IService1_hostelIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:hostelIndex" />
   </wsdl:message>
-  <wsdl:message name="IService1_rtnames_OutputMessage">
-    <wsdl:part name="parameters" element="tns:rtnamesResponse" />
+  <wsdl:message name="IService1_hostelIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:hostelIndexResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_hostels_InputMessage">
-    <wsdl:part name="parameters" element="tns:hostels" />
+  <wsdl:message name="IService1_listOfAllHostel_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfAllHostel" />
   </wsdl:message>
-  <wsdl:message name="IService1_hostels_OutputMessage">
-    <wsdl:part name="parameters" element="tns:hostelsResponse" />
+  <wsdl:message name="IService1_listOfAllHostel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfAllHostelResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_gknames_InputMessage">
-    <wsdl:part name="parameters" element="tns:gknames" />
+  <wsdl:message name="IService1_registerForHostel_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerForHostel" />
   </wsdl:message>
-  <wsdl:message name="IService1_gknames_OutputMessage">
-    <wsdl:part name="parameters" element="tns:gknamesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_showallhostel_InputMessage">
-    <wsdl:part name="parameters" element="tns:showallhostel" />
-  </wsdl:message>
-  <wsdl:message name="IService1_showallhostel_OutputMessage">
-    <wsdl:part name="parameters" element="tns:showallhostelResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_registerforhostel_InputMessage">
-    <wsdl:part name="parameters" element="tns:registerforhostel" />
-  </wsdl:message>
-  <wsdl:message name="IService1_registerforhostel_OutputMessage">
-    <wsdl:part name="parameters" element="tns:registerforhostelResponse" />
+  <wsdl:message name="IService1_registerForHostel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerForHostelResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_isHostelRegistered_InputMessage">
     <wsdl:part name="parameters" element="tns:isHostelRegistered" />
@@ -140,23 +139,23 @@
   <wsdl:message name="IService1_isHostelRegistered_OutputMessage">
     <wsdl:part name="parameters" element="tns:isHostelRegisteredResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_registeredstudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:registeredstudent" />
+  <wsdl:message name="IService1_listOfRegisteredStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfRegisteredStudent" />
   </wsdl:message>
-  <wsdl:message name="IService1_registeredstudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:registeredstudentResponse" />
+  <wsdl:message name="IService1_listOfRegisteredStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfRegisteredStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_getregisteredstudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:getregisteredstudent" />
+  <wsdl:message name="IService1_registeredStudentIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:registeredStudentIndex" />
   </wsdl:message>
-  <wsdl:message name="IService1_getregisteredstudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getregisteredstudentResponse" />
+  <wsdl:message name="IService1_registeredStudentIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registeredStudentIndexResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_allotedStudentsforhostel_InputMessage">
-    <wsdl:part name="parameters" element="tns:allotedStudentsforhostel" />
+  <wsdl:message name="IService1_listOfAllotedStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfAllotedStudent" />
   </wsdl:message>
-  <wsdl:message name="IService1_allotedStudentsforhostel_OutputMessage">
-    <wsdl:part name="parameters" element="tns:allotedStudentsforhostelResponse" />
+  <wsdl:message name="IService1_listOfAllotedStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfAllotedStudentResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_indexForAllottedStudent_InputMessage">
     <wsdl:part name="parameters" element="tns:indexForAllottedStudent" />
@@ -164,23 +163,23 @@
   <wsdl:message name="IService1_indexForAllottedStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:indexForAllottedStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_allotstudent_InputMessage">
-    <wsdl:part name="parameters" element="tns:allotstudent" />
+  <wsdl:message name="IService1_allotStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:allotStudent" />
   </wsdl:message>
-  <wsdl:message name="IService1_allotstudent_OutputMessage">
-    <wsdl:part name="parameters" element="tns:allotstudentResponse" />
+  <wsdl:message name="IService1_allotStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:allotStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_addnotificationforsearch_InputMessage">
-    <wsdl:part name="parameters" element="tns:addnotificationforsearch" />
+  <wsdl:message name="IService1_addnotificationforStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:addnotificationforStudent" />
   </wsdl:message>
-  <wsdl:message name="IService1_addnotificationforsearch_OutputMessage">
-    <wsdl:part name="parameters" element="tns:addnotificationforsearchResponse" />
+  <wsdl:message name="IService1_addnotificationforStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addnotificationforStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_deletependingst_InputMessage">
-    <wsdl:part name="parameters" element="tns:deletependingst" />
+  <wsdl:message name="IService1_deletePendingStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletePendingStudent" />
   </wsdl:message>
-  <wsdl:message name="IService1_deletependingst_OutputMessage">
-    <wsdl:part name="parameters" element="tns:deletependingstResponse" />
+  <wsdl:message name="IService1_deletePendingStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletePendingStudentResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_student_checkin_InputMessage">
     <wsdl:part name="parameters" element="tns:student_checkin" />
@@ -206,11 +205,11 @@
   <wsdl:message name="IService1_visitor_checkOut_OutputMessage">
     <wsdl:part name="parameters" element="tns:visitor_checkOutResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_allotedRT_InputMessage">
-    <wsdl:part name="parameters" element="tns:allotedRT" />
+  <wsdl:message name="IService1_listOfallotedRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfallotedRT" />
   </wsdl:message>
-  <wsdl:message name="IService1_allotedRT_OutputMessage">
-    <wsdl:part name="parameters" element="tns:allotedRTResponse" />
+  <wsdl:message name="IService1_listOfallotedRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfallotedRTResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_complaintsfromstudent_InputMessage">
     <wsdl:part name="parameters" element="tns:complaintsfromstudent" />
@@ -224,11 +223,11 @@
   <wsdl:message name="IService1_complaintsfromRT_OutputMessage">
     <wsdl:part name="parameters" element="tns:complaintsfromRTResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_getComplainFromRt_InputMessage">
-    <wsdl:part name="parameters" element="tns:getComplainFromRt" />
+  <wsdl:message name="IService1_listOfComplainFromRt_InputMessage">
+    <wsdl:part name="parameters" element="tns:listOfComplainFromRt" />
   </wsdl:message>
-  <wsdl:message name="IService1_getComplainFromRt_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getComplainFromRtResponse" />
+  <wsdl:message name="IService1_listOfComplainFromRt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listOfComplainFromRtResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_getIndexedComplaintsFromRt_InputMessage">
     <wsdl:part name="parameters" element="tns:getIndexedComplaintsFromRt" />
@@ -260,50 +259,68 @@
   <wsdl:message name="IService1_deleteAllotedStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteAllotedStudentResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AddNewRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewRT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewRTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewGateKeeper_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewGateKeeper" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewGateKeeper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewGateKeeperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_uniqueStudentid_InputMessage">
+    <wsdl:part name="parameters" element="tns:uniqueStudentid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_uniqueStudentid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uniqueStudentidResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="regst">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regst" message="tns:IService1_regst_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regstResponse" message="tns:IService1_regst_OutputMessage" />
+    <wsdl:operation name="registerStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerStudent" message="tns:IService1_registerStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerStudentResponse" message="tns:IService1_registerStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="reggk">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/reggk" message="tns:IService1_reggk_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/reggkResponse" message="tns:IService1_reggk_OutputMessage" />
+    <wsdl:operation name="registerGatekeeper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerGatekeeper" message="tns:IService1_registerGatekeeper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerGatekeeperResponse" message="tns:IService1_registerGatekeeper_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="regrt">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regrt" message="tns:IService1_regrt_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regrtResponse" message="tns:IService1_regrt_OutputMessage" />
+    <wsdl:operation name="registerRt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerRt" message="tns:IService1_registerRt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerRtResponse" message="tns:IService1_registerRt_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="regadmin">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regadmin" message="tns:IService1_regadmin_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regadminResponse" message="tns:IService1_regadmin_OutputMessage" />
+    <wsdl:operation name="registerAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerAdmin" message="tns:IService1_registerAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerAdminResponse" message="tns:IService1_registerAdmin_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="isAdmin">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isAdmin" message="tns:IService1_isAdmin_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isAdminResponse" message="tns:IService1_isAdmin_OutputMessage" />
+    <wsdl:operation name="AdminLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AdminLogin" message="tns:IService1_AdminLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AdminLoginResponse" message="tns:IService1_AdminLogin_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="isStudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isStudent" message="tns:IService1_isStudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isStudentResponse" message="tns:IService1_isStudent_OutputMessage" />
+    <wsdl:operation name="StudentLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/StudentLogin" message="tns:IService1_StudentLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/StudentLoginResponse" message="tns:IService1_StudentLogin_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="isRT">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isRT" message="tns:IService1_isRT_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isRTResponse" message="tns:IService1_isRT_OutputMessage" />
+    <wsdl:operation name="LoginRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LoginRT" message="tns:IService1_LoginRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginRTResponse" message="tns:IService1_LoginRT_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="isGatekeeper">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isGatekeeper" message="tns:IService1_isGatekeeper_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isGatekeeperResponse" message="tns:IService1_isGatekeeper_OutputMessage" />
+    <wsdl:operation name="GatekeeperLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GatekeeperLogin" message="tns:IService1_GatekeeperLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GatekeeperLoginResponse" message="tns:IService1_GatekeeperLogin_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="canresetAdmin">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetAdmin" message="tns:IService1_canresetAdmin_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetAdminResponse" message="tns:IService1_canresetAdmin_OutputMessage" />
+    <wsdl:operation name="changeAdminPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/changeAdminPassword" message="tns:IService1_changeAdminPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/changeAdminPasswordResponse" message="tns:IService1_changeAdminPassword_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="canresetgatekeeper">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetgatekeeper" message="tns:IService1_canresetgatekeeper_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetgatekeeperResponse" message="tns:IService1_canresetgatekeeper_OutputMessage" />
+    <wsdl:operation name="changeGateKeeperPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/changeGateKeeperPassword" message="tns:IService1_changeGateKeeperPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/changeGateKeeperPasswordResponse" message="tns:IService1_changeGateKeeperPassword_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="canresetstudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetstudent" message="tns:IService1_canresetstudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetstudentResponse" message="tns:IService1_canresetstudent_OutputMessage" />
+    <wsdl:operation name="changeStudentPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/changeStudentPassword" message="tns:IService1_changeStudentPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/changeStudentPasswordResponse" message="tns:IService1_changeStudentPassword_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="canresetrt">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetrt" message="tns:IService1_canresetrt_InputMessage" />
@@ -321,61 +338,61 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/logged_Gatekeeper" message="tns:IService1_logged_Gatekeeper_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/logged_GatekeeperResponse" message="tns:IService1_logged_Gatekeeper_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="listOfavailableRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfavailableRT" message="tns:IService1_listOfavailableRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfavailableRTResponse" message="tns:IService1_listOfavailableRT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listOfavailableGateKeeper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfavailableGateKeeper" message="tns:IService1_listOfavailableGateKeeper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfavailableGateKeeperResponse" message="tns:IService1_listOfavailableGateKeeper_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="addhostel">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/addhostel" message="tns:IService1_addhostel_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/addhostelResponse" message="tns:IService1_addhostel_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="rtnames">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/rtnames" message="tns:IService1_rtnames_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/rtnamesResponse" message="tns:IService1_rtnames_OutputMessage" />
+    <wsdl:operation name="hostelIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/hostelIndex" message="tns:IService1_hostelIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/hostelIndexResponse" message="tns:IService1_hostelIndex_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="hostels">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/hostels" message="tns:IService1_hostels_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/hostelsResponse" message="tns:IService1_hostels_OutputMessage" />
+    <wsdl:operation name="listOfAllHostel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfAllHostel" message="tns:IService1_listOfAllHostel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfAllHostelResponse" message="tns:IService1_listOfAllHostel_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="gknames">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gknames" message="tns:IService1_gknames_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gknamesResponse" message="tns:IService1_gknames_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="showallhostel">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/showallhostel" message="tns:IService1_showallhostel_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/showallhostelResponse" message="tns:IService1_showallhostel_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="registerforhostel">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerforhostel" message="tns:IService1_registerforhostel_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerforhostelResponse" message="tns:IService1_registerforhostel_OutputMessage" />
+    <wsdl:operation name="registerForHostel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerForHostel" message="tns:IService1_registerForHostel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerForHostelResponse" message="tns:IService1_registerForHostel_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="isHostelRegistered">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/isHostelRegistered" message="tns:IService1_isHostelRegistered_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/isHostelRegisteredResponse" message="tns:IService1_isHostelRegistered_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="registeredstudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registeredstudent" message="tns:IService1_registeredstudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registeredstudentResponse" message="tns:IService1_registeredstudent_OutputMessage" />
+    <wsdl:operation name="listOfRegisteredStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfRegisteredStudent" message="tns:IService1_listOfRegisteredStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfRegisteredStudentResponse" message="tns:IService1_listOfRegisteredStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getregisteredstudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getregisteredstudent" message="tns:IService1_getregisteredstudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getregisteredstudentResponse" message="tns:IService1_getregisteredstudent_OutputMessage" />
+    <wsdl:operation name="registeredStudentIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registeredStudentIndex" message="tns:IService1_registeredStudentIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registeredStudentIndexResponse" message="tns:IService1_registeredStudentIndex_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="allotedStudentsforhostel">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/allotedStudentsforhostel" message="tns:IService1_allotedStudentsforhostel_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/allotedStudentsforhostelResponse" message="tns:IService1_allotedStudentsforhostel_OutputMessage" />
+    <wsdl:operation name="listOfAllotedStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfAllotedStudent" message="tns:IService1_listOfAllotedStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfAllotedStudentResponse" message="tns:IService1_listOfAllotedStudent_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="indexForAllottedStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/indexForAllottedStudent" message="tns:IService1_indexForAllottedStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/indexForAllottedStudentResponse" message="tns:IService1_indexForAllottedStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="allotstudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/allotstudent" message="tns:IService1_allotstudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/allotstudentResponse" message="tns:IService1_allotstudent_OutputMessage" />
+    <wsdl:operation name="allotStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/allotStudent" message="tns:IService1_allotStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/allotStudentResponse" message="tns:IService1_allotStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="addnotificationforsearch">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addnotificationforsearch" message="tns:IService1_addnotificationforsearch_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addnotificationforsearchResponse" message="tns:IService1_addnotificationforsearch_OutputMessage" />
+    <wsdl:operation name="addnotificationforStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addnotificationforStudent" message="tns:IService1_addnotificationforStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addnotificationforStudentResponse" message="tns:IService1_addnotificationforStudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="deletependingst">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletependingst" message="tns:IService1_deletependingst_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletependingstResponse" message="tns:IService1_deletependingst_OutputMessage" />
+    <wsdl:operation name="deletePendingStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletePendingStudent" message="tns:IService1_deletePendingStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletePendingStudentResponse" message="tns:IService1_deletePendingStudent_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="student_checkin">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/student_checkin" message="tns:IService1_student_checkin_InputMessage" />
@@ -393,9 +410,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/visitor_checkOut" message="tns:IService1_visitor_checkOut_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/visitor_checkOutResponse" message="tns:IService1_visitor_checkOut_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="allotedRT">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/allotedRT" message="tns:IService1_allotedRT_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/allotedRTResponse" message="tns:IService1_allotedRT_OutputMessage" />
+    <wsdl:operation name="listOfallotedRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfallotedRT" message="tns:IService1_listOfallotedRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfallotedRTResponse" message="tns:IService1_listOfallotedRT_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="complaintsfromstudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/complaintsfromstudent" message="tns:IService1_complaintsfromstudent_InputMessage" />
@@ -405,9 +422,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/complaintsfromRT" message="tns:IService1_complaintsfromRT_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/complaintsfromRTResponse" message="tns:IService1_complaintsfromRT_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getComplainFromRt">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getComplainFromRt" message="tns:IService1_getComplainFromRt_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getComplainFromRtResponse" message="tns:IService1_getComplainFromRt_OutputMessage" />
+    <wsdl:operation name="listOfComplainFromRt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listOfComplainFromRt" message="tns:IService1_listOfComplainFromRt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listOfComplainFromRtResponse" message="tns:IService1_listOfComplainFromRt_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getIndexedComplaintsFromRt">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getIndexedComplaintsFromRt" message="tns:IService1_getIndexedComplaintsFromRt_InputMessage" />
@@ -429,11 +446,23 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteAllotedStudent" message="tns:IService1_deleteAllotedStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteAllotedStudentResponse" message="tns:IService1_deleteAllotedStudent_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AddNewRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewRT" message="tns:IService1_AddNewRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewRTResponse" message="tns:IService1_AddNewRT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewGateKeeper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewGateKeeper" message="tns:IService1_AddNewGateKeeper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewGateKeeperResponse" message="tns:IService1_AddNewGateKeeper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uniqueStudentid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/uniqueStudentid" message="tns:IService1_uniqueStudentid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/uniqueStudentidResponse" message="tns:IService1_uniqueStudentid_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="regst">
-      <soap:operation soapAction="http://tempuri.org/IService1/regst" style="document" />
+    <wsdl:operation name="registerStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -441,8 +470,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="reggk">
-      <soap:operation soapAction="http://tempuri.org/IService1/reggk" style="document" />
+    <wsdl:operation name="registerGatekeeper">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerGatekeeper" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -450,8 +479,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="regrt">
-      <soap:operation soapAction="http://tempuri.org/IService1/regrt" style="document" />
+    <wsdl:operation name="registerRt">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerRt" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -459,8 +488,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="regadmin">
-      <soap:operation soapAction="http://tempuri.org/IService1/regadmin" style="document" />
+    <wsdl:operation name="registerAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerAdmin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -468,8 +497,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="isAdmin">
-      <soap:operation soapAction="http://tempuri.org/IService1/isAdmin" style="document" />
+    <wsdl:operation name="AdminLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/AdminLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -477,8 +506,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="isStudent">
-      <soap:operation soapAction="http://tempuri.org/IService1/isStudent" style="document" />
+    <wsdl:operation name="StudentLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/StudentLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -486,8 +515,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="isRT">
-      <soap:operation soapAction="http://tempuri.org/IService1/isRT" style="document" />
+    <wsdl:operation name="LoginRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/LoginRT" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -495,8 +524,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="isGatekeeper">
-      <soap:operation soapAction="http://tempuri.org/IService1/isGatekeeper" style="document" />
+    <wsdl:operation name="GatekeeperLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/GatekeeperLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -504,8 +533,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="canresetAdmin">
-      <soap:operation soapAction="http://tempuri.org/IService1/canresetAdmin" style="document" />
+    <wsdl:operation name="changeAdminPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/changeAdminPassword" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -513,8 +542,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="canresetgatekeeper">
-      <soap:operation soapAction="http://tempuri.org/IService1/canresetgatekeeper" style="document" />
+    <wsdl:operation name="changeGateKeeperPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/changeGateKeeperPassword" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -522,8 +551,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="canresetstudent">
-      <soap:operation soapAction="http://tempuri.org/IService1/canresetstudent" style="document" />
+    <wsdl:operation name="changeStudentPassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/changeStudentPassword" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -567,6 +596,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="listOfavailableRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfavailableRT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listOfavailableGateKeeper">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfavailableGateKeeper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="addhostel">
       <soap:operation soapAction="http://tempuri.org/IService1/addhostel" style="document" />
       <wsdl:input>
@@ -576,8 +623,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="rtnames">
-      <soap:operation soapAction="http://tempuri.org/IService1/rtnames" style="document" />
+    <wsdl:operation name="hostelIndex">
+      <soap:operation soapAction="http://tempuri.org/IService1/hostelIndex" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -585,8 +632,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="hostels">
-      <soap:operation soapAction="http://tempuri.org/IService1/hostels" style="document" />
+    <wsdl:operation name="listOfAllHostel">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfAllHostel" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -594,26 +641,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="gknames">
-      <soap:operation soapAction="http://tempuri.org/IService1/gknames" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="showallhostel">
-      <soap:operation soapAction="http://tempuri.org/IService1/showallhostel" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="registerforhostel">
-      <soap:operation soapAction="http://tempuri.org/IService1/registerforhostel" style="document" />
+    <wsdl:operation name="registerForHostel">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerForHostel" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -630,8 +659,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="registeredstudent">
-      <soap:operation soapAction="http://tempuri.org/IService1/registeredstudent" style="document" />
+    <wsdl:operation name="listOfRegisteredStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfRegisteredStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -639,8 +668,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getregisteredstudent">
-      <soap:operation soapAction="http://tempuri.org/IService1/getregisteredstudent" style="document" />
+    <wsdl:operation name="registeredStudentIndex">
+      <soap:operation soapAction="http://tempuri.org/IService1/registeredStudentIndex" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -648,8 +677,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="allotedStudentsforhostel">
-      <soap:operation soapAction="http://tempuri.org/IService1/allotedStudentsforhostel" style="document" />
+    <wsdl:operation name="listOfAllotedStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfAllotedStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -666,8 +695,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="allotstudent">
-      <soap:operation soapAction="http://tempuri.org/IService1/allotstudent" style="document" />
+    <wsdl:operation name="allotStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/allotStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -675,8 +704,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="addnotificationforsearch">
-      <soap:operation soapAction="http://tempuri.org/IService1/addnotificationforsearch" style="document" />
+    <wsdl:operation name="addnotificationforStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/addnotificationforStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -684,8 +713,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="deletependingst">
-      <soap:operation soapAction="http://tempuri.org/IService1/deletependingst" style="document" />
+    <wsdl:operation name="deletePendingStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletePendingStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -729,8 +758,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="allotedRT">
-      <soap:operation soapAction="http://tempuri.org/IService1/allotedRT" style="document" />
+    <wsdl:operation name="listOfallotedRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfallotedRT" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -756,8 +785,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getComplainFromRt">
-      <soap:operation soapAction="http://tempuri.org/IService1/getComplainFromRt" style="document" />
+    <wsdl:operation name="listOfComplainFromRt">
+      <soap:operation soapAction="http://tempuri.org/IService1/listOfComplainFromRt" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -803,6 +832,33 @@
     </wsdl:operation>
     <wsdl:operation name="deleteAllotedStudent">
       <soap:operation soapAction="http://tempuri.org/IService1/deleteAllotedStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewRT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewGateKeeper">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewGateKeeper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uniqueStudentid">
+      <soap:operation soapAction="http://tempuri.org/IService1/uniqueStudentid" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

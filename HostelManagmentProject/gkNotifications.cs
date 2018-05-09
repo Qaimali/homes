@@ -16,6 +16,7 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+       
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -47,13 +48,17 @@ namespace HostelManagmentProject
 
         private void gkNotifications_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc=new localhost.Service1();
+            localhost.Service1 service=new localhost.Service1();
             localhost.Cgatek cg = new localhost.Cgatek();
-            cg = sc.logged_Gatekeeper();
+            cg = service.logged_Gatekeeper();
             BindingSource s = new BindingSource();
             s.DataSource = cg.Notificationlist;
             GVgkNotifications.DataSource = s;
-            labelgkname.Text = cg.Name;
+            localhost.Service1 sc = new localhost.Service1();
+            localhost.Cgatek keeper = sc.logged_Gatekeeper();
+            labelkeepername.Text = keeper.Name;
+            labelhostelname.Text = keeper.AllotedHostel;
+
         }
         private void visitorCheckOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -79,6 +84,32 @@ namespace HostelManagmentProject
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void visitorCheckOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckout gk = new gk_Stvisitorscheckout();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stdetails gk = new gk_Stdetails();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentVisitorDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_StVisitorsDetails gk = new gk_StVisitorsDetails();
+            gk.Show();
+            this.Hide();
         }
     }
 }

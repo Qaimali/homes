@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelgkname = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,54 +40,14 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.GVgkNotifications = new System.Windows.Forms.DataGridView();
+            this.labelkeepername = new System.Windows.Forms.Label();
+            this.labelhostelname = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVgkNotifications)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelgkname
-            // 
-            this.labelgkname.AutoSize = true;
-            this.labelgkname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelgkname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelgkname.Location = new System.Drawing.Point(508, 52);
-            this.labelgkname.Name = "labelgkname";
-            this.labelgkname.Size = new System.Drawing.Size(18, 16);
-            this.labelgkname.TabIndex = 565;
-            this.labelgkname.Text = "**";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(156, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 564;
-            this.label3.Text = "Mumtaz Hall";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 563;
-            this.label2.Text = "Hostel Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(365, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 562;
-            this.label1.Text = "Name";
             // 
             // menuStrip1
             // 
@@ -126,7 +82,7 @@
             // 
             // checkOutToolStripMenuItem
             // 
-            this.checkOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
             this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.checkOutToolStripMenuItem.Text = "Check Out";
@@ -144,24 +100,29 @@
             this.visitorCheckOutToolStripMenuItem.Name = "visitorCheckOutToolStripMenuItem";
             this.visitorCheckOutToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.visitorCheckOutToolStripMenuItem.Text = "Visitor Check Out";
+            this.visitorCheckOutToolStripMenuItem.Click += new System.EventHandler(this.visitorCheckOutToolStripMenuItem_Click_1);
             // 
             // studentDetailToolStripMenuItem
             // 
             this.studentDetailToolStripMenuItem.Name = "studentDetailToolStripMenuItem";
             this.studentDetailToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
+            this.studentDetailToolStripMenuItem.Click += new System.EventHandler(this.studentDetailToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
             this.toolStripMenuItem1.Text = "Notifications";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // studentVisitorDetailToolStripMenuItem
             // 
             this.studentVisitorDetailToolStripMenuItem.Name = "studentVisitorDetailToolStripMenuItem";
             this.studentVisitorDetailToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.studentVisitorDetailToolStripMenuItem.Text = "Student Visitor Detail";
+            this.studentVisitorDetailToolStripMenuItem.Click += new System.EventHandler(this.studentVisitorDetailToolStripMenuItem_Click_1);
             // 
             // logOutToolStripMenuItem
             // 
@@ -192,11 +153,56 @@
             // GVgkNotifications
             // 
             this.GVgkNotifications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVgkNotifications.BackgroundColor = System.Drawing.Color.White;
             this.GVgkNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVgkNotifications.Location = new System.Drawing.Point(194, 140);
             this.GVgkNotifications.Name = "GVgkNotifications";
             this.GVgkNotifications.Size = new System.Drawing.Size(734, 299);
             this.GVgkNotifications.TabIndex = 566;
+            // 
+            // labelkeepername
+            // 
+            this.labelkeepername.AutoSize = true;
+            this.labelkeepername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelkeepername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelkeepername.Location = new System.Drawing.Point(551, 52);
+            this.labelkeepername.Name = "labelkeepername";
+            this.labelkeepername.Size = new System.Drawing.Size(18, 16);
+            this.labelkeepername.TabIndex = 610;
+            this.labelkeepername.Text = "**";
+            // 
+            // labelhostelname
+            // 
+            this.labelhostelname.AutoSize = true;
+            this.labelhostelname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelhostelname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelhostelname.Location = new System.Drawing.Point(199, 52);
+            this.labelhostelname.Name = "labelhostelname";
+            this.labelhostelname.Size = new System.Drawing.Size(18, 16);
+            this.labelhostelname.TabIndex = 609;
+            this.labelhostelname.Text = "**";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(55, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.TabIndex = 608;
+            this.label2.Text = "Hostel Name:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(408, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 607;
+            this.label1.Text = "Name";
             // 
             // gkNotifications
             // 
@@ -204,11 +210,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
-            this.Controls.Add(this.GVgkNotifications);
-            this.Controls.Add(this.labelgkname);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelkeepername);
+            this.Controls.Add(this.labelhostelname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.GVgkNotifications);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "gkNotifications";
@@ -225,11 +231,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelgkname;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
@@ -242,5 +243,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.DataGridView GVgkNotifications;
+        private System.Windows.Forms.Label labelkeepername;
+        private System.Windows.Forms.Label labelhostelname;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

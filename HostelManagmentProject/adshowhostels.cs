@@ -16,13 +16,13 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
-
+        
         private void showhostels_Load(object sender, EventArgs e)
         {
 
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             BindingSource s = new BindingSource();
-            s.DataSource = sc.showallhostel();
+            s.DataSource = service.listOfAllHostel();
             GVshowhostels.DataSource = s;
             
             GVshowhostels.Columns[3].Visible = false;
@@ -32,11 +32,11 @@ namespace HostelManagmentProject
 
         private void GVshowhostels_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             bool postspecified = true;
             if (e.ColumnIndex == 0)
             {
-                localhost.Hostel hostelss = sc.hostels(e.RowIndex, postspecified);
+                localhost.Hostel hostelss = service.hostelIndex(e.RowIndex, postspecified);
                 adhostelDetail hd = new adhostelDetail(hostelss);
                 hd.Show();
                 this.Hide();

@@ -36,7 +36,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtbllodgroup = new System.Windows.Forms.TextBox();
             this.txtguardianname = new System.Windows.Forms.TextBox();
@@ -57,10 +56,9 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.txtuserid = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -152,16 +150,6 @@
             this.label13.Text = "Blood Group";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(494, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Image";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -178,7 +166,7 @@
             this.txtbllodgroup.Location = new System.Drawing.Point(197, 369);
             this.txtbllodgroup.Name = "txtbllodgroup";
             this.txtbllodgroup.Size = new System.Drawing.Size(137, 20);
-            this.txtbllodgroup.TabIndex = 17;
+            this.txtbllodgroup.TabIndex = 8;
             this.txtbllodgroup.TextChanged += new System.EventHandler(this.txtbllodgroup_TextChanged);
             // 
             // txtguardianname
@@ -186,7 +174,7 @@
             this.txtguardianname.Location = new System.Drawing.Point(197, 327);
             this.txtguardianname.Name = "txtguardianname";
             this.txtguardianname.Size = new System.Drawing.Size(137, 20);
-            this.txtguardianname.TabIndex = 18;
+            this.txtguardianname.TabIndex = 7;
             this.txtguardianname.TextChanged += new System.EventHandler(this.txtguardianname_TextChanged);
             // 
             // txtfathername
@@ -194,7 +182,7 @@
             this.txtfathername.Location = new System.Drawing.Point(197, 273);
             this.txtfathername.Name = "txtfathername";
             this.txtfathername.Size = new System.Drawing.Size(137, 20);
-            this.txtfathername.TabIndex = 19;
+            this.txtfathername.TabIndex = 6;
             this.txtfathername.TextChanged += new System.EventHandler(this.txtfathername_TextChanged);
             // 
             // txtregistrtaionnumber
@@ -202,7 +190,7 @@
             this.txtregistrtaionnumber.Location = new System.Drawing.Point(197, 233);
             this.txtregistrtaionnumber.Name = "txtregistrtaionnumber";
             this.txtregistrtaionnumber.Size = new System.Drawing.Size(137, 20);
-            this.txtregistrtaionnumber.TabIndex = 20;
+            this.txtregistrtaionnumber.TabIndex = 5;
             this.txtregistrtaionnumber.TextChanged += new System.EventHandler(this.txtregistrtaionnumber_TextChanged);
             // 
             // txtphonenumber
@@ -210,7 +198,7 @@
             this.txtphonenumber.Location = new System.Drawing.Point(197, 189);
             this.txtphonenumber.Name = "txtphonenumber";
             this.txtphonenumber.Size = new System.Drawing.Size(137, 20);
-            this.txtphonenumber.TabIndex = 21;
+            this.txtphonenumber.TabIndex = 4;
             this.txtphonenumber.TextChanged += new System.EventHandler(this.txtphonenumber_TextChanged);
             // 
             // txtfatherphone
@@ -218,7 +206,7 @@
             this.txtfatherphone.Location = new System.Drawing.Point(666, 232);
             this.txtfatherphone.Name = "txtfatherphone";
             this.txtfatherphone.Size = new System.Drawing.Size(137, 20);
-            this.txtfatherphone.TabIndex = 24;
+            this.txtfatherphone.TabIndex = 9;
             this.txtfatherphone.TextChanged += new System.EventHandler(this.txtfatherphone_TextChanged);
             // 
             // txtguardianphone
@@ -226,7 +214,7 @@
             this.txtguardianphone.Location = new System.Drawing.Point(666, 283);
             this.txtguardianphone.Name = "txtguardianphone";
             this.txtguardianphone.Size = new System.Drawing.Size(137, 20);
-            this.txtguardianphone.TabIndex = 25;
+            this.txtguardianphone.TabIndex = 10;
             this.txtguardianphone.TextChanged += new System.EventHandler(this.txtguardianphone_TextChanged);
             // 
             // txtstudentname
@@ -234,7 +222,7 @@
             this.txtstudentname.Location = new System.Drawing.Point(197, 120);
             this.txtstudentname.Name = "txtstudentname";
             this.txtstudentname.Size = new System.Drawing.Size(137, 20);
-            this.txtstudentname.TabIndex = 28;
+            this.txtstudentname.TabIndex = 1;
             this.txtstudentname.TextChanged += new System.EventHandler(this.txtstudentname_TextChanged);
             // 
             // txtaddress
@@ -243,7 +231,7 @@
             this.txtaddress.Multiline = true;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(269, 115);
-            this.txtaddress.TabIndex = 29;
+            this.txtaddress.TabIndex = 11;
             this.txtaddress.TextChanged += new System.EventHandler(this.txtaddress_TextChanged);
             // 
             // label5
@@ -262,7 +250,7 @@
             this.button1.Location = new System.Drawing.Point(452, 457);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 35;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -273,7 +261,7 @@
             this.chckmale.Location = new System.Drawing.Point(197, 148);
             this.chckmale.Name = "chckmale";
             this.chckmale.Size = new System.Drawing.Size(49, 17);
-            this.chckmale.TabIndex = 36;
+            this.chckmale.TabIndex = 2;
             this.chckmale.Text = "Male";
             this.chckmale.UseVisualStyleBackColor = true;
             this.chckmale.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -284,7 +272,7 @@
             this.chckfemale.Location = new System.Drawing.Point(243, 149);
             this.chckfemale.Name = "chckfemale";
             this.chckfemale.Size = new System.Drawing.Size(60, 17);
-            this.chckfemale.TabIndex = 37;
+            this.chckfemale.TabIndex = 3;
             this.chckfemale.Text = "Female";
             this.chckfemale.UseVisualStyleBackColor = true;
             this.chckfemale.CheckedChanged += new System.EventHandler(this.chckfemale_CheckedChanged);
@@ -308,7 +296,7 @@
             this.hostelApplicationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(803, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1022, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -338,7 +326,7 @@
             this.txtuserid.Location = new System.Drawing.Point(197, 71);
             this.txtuserid.Name = "txtuserid";
             this.txtuserid.Size = new System.Drawing.Size(137, 20);
-            this.txtuserid.TabIndex = 41;
+            this.txtuserid.TabIndex = 0;
             this.txtuserid.TextChanged += new System.EventHandler(this.txtuserid_TextChanged);
             // 
             // label4
@@ -352,16 +340,16 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "User id";
             // 
-            // pictureBox2
+            // linkLabel1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::HostelManagmentProject.Properties.Resources.Untitled_2;
-            this.pictureBox2.Location = new System.Drawing.Point(852, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(148, 124);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 39;
-            this.pictureBox2.TabStop = false;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(13, 457);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(35, 13);
+            this.linkLabel1.TabIndex = 41;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Home";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Stregistration
             // 
@@ -369,9 +357,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1022, 516);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtuserid);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.chckfemale);
             this.Controls.Add(this.chckmale);
             this.Controls.Add(this.button1);
@@ -386,7 +374,6 @@
             this.Controls.Add(this.txtguardianname);
             this.Controls.Add(this.txtbllodgroup);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -406,7 +393,6 @@
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,7 +408,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbllodgroup;
         private System.Windows.Forms.TextBox txtguardianname;
@@ -437,13 +422,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox chckmale;
         private System.Windows.Forms.CheckBox chckfemale;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem hostelApplicationToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem studentHostelApplicationToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.TextBox txtuserid;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
     
 }

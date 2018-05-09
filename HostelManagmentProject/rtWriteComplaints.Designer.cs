@@ -87,7 +87,7 @@
             // 
             // complaintsToolStripMenuItem
             // 
-            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.complaintsToolStripMenuItem.Text = "Notication";
@@ -102,6 +102,7 @@
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
             this.toolStripMenuItem1.Text = "Write Complaints";
@@ -135,7 +136,7 @@
             this.button1.Location = new System.Drawing.Point(486, 400);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
-            this.button1.TabIndex = 527;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -146,7 +147,7 @@
             this.txtcomplaint.Multiline = true;
             this.txtcomplaint.Name = "txtcomplaint";
             this.txtcomplaint.Size = new System.Drawing.Size(251, 115);
-            this.txtcomplaint.TabIndex = 526;
+            this.txtcomplaint.TabIndex = 1;
             // 
             // label1
             // 
@@ -170,7 +171,7 @@
             this.txtsubject.Location = new System.Drawing.Point(486, 146);
             this.txtsubject.Name = "txtsubject";
             this.txtsubject.Size = new System.Drawing.Size(137, 20);
-            this.txtsubject.TabIndex = 523;
+            this.txtsubject.TabIndex = 0;
             // 
             // label12
             // 

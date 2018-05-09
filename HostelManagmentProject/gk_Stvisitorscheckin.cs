@@ -60,7 +60,10 @@ namespace HostelManagmentProject
 
         private void gk_Stvisitorscheckin_Load(object sender, EventArgs e)
         {
-
+            localhost.Service1 sc = new localhost.Service1();
+            localhost.Cgatek keeper = sc.logged_Gatekeeper();
+            labelkeepername.Text = keeper.Name;
+            labelhostelname.Text = keeper.AllotedHostel;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -81,19 +84,29 @@ namespace HostelManagmentProject
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            bool st = false;
-            bool sts = false;
-            string temp = DateTime.Now.ToString("ddd dd MMM yyyy");
-            sc.visitor_checkIn(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text,datetimeVcheckin.Text ,txtstroomnu.Text, out st, out sts);
-            
-            if (st)
+            if ( txtcnicvisitor.Text == "" || txtstregno.Text == ""  || txtViname.Text == "")
             {
-                MessageBox.Show("submitted");
+                MessageBox.Show("Fill the Form Completely");
             }
-            else
+            else if (txtcnicvisitor.Text != "" && txtstregno.Text != "" && txtViname.Text != "")
             {
-                MessageBox.Show("invlid information");
+                localhost.Service1 service = new localhost.Service1();
+                bool st = false;
+                bool sts = false;
+                service.visitor_checkIn( txtstregno.Text, txtViname.Text, txtcnicvisitor.Text, datetimeVcheckin.Text,  out st, out sts);
+
+                if (st)
+                {
+                    MessageBox.Show("submitted");
+                }
+                else
+                {
+                    MessageBox.Show("invlid information");
+                }
+               
+                txtcnicvisitor.Text = "";
+                txtstregno.Text = "";
+                txtViname.Text = "";
             }
         }
 

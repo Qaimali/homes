@@ -16,7 +16,7 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
-
+        
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             register reg = new register();
@@ -29,6 +29,11 @@ namespace HostelManagmentProject
             Login log = new Login();
             log.Show();
             this.Hide();
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

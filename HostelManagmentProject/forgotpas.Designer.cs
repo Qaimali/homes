@@ -44,7 +44,7 @@
             this.txtanswer.Location = new System.Drawing.Point(316, 348);
             this.txtanswer.Name = "txtanswer";
             this.txtanswer.Size = new System.Drawing.Size(178, 20);
-            this.txtanswer.TabIndex = 213;
+            this.txtanswer.TabIndex = 2;
             // 
             // label4
             // 
@@ -63,10 +63,10 @@
             "which aunt is your favourite?",
             "which sibling is your favourite?",
             "which city you love the most?"});
-            this.comboquestion.Location = new System.Drawing.Point(316, 279);
+            this.comboquestion.Location = new System.Drawing.Point(316, 280);
             this.comboquestion.Name = "comboquestion";
             this.comboquestion.Size = new System.Drawing.Size(178, 21);
-            this.comboquestion.TabIndex = 211;
+            this.comboquestion.TabIndex = 1;
             // 
             // label3
             // 
@@ -83,7 +83,7 @@
             this.txtusername.Location = new System.Drawing.Point(316, 217);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(178, 20);
-            this.txtusername.TabIndex = 209;
+            this.txtusername.TabIndex = 0;
             // 
             // label2
             // 
@@ -100,8 +100,8 @@
             this.button1.Location = new System.Drawing.Point(363, 433);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 214;
-            this.button1.Text = "button1";
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -110,7 +110,7 @@
             this.txtnewpass.Location = new System.Drawing.Point(316, 397);
             this.txtnewpass.Name = "txtnewpass";
             this.txtnewpass.Size = new System.Drawing.Size(178, 20);
-            this.txtnewpass.TabIndex = 216;
+            this.txtnewpass.TabIndex = 3;
             // 
             // label1
             // 

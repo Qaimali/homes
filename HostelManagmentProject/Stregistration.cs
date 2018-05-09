@@ -15,14 +15,8 @@ namespace HostelManagmentProject
         public Stregistration()
         {
             InitializeComponent();
-            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
-            int w = Width >= screen.Width ? screen.Width : ( screen.Width + Width ) / 2;
-
-            int h = Height >= screen.Height ? screen.Height : ( screen.Height + Height ) / 2;
-            this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
-            this.Size = new Size(w, h);
         }
-
+       
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -66,41 +60,64 @@ namespace HostelManagmentProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            localhost.Cstudent sttemp = new localhost.Cstudent();
-            sttemp = sc.loggedstudent();
-            txtuserid.Text = sttemp.Userid;
+            localhost.Service1 service = new localhost.Service1();
+            localhost.Cstudent tempStudent = new localhost.Cstudent();
+            tempStudent = service.loggedstudent();
+            txtuserid.Text = tempStudent.Userid;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            localhost.Cstudent stu = sc.loggedstudent();
-            stu.Name = txtstudentname.Text;
-            stu.PhoneNumber = txtphonenumber.Text;
-            stu.RegistrationNumber = txtregistrtaionnumber.Text;
-            stu.FatherName = txtfathername.Text;
-            stu.FatherNumber = txtfatherphone.Text;
-            stu.GuardianName = txtguardianname.Text;
-            stu.GuardianNumber = txtguardianphone.Text;
-            stu.Address = txtaddress.Text;
-            stu.BloodGroup = txtbllodgroup.Text;
-            if (chckmale.Checked)
+            if (txtaddress.Text == "" || txtbllodgroup.Text == "" || txtfathername.Text == "" || txtfatherphone.Text == "" || txtguardianname.Text == "" || txtguardianphone.Text == "" || txtphonenumber.Text == "" || txtregistrtaionnumber.Text == "" || txtstudentname.Text == "" || txtuserid.Text == "" || chckfemale.Text == "" || chckmale.Text == "")
             {
-                stu.Gender = "male";
+                MessageBox.Show("Fill the Form Completely");
             }
-            else if (chckfemale.Checked)
+            else if(chckmale.Checked==false && chckfemale.Checked== false)
             {
-                stu.Gender = "female";
+                MessageBox.Show("Select Any gender");
             }
-            else
+            else if (chckmale.Checked && chckfemale.Checked)
             {
-                MessageBox.Show("mark your gender");
-            }            
-            sc.registerforhostel(stu);
-            StFormSubmission stf = new StFormSubmission();
-            stf.Show();
-            this.Hide();
+                MessageBox.Show("Select one gender");
+            }
+            else if (txtaddress.Text != "" && txtbllodgroup.Text != "" && txtfathername.Text != "" && txtfatherphone.Text != "" && txtguardianname.Text != "" && txtguardianphone.Text != "" && txtphonenumber.Text != "" && txtregistrtaionnumber.Text != "" && txtstudentname.Text != "" && txtuserid.Text != "" &&( chckfemale.Checked || chckmale.Checked))
+            {
+                localhost.Service1 service = new localhost.Service1();
+                localhost.Cstudent stu = service.loggedstudent();
+                if (chckfemale.Checked)
+                {
+                    stu.Gender = "female";
+                }
+                else
+                {
+                    stu.Gender = "male";
+                }
+                stu.Name = txtstudentname.Text;
+                stu.PhoneNumber = txtphonenumber.Text;
+                stu.RegistrationNumber = txtregistrtaionnumber.Text;
+                stu.FatherName = txtfathername.Text;
+                stu.FatherNumber = txtfatherphone.Text;
+                stu.GuardianName = txtguardianname.Text;
+                stu.GuardianNumber = txtguardianphone.Text;
+                stu.Address = txtaddress.Text;
+                stu.BloodGroup = txtbllodgroup.Text;
+                txtaddress.Text = "";
+                txtbllodgroup.Text = "";
+                txtfathername.Text = "";
+                txtfatherphone.Text = "";
+                txtguardianname.Text = "";
+                txtguardianphone.Text = "";
+                txtphonenumber.Text = "";
+                txtregistrtaionnumber.Text = "";
+                txtstudentname.Text = "";
+                txtuserid.Text = "";
+                chckfemale.Text = "";
+                chckmale.Text = "";
+                service.registerForHostel(stu);
+                StFormSubmission stf = new StFormSubmission();
+                stf.Show();
+                this.Hide();
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -196,6 +213,13 @@ namespace HostelManagmentProject
         private void txtuserid_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MainPage mp = new MainPage();
+            mp.Show();
+            this.Hide();
         }
     }
 }

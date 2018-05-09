@@ -19,7 +19,10 @@ namespace HostelManagmentProject
 
         private void gk_Stcheckindetails_Load(object sender, EventArgs e)
         {
-
+            localhost.Service1 sc = new localhost.Service1();
+            localhost.Cgatek keeper = sc.logged_Gatekeeper();
+            labelkeepername.Text = keeper.Name;
+            labelhostelname.Text = keeper.AllotedHostel;
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,21 +80,29 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-            localhost.Service1 sc = new localhost.Service1();
-            foreach(localhost.Cstudent cs in sc.allotedStudentsforhostel())
+            if (txtStiname.Text == "" || txtstregno.Text == "" || txtstroomnu.Text == "")
             {
-                if(cs.Name==txtStiname.Text && cs.RegistrationNumber == txtstregno.Text && cs.RoomNumber == txtstroomnu.Text)
+                MessageBox.Show("Fill the Search  Form Completly");
+            }
+            else if (txtStiname.Text != "" && txtstregno.Text != "" && txtstroomnu.Text != "")
+            {
+                localhost.Service1 service = new localhost.Service1();
+                foreach (localhost.Cstudent student in service.listOfAllotedStudent())
                 {
-                    BindingSource s = new BindingSource();
-                    s.DataSource = cs.Student_checkin;
-                    gvvheckin.DataSource = s;
-                    
-                    BindingSource si = new BindingSource();
-                    si.DataSource = cs.Student_checkout;
-                    
-                    gvcheckout.DataSource = si;
+                    if (student.Name == txtStiname.Text && student.RegistrationNumber == txtstregno.Text && student.RoomNumber == txtstroomnu.Text)
+                    {
+                        BindingSource s = new BindingSource();
+                        s.DataSource = student.Student_checkin;
+                        gvvheckin.DataSource = s;
+                        BindingSource si = new BindingSource();
+                        si.DataSource = student.Student_checkout;
+
+                        gvcheckout.DataSource = si;
+                    }
                 }
+                txtStiname.Text = "";
+                txtstregno.Text = "";
+                txtstroomnu.Text = "";
             }
         }
 

@@ -38,8 +38,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelkeepername = new System.Windows.Forms.Label();
+            this.labelhostelname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -61,21 +61,21 @@
             this.txtstname.Location = new System.Drawing.Point(543, 206);
             this.txtstname.Name = "txtstname";
             this.txtstname.Size = new System.Drawing.Size(200, 20);
-            this.txtstname.TabIndex = 550;
+            this.txtstname.TabIndex = 0;
             // 
             // txtstregno
             // 
             this.txtstregno.Location = new System.Drawing.Point(543, 250);
             this.txtstregno.Name = "txtstregno";
             this.txtstregno.Size = new System.Drawing.Size(200, 20);
-            this.txtstregno.TabIndex = 549;
+            this.txtstregno.TabIndex = 1;
             // 
             // txtstroomnu
             // 
             this.txtstroomnu.Location = new System.Drawing.Point(543, 290);
             this.txtstroomnu.Name = "txtstroomnu";
             this.txtstroomnu.Size = new System.Drawing.Size(200, 20);
-            this.txtstroomnu.TabIndex = 548;
+            this.txtstroomnu.TabIndex = 2;
             // 
             // label12
             // 
@@ -112,7 +112,7 @@
             this.button1.Location = new System.Drawing.Point(494, 425);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 553;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -146,27 +146,27 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(79, 20);
             this.toolStripMenuItem2.Text = "GateKeeper";
             // 
-            // label4
+            // labelkeepername
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(508, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 16);
-            this.label4.TabIndex = 559;
-            this.label4.Text = "**";
+            this.labelkeepername.AutoSize = true;
+            this.labelkeepername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelkeepername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelkeepername.Location = new System.Drawing.Point(508, 45);
+            this.labelkeepername.Name = "labelkeepername";
+            this.labelkeepername.Size = new System.Drawing.Size(18, 16);
+            this.labelkeepername.TabIndex = 559;
+            this.labelkeepername.Text = "**";
             // 
-            // label3
+            // labelhostelname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(156, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 16);
-            this.label3.TabIndex = 558;
-            this.label3.Text = "**";
+            this.labelhostelname.AutoSize = true;
+            this.labelhostelname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelhostelname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelhostelname.Location = new System.Drawing.Point(156, 45);
+            this.labelhostelname.Name = "labelhostelname";
+            this.labelhostelname.Size = new System.Drawing.Size(18, 16);
+            this.labelhostelname.TabIndex = 558;
+            this.labelhostelname.Text = "**";
             // 
             // label2
             // 
@@ -214,7 +214,7 @@
             // 
             // checkInToolStripMenuItem
             // 
-            this.checkInToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.checkInToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
             this.checkInToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.checkInToolStripMenuItem.Text = "Check in";
@@ -222,7 +222,7 @@
             // 
             // checkOutToolStripMenuItem
             // 
-            this.checkOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
             this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.checkOutToolStripMenuItem.Text = "Check Out";
@@ -284,8 +284,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
             this.Controls.Add(this.datetimestcheckin);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelkeepername);
+            this.Controls.Add(this.labelhostelname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -322,8 +322,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelkeepername;
+        private System.Windows.Forms.Label labelhostelname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;

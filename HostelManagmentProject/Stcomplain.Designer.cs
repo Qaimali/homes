@@ -40,7 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtcomplaint = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelHostelname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +56,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtRoomNum = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.labelStudentName = new System.Windows.Forms.Label();
+            this.labelRoomNumber = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -123,7 +125,7 @@
             this.txtsubject.Location = new System.Drawing.Point(505, 215);
             this.txtsubject.Name = "txtsubject";
             this.txtsubject.Size = new System.Drawing.Size(137, 20);
-            this.txtsubject.TabIndex = 505;
+            this.txtsubject.TabIndex = 0;
             // 
             // label12
             // 
@@ -161,7 +163,7 @@
             this.txtcomplaint.Multiline = true;
             this.txtcomplaint.Name = "txtcomplaint";
             this.txtcomplaint.Size = new System.Drawing.Size(251, 76);
-            this.txtcomplaint.TabIndex = 508;
+            this.txtcomplaint.TabIndex = 1;
             this.txtcomplaint.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
@@ -169,21 +171,21 @@
             this.button1.Location = new System.Drawing.Point(505, 481);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
-            this.button1.TabIndex = 509;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // labelHostelname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(156, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 513;
-            this.label3.Text = "Mumtaz Hall";
+            this.labelHostelname.AutoSize = true;
+            this.labelHostelname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHostelname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelHostelname.Location = new System.Drawing.Point(156, 48);
+            this.labelHostelname.Name = "labelHostelname";
+            this.labelHostelname.Size = new System.Drawing.Size(18, 16);
+            this.labelHostelname.TabIndex = 513;
+            this.labelHostelname.Text = "**";
             // 
             // label2
             // 
@@ -220,6 +222,7 @@
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.complaintsToolStripMenuItem.Text = "Complaints";
+            this.complaintsToolStripMenuItem.Click += new System.EventHandler(this.complaintsToolStripMenuItem_Click);
             // 
             // checkOutToolStripMenuItem
             // 
@@ -328,12 +331,36 @@
             this.label11.TabIndex = 523;
             this.label11.Text = "Room Number";
             // 
+            // labelStudentName
+            // 
+            this.labelStudentName.AutoSize = true;
+            this.labelStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStudentName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelStudentName.Location = new System.Drawing.Point(467, 48);
+            this.labelStudentName.Name = "labelStudentName";
+            this.labelStudentName.Size = new System.Drawing.Size(18, 16);
+            this.labelStudentName.TabIndex = 525;
+            this.labelStudentName.Text = "**";
+            // 
+            // labelRoomNumber
+            // 
+            this.labelRoomNumber.AutoSize = true;
+            this.labelRoomNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRoomNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelRoomNumber.Location = new System.Drawing.Point(846, 48);
+            this.labelRoomNumber.Name = "labelRoomNumber";
+            this.labelRoomNumber.Size = new System.Drawing.Size(18, 16);
+            this.labelRoomNumber.TabIndex = 526;
+            this.labelRoomNumber.Text = "**";
+            // 
             // Stcomplain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.labelRoomNumber);
+            this.Controls.Add(this.labelStudentName);
             this.Controls.Add(this.txtRoomNum);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtregNum);
@@ -344,7 +371,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelHostelname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button1);
@@ -384,7 +411,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtcomplaint;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelHostelname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem complaintsToolStripMenuItem;
@@ -400,5 +427,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtRoomNum;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelStudentName;
+        private System.Windows.Forms.Label labelRoomNumber;
     }
 }

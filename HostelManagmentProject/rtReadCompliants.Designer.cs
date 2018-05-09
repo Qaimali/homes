@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compliantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txthostel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.txtsubject = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +86,7 @@
             // 
             // complaintsToolStripMenuItem
             // 
-            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.complaintsToolStripMenuItem.Text = "Notication";
@@ -94,10 +94,18 @@
             // 
             // compliantsToolStripMenuItem
             // 
+            this.compliantsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.compliantsToolStripMenuItem.Name = "compliantsToolStripMenuItem";
             this.compliantsToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.compliantsToolStripMenuItem.Text = "Comlpaints";
             this.compliantsToolStripMenuItem.Click += new System.EventHandler(this.compliantsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
+            this.toolStripMenuItem1.Text = "Write Complaints";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // logoutToolStripMenuItem
             // 
@@ -174,13 +182,6 @@
             this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 521;
             this.label8.Text = "Name";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
-            this.toolStripMenuItem1.Text = "Write Complaints";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // rtReadCompliants
             // 

@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hostelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registeredStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,50 +49,6 @@
             this.menuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVRtcomplaints)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(508, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
-            this.label4.TabIndex = 506;
-            this.label4.Text = "MH_";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(156, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 505;
-            this.label3.Text = "Mumtaz Hall";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 504;
-            this.label2.Text = "Hostel Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(365, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 503;
-            this.label1.Text = "Hostel ID:";
             // 
             // menuStrip1
             // 
@@ -225,6 +177,7 @@
             // GVRtcomplaints
             // 
             this.GVRtcomplaints.AllowUserToOrderColumns = true;
+            this.GVRtcomplaints.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.GVRtcomplaints.BackgroundColor = System.Drawing.Color.White;
             this.GVRtcomplaints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVRtcomplaints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -244,6 +197,7 @@
             this.Column1.Name = "Column1";
             this.Column1.Text = "Click Here";
             this.Column1.UseColumnTextForLinkValue = true;
+            this.Column1.Width = 67;
             // 
             // Column2
             // 
@@ -251,6 +205,7 @@
             this.Column2.Name = "Column2";
             this.Column2.Text = "Click Here";
             this.Column2.UseColumnTextForLinkValue = true;
+            this.Column2.Width = 44;
             // 
             // Admincomplain
             // 
@@ -260,10 +215,6 @@
             this.ClientSize = new System.Drawing.Size(1038, 516);
             this.Controls.Add(this.GVRtcomplaints);
             this.Controls.Add(this.menuStrip3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "Admincomplain";
@@ -282,11 +233,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hostelApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registeredStudentsToolStripMenuItem;

@@ -73,7 +73,7 @@
             this.combolistofhostels.Location = new System.Drawing.Point(366, 167);
             this.combolistofhostels.Name = "combolistofhostels";
             this.combolistofhostels.Size = new System.Drawing.Size(121, 21);
-            this.combolistofhostels.TabIndex = 200;
+            this.combolistofhostels.TabIndex = 0;
             this.combolistofhostels.SelectedIndexChanged += new System.EventHandler(this.combolistofhostels_SelectedIndexChanged);
             // 
             // combolistofrooms
@@ -82,7 +82,7 @@
             this.combolistofrooms.Location = new System.Drawing.Point(366, 249);
             this.combolistofrooms.Name = "combolistofrooms";
             this.combolistofrooms.Size = new System.Drawing.Size(121, 21);
-            this.combolistofrooms.TabIndex = 201;
+            this.combolistofrooms.TabIndex = 1;
             this.combolistofrooms.SelectedIndexChanged += new System.EventHandler(this.combolistofrooms_SelectedIndexChanged);
             // 
             // cmdallot
@@ -90,7 +90,7 @@
             this.cmdallot.Location = new System.Drawing.Point(385, 354);
             this.cmdallot.Name = "cmdallot";
             this.cmdallot.Size = new System.Drawing.Size(75, 23);
-            this.cmdallot.TabIndex = 202;
+            this.cmdallot.TabIndex = 2;
             this.cmdallot.Text = "allot";
             this.cmdallot.UseVisualStyleBackColor = true;
             this.cmdallot.Click += new System.EventHandler(this.cmdallot_Click);
@@ -128,7 +128,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(176, 364);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 13);
-            this.linkLabel1.TabIndex = 206;
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Go to Previous page";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

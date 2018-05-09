@@ -41,6 +41,12 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvrtlist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvgatekeeperlist)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -50,22 +56,23 @@
             // 
             // txthostelname
             // 
-            this.txthostelname.Location = new System.Drawing.Point(279, 84);
+            this.txthostelname.Location = new System.Drawing.Point(258, 84);
             this.txthostelname.Name = "txthostelname";
-            this.txthostelname.Size = new System.Drawing.Size(100, 20);
+            this.txthostelname.Size = new System.Drawing.Size(121, 20);
             this.txthostelname.TabIndex = 0;
             // 
             // txtnuofrooms
             // 
-            this.txtnuofrooms.Location = new System.Drawing.Point(751, 84);
+            this.txtnuofrooms.Location = new System.Drawing.Point(730, 84);
             this.txtnuofrooms.Name = "txtnuofrooms";
-            this.txtnuofrooms.Size = new System.Drawing.Size(100, 20);
+            this.txtnuofrooms.Size = new System.Drawing.Size(121, 20);
             this.txtnuofrooms.TabIndex = 1;
             // 
             // gvrtlist
             // 
+            this.gvrtlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvrtlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvrtlist.Location = new System.Drawing.Point(62, 171);
+            this.gvrtlist.Location = new System.Drawing.Point(62, 220);
             this.gvrtlist.Name = "gvrtlist";
             this.gvrtlist.Size = new System.Drawing.Size(317, 150);
             this.gvrtlist.TabIndex = 2;
@@ -73,8 +80,9 @@
             // 
             // gvgatekeeperlist
             // 
+            this.gvgatekeeperlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvgatekeeperlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvgatekeeperlist.Location = new System.Drawing.Point(534, 171);
+            this.gvgatekeeperlist.Location = new System.Drawing.Point(534, 220);
             this.gvgatekeeperlist.Name = "gvgatekeeperlist";
             this.gvgatekeeperlist.Size = new System.Drawing.Size(317, 150);
             this.gvgatekeeperlist.TabIndex = 3;
@@ -123,7 +131,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(59, 416);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 13);
-            this.linkLabel1.TabIndex = 202;
+            this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Go to Previous page";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_2);
@@ -137,7 +145,7 @@
             this.menuStrip4.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem4});
-            this.menuStrip4.Location = new System.Drawing.Point(62, 146);
+            this.menuStrip4.Location = new System.Drawing.Point(62, 195);
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.Size = new System.Drawing.Size(317, 26);
             this.menuStrip4.TabIndex = 341;
@@ -160,7 +168,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(534, 146);
+            this.menuStrip1.Location = new System.Drawing.Point(534, 195);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(317, 26);
             this.menuStrip1.TabIndex = 342;
@@ -174,12 +182,72 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
             this.toolStripMenuItem1.Text = "Gate Keeper List";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(255, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 343;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(730, 122);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 344;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(59, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 345;
+            this.label1.Text = "Add New RT";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(531, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.TabIndex = 346;
+            this.label4.Text = "Add New GateKeeper";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(276, 156);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 347;
+            this.button1.Text = "Add RT";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(748, 156);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 348;
+            this.button2.Text = "Add GateKeeper";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // adhostelDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip4);
             this.Controls.Add(this.linkLabel1);
@@ -221,5 +289,11 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

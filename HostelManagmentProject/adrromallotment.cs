@@ -12,21 +12,21 @@ namespace HostelManagmentProject
 {
     public partial class adrromallotment : Form
     {
-        private localhost.Cstudent stud; 
+        private localhost.Cstudent studentO; 
         public adrromallotment()
         {
             InitializeComponent();
         }
-        public adrromallotment(localhost.Cstudent stu)
+        public adrromallotment(localhost.Cstudent studentP)
         {
             InitializeComponent();
-            stud = stu;
+            studentO = studentP;
         }
         private void adrromallotment_Load(object sender, EventArgs e)
         {
-            txtregistrationnumber.Text = stud.RegistrationNumber;
-            localhost.Service1 sc = new localhost.Service1();
-            foreach(localhost.Hostel hos in sc.showallhostel())
+            txtregistrationnumber.Text = studentO.RegistrationNumber;
+            localhost.Service1 service = new localhost.Service1();
+            foreach(localhost.Hostel hos in service.listOfAllHostel())
             {
                 combolistofhostels.Items.Add(hos.HostelName);
             }
@@ -34,9 +34,9 @@ namespace HostelManagmentProject
 
         private void combolistofhostels_SelectedIndexChanged(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 service = new localhost.Service1();
             
-            foreach (localhost.Hostel hos in sc.showallhostel())
+            foreach (localhost.Hostel hos in service.listOfAllHostel())
             {
                 if (combolistofhostels.GetItemText(combolistofhostels.SelectedItem) == hos.HostelName)
                 {
@@ -61,17 +61,32 @@ namespace HostelManagmentProject
 
         private void cmdallot_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            stud.HostelName = combolistofhostels.Text;
-            stud.RoomNumber = combolistofrooms.Text;
-            string c = "you are most wellcomed to HOMES Your hotel name is " + stud.HostelName + "& room number is " + stud.RoomNumber;
-            sc.allotstudent(stud);
-            sc.addnotificationforsearch(stud.Name, stud.RegistrationNumber, c);
-            sc.deletependingst(stud);
+            if (combolistofhostels.Text == "")
+            {
+                MessageBox.Show("Select Any Hostel");
+            }
+            else if (combolistofrooms.Text == "")
+            {
+                MessageBox.Show("Select Any Room");
+            }
+            else
+            {
+                localhost.Service1 service = new localhost.Service1();
+                studentO.HostelName = combolistofhostels.Text;
+                studentO.RoomNumber = combolistofrooms.Text;
+                string c = "you are most wellcomed to HOMES Your hotel name is " + studentO.HostelName + "& room number is " + studentO.RoomNumber;
+                service.allotStudent(studentO);
+                service.addnotificationforStudent(studentO.Name, studentO.RegistrationNumber, c);
+                service.deletePendingStudent(studentO);
+                MessageBox.Show("Room is Alloted to" + studentO.Name + "whose registration number is" + studentO.RegistrationNumber);
+                combolistofrooms.Text = "";
+                combolistofhostels.Text = "";
+                txtregistrationnumber.Text = "";
+            }
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            adpendingprofile adp = new adpendingprofile(stud);
+            adpendingprofile adp = new adpendingprofile(studentO);
             adp.Show();
             this.Hide();
         }

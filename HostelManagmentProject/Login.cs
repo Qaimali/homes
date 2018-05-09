@@ -61,16 +61,24 @@ namespace HostelManagmentProject
             bool notgk = true;
             bool hostelregistered = true;
             bool nothostelregistered = true;
-            sc.isGatekeeper(txtusername.Text, txtpassword.Text, out gatekeeper, out notgk);
-            sc.isRT(txtusername.Text, txtpassword.Text, out rt, out notrt);
-            sc.isAdmin(txtusername.Text, txtpassword.Text, out admin, out fail);
-            sc.isStudent(txtusername.Text, txtpassword.Text, out student, out notst);
+            sc.GatekeeperLogin(txtusername.Text, txtpassword.Text, out gatekeeper, out notgk);
+            sc.LoginRT(txtusername.Text, txtpassword.Text, out rt, out notrt);
+            sc.AdminLogin(txtusername.Text, txtpassword.Text, out admin, out fail);
+            sc.StudentLogin(txtusername.Text, txtpassword.Text, out student, out notst);
             sc.isHostelRegistered(txtusername.Text, out hostelregistered, out nothostelregistered);
             if (txtusername.Text == "" )
             {
                 MessageBox.Show("Enter User Name");
             }
-            else if (txtusername.Text != "" || txtpassword.Text != "")
+            else if (txtusername.Text == "")
+            {
+                MessageBox.Show("Enter your Password");
+            }
+            else if(txtusername.Text == "" && txtpassword.Text == "")
+            {
+                MessageBox.Show("Enter Username And Password");
+            }
+            else 
             {
                 if (admin)
                 {
@@ -114,6 +122,8 @@ namespace HostelManagmentProject
                 {
                     MessageBox.Show("welcocme in homes");
                 }
+                txtusername.Text = "";
+                txtpassword.Text = "";
             }
         }
 

@@ -16,6 +16,7 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+        
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -80,24 +81,38 @@ namespace HostelManagmentProject
 
         private void gk_StCheckin_Load(object sender, EventArgs e)
         {
-
+            localhost.Service1 sc = new localhost.Service1();
+            localhost.Cgatek keeper = sc.logged_Gatekeeper();
+            labelkeepername.Text = keeper.Name;
+            labelhostelname.Text = keeper.AllotedHostel;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            bool st = false;
-            bool sts2 = false;
-            
-            sc.student_checkin(txtstname.Text, txtstregno.Text, txtstroomnu.Text,datetimestcheckin.Text, out st,out sts2);
-            
-            if (st)
+            if (txtstname.Text == "" || txtstregno.Text == "" || txtstroomnu.Text == "")
             {
-                MessageBox.Show("submitted");
+                MessageBox.Show("Fill the Form Completly");
             }
-            else
+            else if (txtstname.Text != "" && txtstregno.Text != "" && txtstroomnu.Text != "")
             {
-                MessageBox.Show("inalid information");
+                localhost.Service1 service = new localhost.Service1();
+                bool st = false;
+                bool sts2 = false;
+
+                service.student_checkin(txtstname.Text, txtstregno.Text, txtstroomnu.Text, datetimestcheckin.Text, out st, out sts2);
+
+                if (st)
+                {
+                    MessageBox.Show("submitted");
+                }
+                else
+                {
+                    MessageBox.Show("invlid information");
+                }
+                txtstregno.Text = "";
+                txtstroomnu.Text = "";
+                txtstname.Text = "";
             }
         }
     }

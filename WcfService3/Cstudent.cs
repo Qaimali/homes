@@ -32,6 +32,8 @@ namespace WcfService3
         List<CDate> student_checkin =new List<CDate>();
         List<CDate> student_checkout=new List<CDate>();
         List<Cvisistor> visitors = new List<Cvisistor>();
+        
+        bool checkIn = false;
         [DataMember]
         public String Password
         {
@@ -271,6 +273,19 @@ namespace WcfService3
             set
             {
                 student_checkin = value;
+            }
+        }
+        [DataMember]
+        public bool CheckIn
+        {
+            get
+            {
+                return checkIn;
+            }
+
+            set
+            {
+                checkIn = value;
             }
         }
     }
