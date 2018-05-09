@@ -16,5 +16,32 @@ namespace HostelManagmentProject
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 sc = new localhost.Service1();
+            sc.complaintsfromRT(txtname.Text, txtsubject.Text, txtcomplaint.Text, txthostel.Text);
+        }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtNotifications rt = new rtNotifications();
+            rt.Show();
+            this.Hide();
+        }
+
+        private void compliantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtReceievedComplaints rt = new rtReceievedComplaints();
+            rt.Show();
+            this.Hide();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPage mp = new MainPage();
+            mp.Show();
+            this.Hide();
+        }
     }
 }

@@ -12,9 +12,22 @@ namespace HostelManagmentProject
 {
     public partial class rtReadCompliants : Form
     {
+        localhost.Complaints curr = new localhost.Complaints();
         public rtReadCompliants()
         {
             InitializeComponent();
+        }
+        public rtReadCompliants(localhost.Complaints c)
+        {
+            InitializeComponent();
+            curr = c;
+        }
+        private void rtReadCompliants_Load(object sender, EventArgs e)
+        {
+            txtname.Text = curr.Name;
+            txthostel.Text = curr.Residencyofperson;
+            txtsubject.Text = curr.ComplaintSubject;
+            txtcomplaint.Text = curr.TextCompliants;
         }
     }
 }

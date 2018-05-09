@@ -45,5 +45,11 @@ namespace HostelManagmentProject
             mp.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 sc = new localhost.Service1();
+            sc.complaintsfromstudent(txtname.Text, txtsubject.Text,txtcomplaint.Text, txthostel.Text);
+        }
     }
 }

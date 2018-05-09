@@ -9,7 +9,7 @@ namespace WcfService3
     {
         public static List<Cgatek> gatekList = new List<Cgatek>();
         public static ArrayList gatearr = new ArrayList();
-        public ArrayList gknames()
+        public static ArrayList gknames()
         {
             foreach (Cgatek cr in gatekDL.gatekList)
             {
@@ -17,15 +17,15 @@ namespace WcfService3
             }
             return gatearr;
         }
-        public void addgatekeeper(Cgatek gk)
+        public static void addgatekeeper(Cgatek gk)
         {
             gatekList.Add(gk);
         }
-        public void addNotification(Cnotification not)
+        public static void addNotification(Cnotification not)
         {
             myutilGateKeeper.logingatkeeper.Notificationlist.Add(not);
         }
-        public bool isgatekeeper(string username, string password)
+        public static bool isgatekeeper(string username, string password)
         {
             bool isfound = false;
             foreach (Cgatek cg in gatekDL.gatekList)
@@ -38,7 +38,7 @@ namespace WcfService3
             }
             return isfound;
         }
-        public bool resetGatePass(string u1, string q1, string a1, string p1)
+        public static bool resetGatePass(string u1, string q1, string a1, string p1)
         {
             bool isfound = false;
             foreach (Cgatek ad in gatekDL.gatekList)

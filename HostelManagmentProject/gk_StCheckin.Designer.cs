@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtstname = new System.Windows.Forms.TextBox();
+            this.txtstregno = new System.Windows.Forms.TextBox();
+            this.txtstroomnu = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,33 +48,34 @@
             this.visitorCheckInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitorCheckOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.studentVisitorDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.datetimestcheckin = new System.Windows.Forms.DateTimePicker();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox6
+            // txtstname
             // 
-            this.textBox6.Location = new System.Drawing.Point(543, 206);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(137, 20);
-            this.textBox6.TabIndex = 550;
+            this.txtstname.Location = new System.Drawing.Point(543, 206);
+            this.txtstname.Name = "txtstname";
+            this.txtstname.Size = new System.Drawing.Size(200, 20);
+            this.txtstname.TabIndex = 550;
             // 
-            // textBox5
+            // txtstregno
             // 
-            this.textBox5.Location = new System.Drawing.Point(543, 250);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 20);
-            this.textBox5.TabIndex = 549;
+            this.txtstregno.Location = new System.Drawing.Point(543, 250);
+            this.txtstregno.Name = "txtstregno";
+            this.txtstregno.Size = new System.Drawing.Size(200, 20);
+            this.txtstregno.TabIndex = 549;
             // 
-            // textBox4
+            // txtstroomnu
             // 
-            this.textBox4.Location = new System.Drawing.Point(543, 290);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 20);
-            this.textBox4.TabIndex = 548;
+            this.txtstroomnu.Location = new System.Drawing.Point(543, 290);
+            this.txtstroomnu.Name = "txtstroomnu";
+            this.txtstroomnu.Size = new System.Drawing.Size(200, 20);
+            this.txtstroomnu.TabIndex = 548;
             // 
             // label12
             // 
@@ -115,13 +115,7 @@
             this.button1.TabIndex = 553;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(543, 339);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 552;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 
@@ -255,6 +249,13 @@
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
             this.studentDetailToolStripMenuItem.Click += new System.EventHandler(this.studentDetailToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
+            this.toolStripMenuItem1.Text = "Notifications";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // studentVisitorDetailToolStripMenuItem
             // 
             this.studentVisitorDetailToolStripMenuItem.Name = "studentVisitorDetailToolStripMenuItem";
@@ -269,12 +270,12 @@
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // datetimestcheckin
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
-            this.toolStripMenuItem1.Text = "Notifications";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.datetimestcheckin.Location = new System.Drawing.Point(543, 339);
+            this.datetimestcheckin.Name = "datetimestcheckin";
+            this.datetimestcheckin.Size = new System.Drawing.Size(200, 20);
+            this.datetimestcheckin.TabIndex = 560;
             // 
             // gk_StCheckin
             // 
@@ -282,6 +283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.datetimestcheckin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -289,11 +291,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtstname);
+            this.Controls.Add(this.txtstregno);
+            this.Controls.Add(this.txtstroomnu);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
@@ -311,14 +312,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtstname;
+        private System.Windows.Forms.TextBox txtstregno;
+        private System.Windows.Forms.TextBox txtstroomnu;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -335,5 +335,6 @@
         private System.Windows.Forms.ToolStripMenuItem studentVisitorDetailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.DateTimePicker datetimestcheckin;
     }
 }

@@ -38,11 +38,11 @@
             this.visitorCheckInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitorCheckOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.studentVisitorDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.GVgkNotifications = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -151,6 +151,12 @@
             this.studentDetailToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
+            this.toolStripMenuItem1.Text = "Notifications";
+            // 
             // studentVisitorDetailToolStripMenuItem
             // 
             this.studentVisitorDetailToolStripMenuItem.Name = "studentVisitorDetailToolStripMenuItem";
@@ -183,14 +189,9 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(79, 20);
             this.toolStripMenuItem2.Text = "GateKeeper";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
-            this.toolStripMenuItem1.Text = "Notifications";
-            // 
             // GVgkNotifications
             // 
+            this.GVgkNotifications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GVgkNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVgkNotifications.Location = new System.Drawing.Point(194, 140);
             this.GVgkNotifications.Name = "GVgkNotifications";

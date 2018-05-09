@@ -74,5 +74,31 @@ namespace HostelManagmentProject
             gknot.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+            localhost.Service1 sc = new localhost.Service1();
+            foreach(localhost.Cstudent cs in sc.allotedStudentsforhostel())
+            {
+                if(cs.Name==txtStiname.Text && cs.RegistrationNumber == txtstregno.Text && cs.RoomNumber == txtstroomnu.Text)
+                {
+                    BindingSource s = new BindingSource();
+                    textBox1.Text = cs.Student_checkin[0];
+                    s.DataSource = cs.Student_checkin;
+                    gvvheckin.DataSource = s;
+                    
+                    BindingSource si = new BindingSource();
+                    si.DataSource = cs.Student_checkout;
+                    
+                    gvcheckout.DataSource = si;
+                }
+            }
+        }
+
+        private void gvcheckout_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

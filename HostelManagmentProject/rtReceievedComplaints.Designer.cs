@@ -34,8 +34,14 @@
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compliantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txthostelName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.GVRtcomplaints = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVRtcomplaints)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -67,6 +73,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.complaintsToolStripMenuItem,
             this.compliantsToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 57);
             this.menuStrip1.Name = "menuStrip1";
@@ -93,20 +100,72 @@
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
+            // txthostelName
+            // 
+            this.txthostelName.Location = new System.Drawing.Point(184, 27);
+            this.txthostelName.Name = "txthostelName";
+            this.txthostelName.Size = new System.Drawing.Size(159, 20);
+            this.txthostelName.TabIndex = 529;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(36, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.TabIndex = 528;
+            this.label2.Text = "Hostel Name:";
+            // 
+            // GVRtcomplaints
+            // 
+            this.GVRtcomplaints.AllowUserToOrderColumns = true;
+            this.GVRtcomplaints.BackgroundColor = System.Drawing.Color.White;
+            this.GVRtcomplaints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVRtcomplaints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.GVRtcomplaints.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GVRtcomplaints.Location = new System.Drawing.Point(151, 112);
+            this.GVRtcomplaints.Name = "GVRtcomplaints";
+            this.GVRtcomplaints.RowHeadersWidth = 141;
+            this.GVRtcomplaints.Size = new System.Drawing.Size(744, 364);
+            this.GVRtcomplaints.TabIndex = 530;
+            this.GVRtcomplaints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVRtcomplaints_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "See Details";
+            this.Column1.Name = "Column1";
+            this.Column1.Text = "Click Here";
+            this.Column1.UseColumnTextForLinkValue = true;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
+            this.toolStripMenuItem1.Text = "Write Complaints";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // rtReceievedComplaints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.GVRtcomplaints);
+            this.Controls.Add(this.txthostelName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "rtReceievedComplaints";
             this.Text = "rtReceievedComplaints";
+            this.Load += new System.EventHandler(this.rtReceievedComplaints_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVRtcomplaints)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +179,10 @@
         private System.Windows.Forms.ToolStripMenuItem complaintsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem compliantsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.TextBox txthostelName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView GVRtcomplaints;
+        private System.Windows.Forms.DataGridViewLinkColumn Column1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

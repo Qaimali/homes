@@ -20,9 +20,12 @@ namespace WcfService3
             st.Password = password;
             st.Question = question;
             st.Answer = answer;
-            studentDL std = new studentDL();
-            std.addstudent(st);
+            Cnotification not = new Cnotification();
+            not.Notification = "Dear Student fill the registration form to get allotment in HOMES" ;
+            st.notificationaddtion(not);
+            studentDL.addstudent(st);
         }
+
         public void reggk(string username, string password, string question, string answer)
         {
             Cgatek gk = new Cgatek();
@@ -30,9 +33,9 @@ namespace WcfService3
             gk.Password = password;
             gk.Question = question;
             gk.Answer = answer;
-            gatekDL gkl = new gatekDL();
-            gkl.addgatekeeper(gk);    
+            gatekDL.addgatekeeper(gk);
         }
+
         public void regrt(string username, string password, string question, string answer)
         {
             CRT rt = new CRT();
@@ -40,9 +43,9 @@ namespace WcfService3
             rt.Password = password;
             rt.Question = question;
             rt.Answer = answer;
-            rtDL rtd = new rtDL();
-            rtd.addRT(rt);  
+            rtDL.addRT(rt);
         }
+
         public void regadmin(string username, string password, string question, string answer)
         {
             Cadmin ad = new Cadmin();
@@ -50,123 +53,124 @@ namespace WcfService3
             ad.Password = password;
             ad.Question = question;
             ad.Answer = answer;
-            adminDL adl = new adminDL();
-            adl.addadmin(ad);
+            adminDL.addadmin(ad);
         }
+
         public bool isAdmin(string username, string password)
         {
             adminDL adm = new adminDL();
-            if (adm.isadmin(username, password))
+            if (adminDL.isadmin(username, password))
             {
                 return true;
             }
             return false;
         }
+
         public bool isStudent(string username, string password)
         {
-            studentDL std = new studentDL();
-            if (std.isstudent(username, password))
+            
+            if (studentDL.isstudent(username, password))
             {
-                Cnotification not = new Cnotification();
-                not.Notification = "Dear Student fill the registration form to get allotment in HOMES"+myutilStudent.loginstudents.Userid;
-                std.addNotification(not);
+                
                 return true;
             }
             return false;
 
         }
+
         public bool isRT(string username, string password)
         {
-            rtDL rt = new rtDL();
-            if (rt.isRT(username, password))
+           
+            if (rtDL.isRT(username, password))
             {
                 Cnotification not = new Cnotification();
-                not.Notification = "You are registered in 'HOMES'.You will be notified if there w"+myutilRT.loginRT.Name;
-                rt.addNotification(not);
+                not.Notification = "You are registered in 'HOMES'.You will be notified if there w" + myutilRT.loginRT.Name;
+                rtDL.addNotification(not);
                 return true;
             }
             return false;
 
         }
+
         public bool isGatekeeper(string username, string password)
         {
-            gatekDL gk = new gatekDL();
-            if (gk.isgatekeeper(username, password))
+            
+            if (gatekDL.isgatekeeper(username, password))
             {
                 Cnotification not = new Cnotification();
-                not.Notification = "You are registered in 'HOMES'.Y" ;
-                gk.addNotification(not);
+                not.Notification = "You are registered in 'HOMES'.Y";
+                gatekDL.addNotification(not);
                 return true;
             }
             return false;
         }
-        public bool canresetAdmin(string n1, string q1, string a1, string pass) 
+
+        public bool canresetAdmin(string n1, string q1, string a1, string pass)
         {
-            adminDL ad = new adminDL();
-            if(ad.resetadminpass(n1,q1,a1,pass))
+            
+            if (adminDL.resetadminpass(n1, q1, a1, pass))
             {
                 return true;
             }
             return false;
         }
-        public bool canresetgatekeeper(string n1, string q1, string a1, string pass) 
+
+        public bool canresetgatekeeper(string n1, string q1, string a1, string pass)
         {
-            gatekDL gk = new gatekDL();
-            if(gk.resetGatePass(n1,q1,a1,pass))
+            
+            if (gatekDL.resetGatePass(n1, q1, a1, pass))
             {
                 return true;
             }
             return false;
         }
-        public bool canresetstudent(string n1, string q1, string a1, string pass) 
+        public bool canresetstudent(string n1, string q1, string a1, string pass)
         {
-            studentDL st = new studentDL();
-            if (st.resetStudentPass(n1, q1, a1,pass)) 
+           
+            if (studentDL.resetStudentPass(n1, q1, a1, pass))
             {
                 return true;
             }
             return false;
         }
-        public bool canresetrt(string n1, string q1, string a1, string pass) 
+        public bool canresetrt(string n1, string q1, string a1, string pass)
         {
-            rtDL rt = new rtDL();
-            if(rt.resetRtPass(n1,q1,a1,pass))
+            
+            if (rtDL.resetRtPass(n1, q1, a1, pass))
             {
                 return true;
             }
             return false;
         }
-        public List<Cnotification> mutateStNotification() 
+        public List<Cnotification> mutateStNotification()
         {
             return myutilStudent.loginstudents.Notificationlist;
         }
-        public string loggedstudent() 
+        public Cstudent loggedstudent()
         {
-            return myutilStudent.loginstudents.Userid;
+            return myutilStudent.loginstudents;
         }
-        public string loggedRt() 
+        public CRT loggedRt()
         {
-            return myutilRT.loginRT.Name;
+            return myutilRT.loginRT;
         }
-        public List<Cnotification> mutateGKNotifications() 
+        public List<Cnotification> mutateGKNotifications()
         {
             return myutilGateKeeper.logingatkeeper.Notificationlist;
-            
+
         }
-        public List<Cnotification> mutateRtNotifications() 
+        public List<Cnotification> mutateRtNotifications()
         {
             return myutilRT.loginRT.Notificationlist;
         }
-        public string logged_Gatekeeper() 
+        public Cgatek logged_Gatekeeper()
         {
-            return myutilGateKeeper.logingatkeeper.Name;
+            return myutilGateKeeper.logingatkeeper;
         }
-        public void addhostel(string hostname, int  roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2)
+        public void addhostel(string hostname, int roomcapcity, int nuofrooms, string r1, string r2, string g1, string g2)
         {
             Hostel g = new Hostel();
             g.HostelName = hostname;
-            hostelDL hdl = new hostelDL();
-            
             for (int i = 1; i <= nuofrooms; i++)
             {
                 room r = new room();
@@ -181,7 +185,9 @@ namespace WcfService3
                 {
                     Cnotification not = new Cnotification();
                     not.Notification = "Mr.you are alloted to take your positions";
+                    cr.AllotedHostel = g.HostelName;
                     cr.Notificationlist.Add(not);
+                    rtDL.allotedtRT.Add(cr);
                     g.RtList.Add(cr);
                 }
             }
@@ -192,6 +198,8 @@ namespace WcfService3
                     Cnotification not = new Cnotification();
                     not.Notification = "Mr.you are alloted to take your positions";
                     cr.Notificationlist.Add(not);
+                    cr.AllotedHostel = g.HostelName;
+                    rtDL.allotedtRT.Add(cr);
                     g.RtList.Add(cr);
                 }
             }
@@ -216,28 +224,149 @@ namespace WcfService3
 
                 }
             }
-            hdl.addhostel(g);
+            hostelDL.addhostel(g);
         }
-        public ArrayList  rtnames() 
+
+        public ArrayList rtnames()
         {
-            rtDL n = new rtDL();
-            return n.rtnames();
+            return rtDL.rtnames();
         }
-        public Hostel hostels(int index) 
+
+        public Hostel hostels(int index)
         {
             return hostelDL.hostellist[index];
         }
+
         public ArrayList gknames()
         {
-            gatekDL g = new gatekDL();
-            return g.gknames();
+    
+            return gatekDL.gknames();
         }
+
         public List<Hostel> showallhostel()
         {
             return hostelDL.hostellist;
         }
-        
-    }
-   
+
+        public void registerforhostel(Cstudent s)
+        { 
+            studentDL.getHostelRegistration(s);
+        }
+
+        public bool isHostelRegistered(String name)
+        {
+            foreach (Cstudent stu in studentDL.hostelRegistration)
+            {
+                if (stu.Userid == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public List<Cstudent> registeredstudent()
+        {
+            return studentDL.hostelRegistration;
+        }
+
+        public Cstudent getregisteredstudent(int index)
+        {
+            return studentDL.hostelRegistration[index];
+        }
+
+        public List<Cstudent> allotedStudentsforhostel()
+        {
+            return studentDL.allotedstudents;
+        }
+
+        public void allotstudent(Cstudent std)
+        {
+            studentDL.allotment(std);
+        }
+
+        public void addnotificationforsearch(string name, string regno, string not)
+        {
+            Cnotification cs = new Cnotification();
+            cs.Notification = not;
+            foreach (Cstudent c in studentDL.allotedstudents)
+            {
+                if (c.Name == name && c.RegistrationNumber == regno)
+                {
+                    c.notificationaddtion(cs);
+                }
+            }
+        }
+
+        public void deletependingst(Cstudent st)
+        {
+            studentDL.hostelRegistration.Remove(st);
+        }
+
+        public bool student_checkin(string name, string regNo, string roomNo, String checkin_date)
+        {
+            
+            if (studentDL.checkInS(name, regNo, roomNo, checkin_date))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool student_checkOut(string name, string regNo, string roomNo, DateTime checkOut_date)
+        {
+            
+            if (studentDL.checkOutS(name, regNo, roomNo, checkOut_date))
+            {
+                return true;
+            }
+            return false;
+        }
+        public Cstudent indexForAllottedStudent(int index)
+        {
+            return studentDL.allotedstudents[index];
+        }
+        public bool visitor_checkIn(string host, string hostregno, string visitor_name, string visitor_cnic, DateTime checkin, string room_number)
+        {
+            
+            if (studentDL.CheckInVisitor(host, hostregno, visitor_name,room_number, checkin, visitor_cnic))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool visitor_checkOut(string host, string hostregno, string visitor_name, string visitor_cnic, DateTime checkout, string room_number)
+        {
+            
+            if (studentDL.CheckOutVisitor(host, hostregno, visitor_name,room_number, checkout, visitor_cnic))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public List<CRT> allotedRT()
+        {
+            return rtDL.allotedtRT;
+        }
+
+        public void complaintsfromstudent(string n1, string s1, string t1, string r1)
+        {
+            rtDL.addomplaintforRT(n1, s1, t1, r1);
+        }
+        public void complaintsfromRT(string n1, string s1, string t1, string r1)
+        {
+            adminDL.addcomplaintsforadmin(n1, s1, t1, r1);
+        }
+
+        public List<Complaints> getComplainFromRt()
+        {
+            return adminDL.complaintsForAdmin;
+        }
+
+        public Complaints getIndexedComplaintsFromRt(int index)
+        {
+            return adminDL.complaintsForAdmin[index];
+        } 
+    }   
 }
 

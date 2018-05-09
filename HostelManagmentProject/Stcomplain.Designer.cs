@@ -33,23 +33,25 @@
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.messInformationSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txtsubject = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcomplaint = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txthostel = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -105,29 +107,29 @@
             this.messInformationSystemToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.messInformationSystemToolStripMenuItem.Text = "Complaint";
             // 
-            // textBox6
+            // txtname
             // 
-            this.textBox6.Location = new System.Drawing.Point(505, 163);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(137, 20);
-            this.textBox6.TabIndex = 506;
+            this.txtname.Location = new System.Drawing.Point(505, 163);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(137, 20);
+            this.txtname.TabIndex = 506;
             // 
-            // textBox5
+            // txtsubject
             // 
-            this.textBox5.Location = new System.Drawing.Point(505, 241);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 20);
-            this.textBox5.TabIndex = 505;
+            this.txtsubject.Location = new System.Drawing.Point(505, 215);
+            this.txtsubject.Name = "txtsubject";
+            this.txtsubject.Size = new System.Drawing.Size(137, 20);
+            this.txtsubject.TabIndex = 505;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(320, 245);
+            this.label12.Location = new System.Drawing.Point(320, 219);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 16);
+            this.label12.Size = new System.Drawing.Size(53, 16);
             this.label12.TabIndex = 504;
-            this.label12.Text = "Hostetl Id";
+            this.label12.Text = "Subject";
             // 
             // label8
             // 
@@ -149,14 +151,14 @@
             this.label1.TabIndex = 507;
             this.label1.Text = "Complaint";
             // 
-            // textBox1
+            // txtcomplaint
             // 
-            this.textBox1.Location = new System.Drawing.Point(505, 300);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 115);
-            this.textBox1.TabIndex = 508;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtcomplaint.Location = new System.Drawing.Point(505, 300);
+            this.txtcomplaint.Multiline = true;
+            this.txtcomplaint.Name = "txtcomplaint";
+            this.txtcomplaint.Size = new System.Drawing.Size(251, 115);
+            this.txtcomplaint.TabIndex = 508;
+            this.txtcomplaint.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -166,6 +168,7 @@
             this.button1.TabIndex = 509;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -221,6 +224,13 @@
             this.checkOutToolStripMenuItem.Text = "Notication";
             this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -263,12 +273,22 @@
             this.label10.TabIndex = 517;
             this.label10.Text = "Room No:";
             // 
-            // logoutToolStripMenuItem
+            // txthostel
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            this.txthostel.Location = new System.Drawing.Point(505, 253);
+            this.txthostel.Name = "txthostel";
+            this.txthostel.Size = new System.Drawing.Size(137, 20);
+            this.txthostel.TabIndex = 520;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(320, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.TabIndex = 519;
+            this.label4.Text = "Hostel";
             // 
             // Stcomplain
             // 
@@ -276,6 +296,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.txthostel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
@@ -284,10 +306,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcomplaint);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.txtsubject);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.menuStrip3);
@@ -313,12 +335,12 @@
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem messInformationSystemToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox txtsubject;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcomplaint;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -330,5 +352,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.TextBox txthostel;
+        private System.Windows.Forms.Label label4;
     }
 }

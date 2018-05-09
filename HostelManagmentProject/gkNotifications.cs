@@ -51,8 +51,9 @@ namespace HostelManagmentProject
             BindingSource s = new BindingSource();
             s.DataSource = sc.mutateGKNotifications();
             GVgkNotifications.DataSource = s;
-            labelgkname.Text = sc.logged_Gatekeeper();
-
+            localhost.Cgatek cg = new localhost.Cgatek();
+            cg = sc.logged_Gatekeeper();
+            labelgkname.Text = cg.Name;
         }
         private void visitorCheckOutToolStripMenuItem_Click(object sender, EventArgs e)
         {

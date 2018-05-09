@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -74,8 +75,10 @@
     <Compile Include="Cadmin.cs" />
     <Compile Include="cgatekeeper.cs" />
     <Compile Include="Cnotification.cs" />
+    <Compile Include="Complaints.cs" />
     <Compile Include="CRT.cs" />
     <Compile Include="Cstudent.cs" />
+    <Compile Include="Cvisistor.cs" />
     <Compile Include="gateDL.cs" />
     <Compile Include="Hostel.cs" />
     <Compile Include="hostelDL.cs" />

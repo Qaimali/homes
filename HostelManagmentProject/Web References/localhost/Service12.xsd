@@ -210,7 +210,7 @@
   <xs:element name="loggedstudentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="loggedstudentResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="loggedstudentResult" nillable="true" type="q2:Cstudent" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -222,7 +222,7 @@
   <xs:element name="mutateRtNotificationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="mutateRtNotificationsResult" nillable="true" type="q2:ArrayOfCnotification" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="mutateRtNotificationsResult" nillable="true" type="q3:ArrayOfCnotification" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -234,7 +234,7 @@
   <xs:element name="loggedRtResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="loggedRtResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="loggedRtResult" nillable="true" type="q4:CRT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -246,7 +246,7 @@
   <xs:element name="mutateGKNotificationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="mutateGKNotificationsResult" nillable="true" type="q3:ArrayOfCnotification" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="mutateGKNotificationsResult" nillable="true" type="q5:ArrayOfCnotification" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -258,7 +258,7 @@
   <xs:element name="logged_GatekeeperResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="logged_GatekeeperResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="logged_GatekeeperResult" nillable="true" type="q6:Cgatek" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -288,7 +288,7 @@
   <xs:element name="rtnamesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rtnamesResult" nillable="true" type="q4:ArrayOfanyType" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rtnamesResult" nillable="true" type="q7:ArrayOfanyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -302,7 +302,7 @@
   <xs:element name="hostelsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="hostelsResult" nillable="true" type="q5:Hostel" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="hostelsResult" nillable="true" type="q8:Hostel" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -314,7 +314,7 @@
   <xs:element name="gknamesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="gknamesResult" nillable="true" type="q6:ArrayOfanyType" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="gknamesResult" nillable="true" type="q9:ArrayOfanyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -326,7 +326,263 @@
   <xs:element name="showallhostelResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="showallhostelResult" nillable="true" type="q7:ArrayOfHostel" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="showallhostelResult" nillable="true" type="q10:ArrayOfHostel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerforhostel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="s" nillable="true" type="q11:Cstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerforhostelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isHostelRegistered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isHostelRegisteredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isHostelRegisteredResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registeredstudent">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registeredstudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="registeredstudentResult" nillable="true" type="q12:ArrayOfCstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getregisteredstudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="index" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getregisteredstudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="getregisteredstudentResult" nillable="true" type="q13:Cstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="allotedStudentsforhostel">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="allotedStudentsforhostelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="allotedStudentsforhostelResult" nillable="true" type="q14:ArrayOfCstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indexForAllottedStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="index" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indexForAllottedStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="indexForAllottedStudentResult" nillable="true" type="q15:Cstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="allotstudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="std" nillable="true" type="q16:Cstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="allotstudentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addnotificationforsearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="not" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addnotificationforsearchResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletependingst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="st" nillable="true" type="q17:Cstudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletependingstResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="student_checkin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roomNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkin_date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="student_checkinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="student_checkinResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="student_checkOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roomNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkOut_date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="student_checkOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="student_checkOutResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="visitor_checkIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="host" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hostregno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visitor_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visitor_cnic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="room_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="visitor_checkInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="visitor_checkInResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="visitor_checkOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="host" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hostregno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visitor_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visitor_cnic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkout" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="room_number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="visitor_checkOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="visitor_checkOutResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="allotedRT">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="allotedRTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="allotedRTResult" nillable="true" type="q18:ArrayOfCRT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="complaintsfromstudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="t1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="r1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="complaintsfromstudentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="complaintsfromRT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="t1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="r1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="complaintsfromRTResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getComplainFromRt">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getComplainFromRtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="getComplainFromRtResult" nillable="true" type="q19:ArrayOfComplaints" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getIndexedComplaintsFromRt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="index" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getIndexedComplaintsFromRtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="getIndexedComplaintsFromRtResult" nillable="true" type="q20:Complaints" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

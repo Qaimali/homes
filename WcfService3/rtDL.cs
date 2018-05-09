@@ -8,18 +8,22 @@ namespace WcfService3
     public class rtDL
     {
         public static List<CRT> rtlist = new List<CRT>();
-        
-        public void addRT(CRT rt)
+
+        public static List<CRT> allotedtRT = new List<CRT>();
+
+        public static void addRT(CRT rt)
         {
             rtlist.Add(rt);
         }
+
         public static ArrayList arr = new ArrayList();
-        public void addNotification(Cnotification not)
+
+        public  static void addNotification(Cnotification not)
         {
             myutilRT.loginRT.Notificationlist.Add(not);
         }
 
-        public ArrayList rtnames() 
+        public static ArrayList rtnames() 
         {
             foreach (CRT cr in rtDL.rtlist) 
             {
@@ -27,7 +31,8 @@ namespace WcfService3
             }
             return arr;
         }
-        public bool isRT(string username, string password)
+
+        public static bool isRT(string username, string password)
         {
             bool isfound = false;
             foreach (CRT cr in rtDL.rtlist)
@@ -40,7 +45,8 @@ namespace WcfService3
             }
             return isfound;
         }
-        public bool resetRtPass(string u1, string q1, string a1, string p1)
+
+        public static bool resetRtPass(string u1, string q1, string a1, string p1)
         {
             bool isfound = false;
             foreach (CRT ad in rtDL.rtlist)
@@ -52,6 +58,22 @@ namespace WcfService3
                 }
             }
             return isfound;
+        }
+
+        public static void addomplaintforRT(string name1,string subject1,string text1,string resident)
+        {
+            Complaints com = new Complaints();
+            com.ComplaintSubject = subject1;
+            com.TextCompliants = text1;
+            com.Residencyofperson = resident;
+            com.Name = name1;
+            foreach(CRT rt in rtDL.allotedtRT)
+            {
+                if (rt.AllotedHostel == resident)
+                {
+                    rt.ComplaintsforRT.Add(com);
+                }                
+            }
         }
     }
 }

@@ -81,7 +81,7 @@ namespace HostelManagmentProject
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            showhostels s = new showhostels();
+            adshowhostels s = new adshowhostels();
             s.Show();
             this.Hide();
         }
@@ -94,6 +94,39 @@ namespace HostelManagmentProject
         private void combo2ndGK_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt2ndGK.Text = combo2ndGK.GetItemText(combo2ndGK.SelectedItem);
+        }
+
+        private void registeredStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdregisteredStudents a = new AdregisteredStudents();
+            this.Hide();
+            a.Show();
+        }
+
+        private void pendingStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Adpendingrequest adp = new Adpendingrequest();
+            adp.Show();
+            this.Hide();
+        }
+
+        private void hostelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdregisteredStudents adrs = new AdregisteredStudents();
+            adrs.Show();
+            this.Hide();
+        }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admincomplain a = new Admincomplain();
+            a.Show();
+            this.Hide();
+        }
+
+        private void studentsVistorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,5 +21,12 @@ namespace HostelManagmentProject
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Stnotification stn = new Stnotification();
+            stn.Show();
+            this.Hide();
+        }
     }
 }

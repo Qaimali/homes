@@ -59,10 +59,13 @@ namespace HostelManagmentProject
             bool notrt = true;
             bool gatekeeper = true;
             bool notgk = true;
+            bool hostelregistered = true;
+            bool nothostelregistered = true;
             sc.isGatekeeper(txtusername.Text, txtpassword.Text, out gatekeeper, out notgk);
             sc.isRT(txtusername.Text, txtpassword.Text, out rt, out notrt);
             sc.isAdmin(txtusername.Text, txtpassword.Text, out admin, out fail);
             sc.isStudent(txtusername.Text, txtpassword.Text, out student, out notst);
+            sc.isHostelRegistered(txtusername.Text, out hostelregistered, out nothostelregistered);
             if (admin)
             {
                 MessageBox.Show("welcocme admin");
@@ -72,10 +75,20 @@ namespace HostelManagmentProject
             }
             else if (student)
             {
-                MessageBox.Show("welcocme student");
-                Stnotification stn = new Stnotification();
-                stn.Show();
-                this.Hide();
+                if (hostelregistered)
+                {
+                    MessageBox.Show("welcocme student");
+                    Stnotification stn = new Stnotification();
+                    stn.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Stregistration str = new Stregistration();
+                    str.Show();
+                    this.Hide();
+
+                }
             }
             else if (rt)
             {

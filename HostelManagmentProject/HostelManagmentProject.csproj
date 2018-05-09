@@ -60,6 +60,30 @@
     <Compile Include="AddHostel.Designer.cs">
       <DependentUpon>AddHostel.cs</DependentUpon>
     </Compile>
+    <Compile Include="adpendingprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adpendingprofile.Designer.cs">
+      <DependentUpon>adpendingprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adReadComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adReadComplaints.Designer.cs">
+      <DependentUpon>adReadComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adRegisteredStProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adRegisteredStProfile.Designer.cs">
+      <DependentUpon>adRegisteredStProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adrromallotment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adrromallotment.Designer.cs">
+      <DependentUpon>adrromallotment.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotpas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +132,11 @@
     <Compile Include="gk_StVisitorsDetails.Designer.cs">
       <DependentUpon>gk_StVisitorsDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="hostelDetail.cs">
+    <Compile Include="adhostelDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hostelDetail.Designer.cs">
-      <DependentUpon>hostelDetail.cs</DependentUpon>
+    <Compile Include="adhostelDetail.Designer.cs">
+      <DependentUpon>adhostelDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -156,11 +180,11 @@
     <Compile Include="rtWriteComplaints.Designer.cs">
       <DependentUpon>rtWriteComplaints.cs</DependentUpon>
     </Compile>
-    <Compile Include="showhostels.cs">
+    <Compile Include="adshowhostels.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="showhostels.Designer.cs">
-      <DependentUpon>showhostels.cs</DependentUpon>
+    <Compile Include="adshowhostels.Designer.cs">
+      <DependentUpon>adshowhostels.cs</DependentUpon>
     </Compile>
     <Compile Include="Stnotification.cs">
       <SubType>Form</SubType>
@@ -185,12 +209,6 @@
     </Compile>
     <Compile Include="Admincomplain.Designer.cs">
       <DependentUpon>Admincomplain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Adcomplaintsread.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Adcomplaintsread.Designer.cs">
-      <DependentUpon>Adcomplaintsread.cs</DependentUpon>
     </Compile>
     <Compile Include="StFormSubmission.cs">
       <SubType>Form</SubType>
@@ -220,6 +238,18 @@
     <EmbeddedResource Include="AddHostel.resx">
       <DependentUpon>AddHostel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adpendingprofile.resx">
+      <DependentUpon>adpendingprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adReadComplaints.resx">
+      <DependentUpon>adReadComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adRegisteredStProfile.resx">
+      <DependentUpon>adRegisteredStProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adrromallotment.resx">
+      <DependentUpon>adrromallotment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forgotpas.resx">
       <DependentUpon>forgotpas.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,8 +274,8 @@
     <EmbeddedResource Include="gk_StVisitorsDetails.resx">
       <DependentUpon>gk_StVisitorsDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hostelDetail.resx">
-      <DependentUpon>hostelDetail.cs</DependentUpon>
+    <EmbeddedResource Include="adhostelDetail.resx">
+      <DependentUpon>adhostelDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -268,8 +298,8 @@
     <EmbeddedResource Include="rtWriteComplaints.resx">
       <DependentUpon>rtWriteComplaints.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showhostels.resx">
-      <DependentUpon>showhostels.cs</DependentUpon>
+    <EmbeddedResource Include="adshowhostels.resx">
+      <DependentUpon>adshowhostels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stnotification.resx">
       <DependentUpon>Stnotification.cs</DependentUpon>
@@ -282,9 +312,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admincomplain.resx">
       <DependentUpon>Admincomplain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Adcomplaintsread.resx">
-      <DependentUpon>Adcomplaintsread.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StFormSubmission.resx">
       <DependentUpon>StFormSubmission.cs</DependentUpon>
@@ -314,7 +341,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\localhost\Cgatek.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\localhost\Cnotification.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\localhost\Complaints.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\localhost\CRT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\localhost\Cstudent.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\localhost\Hostel.datasource">

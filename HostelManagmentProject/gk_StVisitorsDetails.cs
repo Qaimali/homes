@@ -69,5 +69,25 @@ namespace HostelManagmentProject
             gknot.Show();
             this.Hide();
         }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 sc = new localhost.Service1();
+            foreach (localhost.Cstudent cs in sc.allotedStudentsforhostel())
+            {
+                if (cs.Name == txtStiname.Text && cs.RegistrationNumber == txtstregno.Text && cs.RoomNumber == txtstroomnu.Text)
+                {
+                    BindingSource s = new BindingSource();
+                    s.DataSource = cs.Visitors;
+                    gvvheckin.DataSource = s;
+                    gvvheckin.Columns[0].DefaultCellStyle.Format = "MM/dd/yyyy";
+                }
+            }
+        }
     }
 }

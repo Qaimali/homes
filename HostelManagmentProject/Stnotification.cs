@@ -44,10 +44,20 @@ namespace HostelManagmentProject
         private void Stnotification_Load(object sender, EventArgs e)
         {
             localhost.Service1 sc = new localhost.Service1();
+            localhost.Cstudent st = new localhost.Cstudent();
+            st = sc.loggedstudent();
+            txtstName.Text = st.Userid;
             BindingSource s = new BindingSource();
-            s.DataSource = sc.mutateStNotification();
+            s.DataSource = st.Notificationlist;
             GVstNotifications.DataSource = s;
-            txtstName.Text = sc.loggedstudent();
+            foreach (localhost.Cstudent csi in sc.allotedStudentsforhostel())
+            {
+                if(csi.Userid == st.Userid)
+                {
+                    s.DataSource = csi.Notificationlist;
+                    GVstNotifications.DataSource = s;
+                }
+            }    
         }
     }
 }

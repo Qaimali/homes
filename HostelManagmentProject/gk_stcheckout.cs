@@ -68,5 +68,22 @@ namespace HostelManagmentProject
             gknot.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 sc = new localhost.Service1();
+            bool st = false;
+            bool sts = false;
+            bool sts2 = false;
+            sc.student_checkOut(txtstname.Text, txtstregno.Text, txtstroomnu.Text, DateTime.Now, sts, out st, out sts2);
+            if (st)
+            {
+                MessageBox.Show("submitted");
+            }
+            else
+            {
+                MessageBox.Show("inalid information");
+            }
+        }
     }
 }

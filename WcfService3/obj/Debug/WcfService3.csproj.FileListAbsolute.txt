@@ -14,3 +14,9 @@ C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\WcfService3\obj\Debug\Wc
 C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\WcfService3\obj\Debug\WcfService3.dll
 C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\WcfService3\obj\Debug\WcfService3.pdb
 C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\WcfService3\bin\WcfService3.dll.config
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\WcfService3\bin\WcfService3.dll.config
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\WcfService3\bin\WcfService3.dll
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\WcfService3\bin\WcfService3.pdb
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\WcfService3\obj\Debug\WcfService3.dll
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\WcfService3\obj\Debug\WcfService3.pdb

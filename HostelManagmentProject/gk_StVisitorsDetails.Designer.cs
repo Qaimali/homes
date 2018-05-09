@@ -43,8 +43,28 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtStiname = new System.Windows.Forms.TextBox();
+            this.txtstregno = new System.Windows.Forms.TextBox();
+            this.txtstroomnu = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gvcheckout = new System.Windows.Forms.DataGridView();
+            this.gvvheckin = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            this.menuStrip5.SuspendLayout();
+            this.menuStrip3.SuspendLayout();
+            this.menuStrip4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvcheckout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -182,12 +202,171 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(79, 20);
             this.toolStripMenuItem2.Text = "GateKeeper";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(778, 195);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.TabIndex = 611;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // menuStrip5
+            // 
+            this.menuStrip5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.menuStrip5.AutoSize = false;
+            this.menuStrip5.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip5.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5});
+            this.menuStrip5.Location = new System.Drawing.Point(135, 101);
+            this.menuStrip5.Name = "menuStrip5";
+            this.menuStrip5.Size = new System.Drawing.Size(771, 26);
+            this.menuStrip5.TabIndex = 610;
+            this.menuStrip5.Text = "menuStrip5";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.BackColor = System.Drawing.Color.SteelBlue;
+            this.toolStripMenuItem5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(95, 22);
+            this.toolStripMenuItem5.Text = "Visitors Details";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            // 
+            // txtStiname
+            // 
+            this.txtStiname.Location = new System.Drawing.Point(318, 147);
+            this.txtStiname.Name = "txtStiname";
+            this.txtStiname.Size = new System.Drawing.Size(200, 20);
+            this.txtStiname.TabIndex = 609;
+            // 
+            // txtstregno
+            // 
+            this.txtstregno.Location = new System.Drawing.Point(706, 147);
+            this.txtstregno.Name = "txtstregno";
+            this.txtstregno.Size = new System.Drawing.Size(200, 20);
+            this.txtstregno.TabIndex = 608;
+            // 
+            // txtstroomnu
+            // 
+            this.txtstroomnu.Location = new System.Drawing.Point(317, 195);
+            this.txtstroomnu.Name = "txtstroomnu";
+            this.txtstroomnu.Size = new System.Drawing.Size(200, 20);
+            this.txtstroomnu.TabIndex = 607;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(535, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 16);
+            this.label12.TabIndex = 606;
+            this.label12.Text = "Registration Number";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(132, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 16);
+            this.label11.TabIndex = 605;
+            this.label11.Text = "Room Number";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(132, 147);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.TabIndex = 604;
+            this.label8.Text = "Name";
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.menuStrip3.AutoSize = false;
+            this.menuStrip3.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip3.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3});
+            this.menuStrip3.Location = new System.Drawing.Point(538, 243);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.Size = new System.Drawing.Size(368, 26);
+            this.menuStrip3.TabIndex = 603;
+            this.menuStrip3.Text = "menuStrip3";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.BackColor = System.Drawing.Color.SteelBlue;
+            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(75, 22);
+            this.toolStripMenuItem3.Text = "Check Out";
+            // 
+            // menuStrip4
+            // 
+            this.menuStrip4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.menuStrip4.AutoSize = false;
+            this.menuStrip4.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip4.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4});
+            this.menuStrip4.Location = new System.Drawing.Point(135, 243);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Size = new System.Drawing.Size(346, 26);
+            this.menuStrip4.TabIndex = 602;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.BackColor = System.Drawing.Color.SteelBlue;
+            this.toolStripMenuItem4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(65, 22);
+            this.toolStripMenuItem4.Text = "Check In";
+            // 
+            // gvcheckout
+            // 
+            this.gvcheckout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvcheckout.Location = new System.Drawing.Point(538, 266);
+            this.gvcheckout.Name = "gvcheckout";
+            this.gvcheckout.Size = new System.Drawing.Size(368, 150);
+            this.gvcheckout.TabIndex = 601;
+            // 
+            // gvvheckin
+            // 
+            this.gvvheckin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvvheckin.Location = new System.Drawing.Point(135, 266);
+            this.gvvheckin.Name = "gvvheckin";
+            this.gvvheckin.Size = new System.Drawing.Size(346, 150);
+            this.gvvheckin.TabIndex = 600;
+            // 
             // gk_StVisitorsDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip5);
+            this.Controls.Add(this.txtStiname);
+            this.Controls.Add(this.txtstregno);
+            this.Controls.Add(this.txtstroomnu);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.menuStrip3);
+            this.Controls.Add(this.menuStrip4);
+            this.Controls.Add(this.gvcheckout);
+            this.Controls.Add(this.gvvheckin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,6 +380,14 @@
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.menuStrip5.ResumeLayout(false);
+            this.menuStrip5.PerformLayout();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvcheckout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +410,20 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.TextBox txtStiname;
+        private System.Windows.Forms.TextBox txtstregno;
+        private System.Windows.Forms.TextBox txtstroomnu;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MenuStrip menuStrip3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.MenuStrip menuStrip4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.DataGridView gvcheckout;
+        private System.Windows.Forms.DataGridView gvvheckin;
     }
 }

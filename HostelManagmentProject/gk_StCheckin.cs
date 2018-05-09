@@ -80,5 +80,24 @@ namespace HostelManagmentProject
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 sc = new localhost.Service1();
+            bool st = false;
+            //bool sts = false;
+            bool sts2 = false;
+            string temp = DateTime.Now.ToShortDateString();
+            sc.student_checkin(txtstname.Text, txtstregno.Text, txtstroomnu.Text,temp , out st,out sts2);
+            
+            if (st)
+            {
+                MessageBox.Show("submitted");
+            }
+            else
+            {
+                MessageBox.Show("inalid information");
+            }
+        }
     }
 }

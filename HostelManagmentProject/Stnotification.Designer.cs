@@ -40,7 +40,6 @@
             this.compliantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GVstNotifications = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtstName = new System.Windows.Forms.TextBox();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -162,19 +161,10 @@
             // GVstNotifications
             // 
             this.GVstNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GVstNotifications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.GVstNotifications.Location = new System.Drawing.Point(159, 140);
             this.GVstNotifications.Name = "GVstNotifications";
             this.GVstNotifications.Size = new System.Drawing.Size(744, 364);
             this.GVstNotifications.TabIndex = 524;
-            // 
-            // Column1
-            // 
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "Notication";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // txtstName
             // 
@@ -225,7 +215,6 @@
         private System.Windows.Forms.ToolStripMenuItem compliantsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.DataGridView GVstNotifications;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.TextBox txtstName;
     }
 }

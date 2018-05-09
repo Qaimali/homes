@@ -41,6 +41,7 @@
             this.studentsVistorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.messBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.txthostelname = new System.Windows.Forms.TextBox();
             this.txtnoofrooms = new System.Windows.Forms.TextBox();
@@ -146,7 +147,8 @@
             this.complaintsToolStripMenuItem,
             this.studentsVistorsToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.messBillToolStripMenuItem});
+            this.messBillToolStripMenuItem,
+            this.pendingStudentToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 59);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1038, 24);
@@ -160,12 +162,14 @@
             this.hostelApplicationToolStripMenuItem.Name = "hostelApplicationToolStripMenuItem";
             this.hostelApplicationToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
             this.hostelApplicationToolStripMenuItem.Text = "Hostel Room Allotment";
+            this.hostelApplicationToolStripMenuItem.Click += new System.EventHandler(this.hostelApplicationToolStripMenuItem_Click);
             // 
             // registeredStudentsToolStripMenuItem
             // 
             this.registeredStudentsToolStripMenuItem.Name = "registeredStudentsToolStripMenuItem";
             this.registeredStudentsToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
             this.registeredStudentsToolStripMenuItem.Text = "Registered Students";
+            this.registeredStudentsToolStripMenuItem.Click += new System.EventHandler(this.registeredStudentsToolStripMenuItem_Click);
             // 
             // complaintsToolStripMenuItem
             // 
@@ -173,12 +177,14 @@
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.complaintsToolStripMenuItem.Text = "Complaints";
+            this.complaintsToolStripMenuItem.Click += new System.EventHandler(this.complaintsToolStripMenuItem_Click);
             // 
             // studentsVistorsToolStripMenuItem
             // 
             this.studentsVistorsToolStripMenuItem.Name = "studentsVistorsToolStripMenuItem";
             this.studentsVistorsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.studentsVistorsToolStripMenuItem.Text = "Add Hostel";
+            this.studentsVistorsToolStripMenuItem.Click += new System.EventHandler(this.studentsVistorsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -194,6 +200,13 @@
             this.messBillToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.messBillToolStripMenuItem.Text = "logout";
             this.messBillToolStripMenuItem.Click += new System.EventHandler(this.messBillToolStripMenuItem_Click);
+            // 
+            // pendingStudentToolStripMenuItem
+            // 
+            this.pendingStudentToolStripMenuItem.Name = "pendingStudentToolStripMenuItem";
+            this.pendingStudentToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.pendingStudentToolStripMenuItem.Text = "pending student";
+            this.pendingStudentToolStripMenuItem.Click += new System.EventHandler(this.pendingStudentToolStripMenuItem_Click);
             // 
             // label5
             // 
@@ -497,5 +510,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboIstGK;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pendingStudentToolStripMenuItem;
     }
 }

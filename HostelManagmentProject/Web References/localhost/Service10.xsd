@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService3" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="ArrayOfCnotification">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Cnotification" nillable="true" type="tns:Cnotification" />
@@ -12,6 +13,83 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cnotification" nillable="true" type="tns:Cnotification" />
+  <xs:complexType name="Cstudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BloodGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FatherName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FatherNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuardianName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuardianNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HostelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Student_checkin" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Student_checkout" nillable="true" type="q2:ArrayOfdateTime" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Visitors" nillable="true" type="tns:ArrayOfCvisistor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cstudent" nillable="true" type="tns:Cstudent" />
+  <xs:complexType name="ArrayOfCvisistor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cvisistor" nillable="true" type="tns:Cvisistor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCvisistor" nillable="true" type="tns:ArrayOfCvisistor" />
+  <xs:complexType name="Cvisistor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckIn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CheckOut" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cnic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cvisistor" nillable="true" type="tns:Cvisistor" />
+  <xs:complexType name="CRT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllotedHostel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComplaintsforRT" nillable="true" type="tns:ArrayOfComplaints" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRT" nillable="true" type="tns:CRT" />
+  <xs:complexType name="ArrayOfComplaints">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Complaints" nillable="true" type="tns:Complaints" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComplaints" nillable="true" type="tns:ArrayOfComplaints" />
+  <xs:complexType name="Complaints">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComplaintSubject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Residencyofperson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextCompliants" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Complaints" nillable="true" type="tns:Complaints" />
+  <xs:complexType name="Cgatek">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cgatek" nillable="true" type="tns:Cgatek" />
   <xs:complexType name="Hostel">
     <xs:sequence>
       <xs:element minOccurs="0" name="GatekeeperList" nillable="true" type="tns:ArrayOfCgatek" />
@@ -28,16 +106,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCgatek" nillable="true" type="tns:ArrayOfCgatek" />
-  <xs:complexType name="Cgatek">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
-      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Cgatek" nillable="true" type="tns:Cgatek" />
   <xs:complexType name="ArrayOfroom">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="room" nillable="true" type="tns:room" />
@@ -58,20 +126,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCRT" nillable="true" type="tns:ArrayOfCRT" />
-  <xs:complexType name="CRT">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
-      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CRT" nillable="true" type="tns:CRT" />
   <xs:complexType name="ArrayOfHostel">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Hostel" nillable="true" type="tns:Hostel" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfHostel" nillable="true" type="tns:ArrayOfHostel" />
+  <xs:complexType name="ArrayOfCstudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cstudent" nillable="true" type="tns:Cstudent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCstudent" nillable="true" type="tns:ArrayOfCstudent" />
 </xs:schema>

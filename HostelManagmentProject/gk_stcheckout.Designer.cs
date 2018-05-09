@@ -38,11 +38,20 @@
             this.visitorCheckInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitorCheckOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.studentVisitorDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.datetimestcheckout = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtstname = new System.Windows.Forms.TextBox();
+            this.txtstregno = new System.Windows.Forms.TextBox();
+            this.txtstroomnu = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -148,6 +157,12 @@
             this.studentDetailToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
+            this.toolStripMenuItem1.Text = "Notifications";
+            // 
             // studentVisitorDetailToolStripMenuItem
             // 
             this.studentVisitorDetailToolStripMenuItem.Name = "studentVisitorDetailToolStripMenuItem";
@@ -180,11 +195,83 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(79, 20);
             this.toolStripMenuItem2.Text = "GateKeeper";
             // 
-            // toolStripMenuItem1
+            // datetimestcheckout
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
-            this.toolStripMenuItem1.Text = "Notifications";
+            this.datetimestcheckout.Location = new System.Drawing.Point(512, 270);
+            this.datetimestcheckout.Name = "datetimestcheckout";
+            this.datetimestcheckout.Size = new System.Drawing.Size(200, 20);
+            this.datetimestcheckout.TabIndex = 574;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(463, 356);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 573;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(327, 274);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(97, 16);
+            this.label13.TabIndex = 572;
+            this.label13.Text = "Date and Time";
+            // 
+            // txtstname
+            // 
+            this.txtstname.Location = new System.Drawing.Point(512, 137);
+            this.txtstname.Name = "txtstname";
+            this.txtstname.Size = new System.Drawing.Size(200, 20);
+            this.txtstname.TabIndex = 571;
+            // 
+            // txtstregno
+            // 
+            this.txtstregno.Location = new System.Drawing.Point(512, 181);
+            this.txtstregno.Name = "txtstregno";
+            this.txtstregno.Size = new System.Drawing.Size(200, 20);
+            this.txtstregno.TabIndex = 570;
+            // 
+            // txtstroomnu
+            // 
+            this.txtstroomnu.Location = new System.Drawing.Point(512, 221);
+            this.txtstroomnu.Name = "txtstroomnu";
+            this.txtstroomnu.Size = new System.Drawing.Size(200, 20);
+            this.txtstroomnu.TabIndex = 569;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(327, 185);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 16);
+            this.label12.TabIndex = 568;
+            this.label12.Text = "Registration Number";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(327, 226);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 16);
+            this.label11.TabIndex = 567;
+            this.label11.Text = "Room Number";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(327, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.TabIndex = 566;
+            this.label8.Text = "Name";
             // 
             // gk_stcheckout
             // 
@@ -192,6 +279,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.datetimestcheckout);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtstname);
+            this.Controls.Add(this.txtstregno);
+            this.Controls.Add(this.txtstroomnu);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -226,5 +322,14 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.DateTimePicker datetimestcheckout;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtstname;
+        private System.Windows.Forms.TextBox txtstregno;
+        private System.Windows.Forms.TextBox txtstroomnu;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -23,6 +23,20 @@ namespace HostelManagmentProject
             BindingSource s = new BindingSource();
             s.DataSource = sc.mutateRtNotifications();
             GVRtNotification.DataSource = s;
+            localhost.CRT rt = new localhost.CRT();
+            rt = sc.loggedRt();
+            foreach(localhost.CRT si in sc.allotedRT())
+            {
+                if(si.Name==rt.Name && si.AllotedHostel == rt.AllotedHostel)
+                {
+                    txthostelName.Text = si.AllotedHostel;
+                }
+                else
+                {
+                    txthostelName.Text = rt.AllotedHostel;
+                }
+            }
+            
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,6 +49,20 @@ namespace HostelManagmentProject
         private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void compliantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtReceievedComplaints co = new rtReceievedComplaints();
+            co.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rtWriteComplaints rt = new rtWriteComplaints();
+            rt.Show();
+            this.Hide();
         }
     }
 }
