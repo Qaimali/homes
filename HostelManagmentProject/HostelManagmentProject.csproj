@@ -66,12 +66,6 @@
     <Compile Include="adpendingprofile.Designer.cs">
       <DependentUpon>adpendingprofile.cs</DependentUpon>
     </Compile>
-    <Compile Include="adReadComplaints.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adReadComplaints.Designer.cs">
-      <DependentUpon>adReadComplaints.cs</DependentUpon>
-    </Compile>
     <Compile Include="adRegisteredStProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +204,12 @@
     <Compile Include="Admincomplain.Designer.cs">
       <DependentUpon>Admincomplain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adcomplaintsread.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adcomplaintsread.Designer.cs">
+      <DependentUpon>Adcomplaintsread.cs</DependentUpon>
+    </Compile>
     <Compile Include="StFormSubmission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adpendingprofile.resx">
       <DependentUpon>adpendingprofile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adReadComplaints.resx">
-      <DependentUpon>adReadComplaints.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adRegisteredStProfile.resx">
       <DependentUpon>adRegisteredStProfile.cs</DependentUpon>
@@ -313,6 +310,9 @@
     <EmbeddedResource Include="Admincomplain.resx">
       <DependentUpon>Admincomplain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Adcomplaintsread.resx">
+      <DependentUpon>Adcomplaintsread.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StFormSubmission.resx">
       <DependentUpon>StFormSubmission.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,9 +345,6 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\localhost\Cnotification.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\localhost\Complaints.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\localhost\CRT.datasource">

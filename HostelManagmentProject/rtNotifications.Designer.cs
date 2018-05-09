@@ -37,7 +37,6 @@
             this.GVRtNotification = new System.Windows.Forms.DataGridView();
             this.txthostelName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVRtNotification)).BeginInit();
@@ -72,7 +71,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.complaintsToolStripMenuItem,
             this.compliantsToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 61);
             this.menuStrip1.Name = "menuStrip1";
@@ -132,13 +130,6 @@
             this.label2.TabIndex = 526;
             this.label2.Text = "Hostel Name:";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
-            this.toolStripMenuItem1.Text = "Write Complaints";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // rtNotifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +165,5 @@
         private System.Windows.Forms.DataGridView GVRtNotification;
         private System.Windows.Forms.TextBox txthostelName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

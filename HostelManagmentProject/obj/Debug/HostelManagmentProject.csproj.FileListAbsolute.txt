@@ -99,9 +99,12 @@ C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debu
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stregistration.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stcomplain.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Admincomplain.resources
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adcomplaintsread.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.StFormSubmission.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adpendingrequest.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.AdregisteredStudents.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Properties.Resources.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.csproj.GenerateResource.Cache
-C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adReadComplaints.resources
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\complaintsfromstudent\s1\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe.config
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\complaintsfromstudent\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.exe
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\complaintsfromstudent\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.pdb

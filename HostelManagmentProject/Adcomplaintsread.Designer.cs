@@ -32,16 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.hostelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registeredStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentsVistorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.messEnrollmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.messAttendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.messBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,9 +48,17 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.hostelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registeredStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentsVistorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.messBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -106,89 +104,6 @@
             this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 509;
             this.label1.Text = "Hostel ID:";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hostelApplicationToolStripMenuItem,
-            this.registeredStudentsToolStripMenuItem,
-            this.complaintsToolStripMenuItem,
-            this.studentsVistorsToolStripMenuItem,
-            this.checkInToolStripMenuItem,
-            this.checkOutToolStripMenuItem,
-            this.messEnrollmentToolStripMenuItem,
-            this.messAttendanceToolStripMenuItem,
-            this.messBillToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 54);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1038, 24);
-            this.menuStrip1.TabIndex = 508;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // hostelApplicationToolStripMenuItem
-            // 
-            this.hostelApplicationToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.hostelApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hostelApplicationToolStripMenuItem.Name = "hostelApplicationToolStripMenuItem";
-            this.hostelApplicationToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
-            this.hostelApplicationToolStripMenuItem.Text = "Hostel Room Allotment";
-            // 
-            // registeredStudentsToolStripMenuItem
-            // 
-            this.registeredStudentsToolStripMenuItem.Name = "registeredStudentsToolStripMenuItem";
-            this.registeredStudentsToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.registeredStudentsToolStripMenuItem.Text = "Registered Students";
-            // 
-            // complaintsToolStripMenuItem
-            // 
-            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
-            this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.complaintsToolStripMenuItem.Text = "Complaints";
-            // 
-            // studentsVistorsToolStripMenuItem
-            // 
-            this.studentsVistorsToolStripMenuItem.Name = "studentsVistorsToolStripMenuItem";
-            this.studentsVistorsToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.studentsVistorsToolStripMenuItem.Text = "Students Vistors ";
-            // 
-            // checkInToolStripMenuItem
-            // 
-            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.checkInToolStripMenuItem.Text = "Check in";
-            // 
-            // checkOutToolStripMenuItem
-            // 
-            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.checkOutToolStripMenuItem.Text = "Check Out";
-            // 
-            // messEnrollmentToolStripMenuItem
-            // 
-            this.messEnrollmentToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.messEnrollmentToolStripMenuItem.Name = "messEnrollmentToolStripMenuItem";
-            this.messEnrollmentToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.messEnrollmentToolStripMenuItem.Text = "Mess Enrollment";
-            // 
-            // messAttendanceToolStripMenuItem
-            // 
-            this.messAttendanceToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.messAttendanceToolStripMenuItem.Name = "messAttendanceToolStripMenuItem";
-            this.messAttendanceToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.messAttendanceToolStripMenuItem.Text = "Mess Attendance";
-            // 
-            // messBillToolStripMenuItem
-            // 
-            this.messBillToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.messBillToolStripMenuItem.Name = "messBillToolStripMenuItem";
-            this.messBillToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.messBillToolStripMenuItem.Text = "Mess Bill";
             // 
             // menuStrip2
             // 
@@ -343,12 +258,88 @@
             this.button1.Text = "Send Reply";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form12
+            // menuStrip1
+            // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hostelApplicationToolStripMenuItem,
+            this.registeredStudentsToolStripMenuItem,
+            this.complaintsToolStripMenuItem,
+            this.studentsVistorsToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.messBillToolStripMenuItem,
+            this.pendingStudentToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 70);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1038, 24);
+            this.menuStrip1.TabIndex = 525;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // hostelApplicationToolStripMenuItem
+            // 
+            this.hostelApplicationToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
+            this.hostelApplicationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.hostelApplicationToolStripMenuItem.Name = "hostelApplicationToolStripMenuItem";
+            this.hostelApplicationToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
+            this.hostelApplicationToolStripMenuItem.Text = "Hostel Room Allotment";
+            this.hostelApplicationToolStripMenuItem.Click += new System.EventHandler(this.hostelApplicationToolStripMenuItem_Click_1);
+            // 
+            // registeredStudentsToolStripMenuItem
+            // 
+            this.registeredStudentsToolStripMenuItem.Name = "registeredStudentsToolStripMenuItem";
+            this.registeredStudentsToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
+            this.registeredStudentsToolStripMenuItem.Text = "Registered Students";
+            this.registeredStudentsToolStripMenuItem.Click += new System.EventHandler(this.registeredStudentsToolStripMenuItem_Click);
+            // 
+            // complaintsToolStripMenuItem
+            // 
+            this.complaintsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
+            this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.complaintsToolStripMenuItem.Text = "Complaints";
+            this.complaintsToolStripMenuItem.Click += new System.EventHandler(this.complaintsToolStripMenuItem_Click);
+            // 
+            // studentsVistorsToolStripMenuItem
+            // 
+            this.studentsVistorsToolStripMenuItem.Name = "studentsVistorsToolStripMenuItem";
+            this.studentsVistorsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.studentsVistorsToolStripMenuItem.Text = "Add Hostel";
+            this.studentsVistorsToolStripMenuItem.Click += new System.EventHandler(this.studentsVistorsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(83, 20);
+            this.toolStripMenuItem3.Text = "Show hostel";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // messBillToolStripMenuItem
+            // 
+            this.messBillToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.messBillToolStripMenuItem.Name = "messBillToolStripMenuItem";
+            this.messBillToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.messBillToolStripMenuItem.Text = "logout";
+            this.messBillToolStripMenuItem.Click += new System.EventHandler(this.messBillToolStripMenuItem_Click);
+            // 
+            // pendingStudentToolStripMenuItem
+            // 
+            this.pendingStudentToolStripMenuItem.Name = "pendingStudentToolStripMenuItem";
+            this.pendingStudentToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.pendingStudentToolStripMenuItem.Text = "pending student";
+            this.pendingStudentToolStripMenuItem.Click += new System.EventHandler(this.pendingStudentToolStripMenuItem_Click);
+            // 
+            // Adcomplaintsread
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
@@ -365,16 +356,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.Name = "Form12";
+            this.Name = "Adcomplaintsread";
             this.Text = "Form12";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Adcomplaintsread_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,16 +377,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem hostelApplicationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registeredStudentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem complaintsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem studentsVistorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem messEnrollmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem messAttendanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem messBillToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.TextBox textBox1;
@@ -412,5 +393,13 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem hostelApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registeredStudentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem complaintsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentsVistorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem messBillToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pendingStudentToolStripMenuItem;
     }
 }

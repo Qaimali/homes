@@ -236,24 +236,6 @@
   <wsdl:message name="IService1_complaintsfromstudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:complaintsfromstudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_complaintsfromRT_InputMessage">
-    <wsdl:part name="parameters" element="tns:complaintsfromRT" />
-  </wsdl:message>
-  <wsdl:message name="IService1_complaintsfromRT_OutputMessage">
-    <wsdl:part name="parameters" element="tns:complaintsfromRTResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getComplainFromRt_InputMessage">
-    <wsdl:part name="parameters" element="tns:getComplainFromRt" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getComplainFromRt_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getComplainFromRtResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getIndexedComplaintsFromRt_InputMessage">
-    <wsdl:part name="parameters" element="tns:getIndexedComplaintsFromRt" />
-  </wsdl:message>
-  <wsdl:message name="IService1_getIndexedComplaintsFromRt_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getIndexedComplaintsFromRtResponse" />
-  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="regst">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/regst" message="tns:IService1_regst_InputMessage" />
@@ -406,18 +388,6 @@
     <wsdl:operation name="complaintsfromstudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/complaintsfromstudent" message="tns:IService1_complaintsfromstudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/complaintsfromstudentResponse" message="tns:IService1_complaintsfromstudent_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="complaintsfromRT">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/complaintsfromRT" message="tns:IService1_complaintsfromRT_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/complaintsfromRTResponse" message="tns:IService1_complaintsfromRT_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="getComplainFromRt">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getComplainFromRt" message="tns:IService1_getComplainFromRt_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getComplainFromRtResponse" message="tns:IService1_getComplainFromRt_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="getIndexedComplaintsFromRt">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getIndexedComplaintsFromRt" message="tns:IService1_getIndexedComplaintsFromRt_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getIndexedComplaintsFromRtResponse" message="tns:IService1_getIndexedComplaintsFromRt_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -757,33 +727,6 @@
     </wsdl:operation>
     <wsdl:operation name="complaintsfromstudent">
       <soap:operation soapAction="http://tempuri.org/IService1/complaintsfromstudent" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="complaintsfromRT">
-      <soap:operation soapAction="http://tempuri.org/IService1/complaintsfromRT" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getComplainFromRt">
-      <soap:operation soapAction="http://tempuri.org/IService1/getComplainFromRt" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getIndexedComplaintsFromRt">
-      <soap:operation soapAction="http://tempuri.org/IService1/getIndexedComplaintsFromRt" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

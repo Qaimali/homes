@@ -57,12 +57,5 @@ namespace HostelManagmentProject
             co.Show();
             this.Hide();
         }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            rtWriteComplaints rt = new rtWriteComplaints();
-            rt.Show();
-            this.Hide();
-        }
     }
 }

@@ -106,12 +106,6 @@ namespace HostelManagmentProject.localhost {
         
         private System.Threading.SendOrPostCallback complaintsfromstudentOperationCompleted;
         
-        private System.Threading.SendOrPostCallback complaintsfromRTOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback getComplainFromRtOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback getIndexedComplaintsFromRtOperationCompleted;
-        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -263,15 +257,6 @@ namespace HostelManagmentProject.localhost {
         
         /// <remarks/>
         public event complaintsfromstudentCompletedEventHandler complaintsfromstudentCompleted;
-        
-        /// <remarks/>
-        public event complaintsfromRTCompletedEventHandler complaintsfromRTCompleted;
-        
-        /// <remarks/>
-        public event getComplainFromRtCompletedEventHandler getComplainFromRtCompleted;
-        
-        /// <remarks/>
-        public event getIndexedComplaintsFromRtCompletedEventHandler getIndexedComplaintsFromRtCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1501,101 +1486,6 @@ namespace HostelManagmentProject.localhost {
             if ((this.complaintsfromstudentCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.complaintsfromstudentCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/complaintsfromRT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void complaintsfromRT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string n1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string s1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string t1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string r1) {
-            this.Invoke("complaintsfromRT", new object[] {
-                        n1,
-                        s1,
-                        t1,
-                        r1});
-        }
-        
-        /// <remarks/>
-        public void complaintsfromRTAsync(string n1, string s1, string t1, string r1) {
-            this.complaintsfromRTAsync(n1, s1, t1, r1, null);
-        }
-        
-        /// <remarks/>
-        public void complaintsfromRTAsync(string n1, string s1, string t1, string r1, object userState) {
-            if ((this.complaintsfromRTOperationCompleted == null)) {
-                this.complaintsfromRTOperationCompleted = new System.Threading.SendOrPostCallback(this.OncomplaintsfromRTOperationCompleted);
-            }
-            this.InvokeAsync("complaintsfromRT", new object[] {
-                        n1,
-                        s1,
-                        t1,
-                        r1}, this.complaintsfromRTOperationCompleted, userState);
-        }
-        
-        private void OncomplaintsfromRTOperationCompleted(object arg) {
-            if ((this.complaintsfromRTCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.complaintsfromRTCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getComplainFromRt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
-        public Complaints[] getComplainFromRt() {
-            object[] results = this.Invoke("getComplainFromRt", new object[0]);
-            return ((Complaints[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void getComplainFromRtAsync() {
-            this.getComplainFromRtAsync(null);
-        }
-        
-        /// <remarks/>
-        public void getComplainFromRtAsync(object userState) {
-            if ((this.getComplainFromRtOperationCompleted == null)) {
-                this.getComplainFromRtOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetComplainFromRtOperationCompleted);
-            }
-            this.InvokeAsync("getComplainFromRt", new object[0], this.getComplainFromRtOperationCompleted, userState);
-        }
-        
-        private void OngetComplainFromRtOperationCompleted(object arg) {
-            if ((this.getComplainFromRtCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getComplainFromRtCompleted(this, new getComplainFromRtCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getIndexedComplaintsFromRt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public Complaints getIndexedComplaintsFromRt(int index, [System.Xml.Serialization.XmlIgnoreAttribute()] bool indexSpecified) {
-            object[] results = this.Invoke("getIndexedComplaintsFromRt", new object[] {
-                        index,
-                        indexSpecified});
-            return ((Complaints)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void getIndexedComplaintsFromRtAsync(int index, bool indexSpecified) {
-            this.getIndexedComplaintsFromRtAsync(index, indexSpecified, null);
-        }
-        
-        /// <remarks/>
-        public void getIndexedComplaintsFromRtAsync(int index, bool indexSpecified, object userState) {
-            if ((this.getIndexedComplaintsFromRtOperationCompleted == null)) {
-                this.getIndexedComplaintsFromRtOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetIndexedComplaintsFromRtOperationCompleted);
-            }
-            this.InvokeAsync("getIndexedComplaintsFromRt", new object[] {
-                        index,
-                        indexSpecified}, this.getIndexedComplaintsFromRtOperationCompleted, userState);
-        }
-        
-        private void OngetIndexedComplaintsFromRtOperationCompleted(object arg) {
-            if ((this.getIndexedComplaintsFromRtCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getIndexedComplaintsFromRtCompleted(this, new getIndexedComplaintsFromRtCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3272,62 +3162,6 @@ namespace HostelManagmentProject.localhost {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void complaintsfromstudentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void complaintsfromRTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void getComplainFromRtCompletedEventHandler(object sender, getComplainFromRtCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getComplainFromRtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getComplainFromRtCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Complaints[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Complaints[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void getIndexedComplaintsFromRtCompletedEventHandler(object sender, getIndexedComplaintsFromRtCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getIndexedComplaintsFromRtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getIndexedComplaintsFromRtCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Complaints Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Complaints)(this.results[0]));
-            }
-        }
-    }
 }
 
 #pragma warning restore 1591

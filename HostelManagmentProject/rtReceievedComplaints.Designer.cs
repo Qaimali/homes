@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.GVRtcomplaints = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVRtcomplaints)).BeginInit();
@@ -73,7 +72,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.complaintsToolStripMenuItem,
             this.compliantsToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 57);
             this.menuStrip1.Name = "menuStrip1";
@@ -140,13 +138,6 @@
             this.Column1.Text = "Click Here";
             this.Column1.UseColumnTextForLinkValue = true;
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
-            this.toolStripMenuItem1.Text = "Write Complaints";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // rtReceievedComplaints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +174,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView GVRtcomplaints;
         private System.Windows.Forms.DataGridViewLinkColumn Column1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

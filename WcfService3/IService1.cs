@@ -157,17 +157,6 @@ namespace WcfService3
 
         void complaintsfromstudent(string n1, string s1, string t1, string r1);
 
-        [OperationContract]
-
-        void complaintsfromRT(string n1, string s1, string t1, string r1);
-
-        [OperationContract]
-
-        List<Complaints> getComplainFromRt();
-
-        [OperationContract]
-
-        Complaints getIndexedComplaintsFromRt(int index);
-
+        
     }
 }

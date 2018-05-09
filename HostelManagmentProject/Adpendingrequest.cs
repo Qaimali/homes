@@ -168,7 +168,7 @@ namespace HostelManagmentProject
 
         private void complaintsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Admincomplain ad = new Admincomplain();
+            Adcomplaintsread ad = new Adcomplaintsread();
             ad.Show();
             this.Hide();
         }

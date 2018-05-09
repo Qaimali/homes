@@ -358,15 +358,6 @@ namespace WcfService3
             adminDL.addcomplaintsforadmin(n1, s1, t1, r1);
         }
 
-        public List<Complaints> getComplainFromRt()
-        {
-            return adminDL.complaintsForAdmin;
-        }
-
-        public Complaints getIndexedComplaintsFromRt(int index)
-        {
-            return adminDL.complaintsForAdmin[index];
-        } 
     }   
 }
 
