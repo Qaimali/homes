@@ -48,7 +48,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtcnicvisitor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.datetimeVcheckout = new System.Windows.Forms.DateTimePicker();
+            this.datetimeVcheckin = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.txtViname = new System.Windows.Forms.TextBox();
             this.txtstregno = new System.Windows.Forms.TextBox();
@@ -148,24 +148,28 @@
             this.visitorCheckInToolStripMenuItem.Name = "visitorCheckInToolStripMenuItem";
             this.visitorCheckInToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.visitorCheckInToolStripMenuItem.Text = "Visitor Check In";
+            this.visitorCheckInToolStripMenuItem.Click += new System.EventHandler(this.visitorCheckInToolStripMenuItem_Click);
             // 
             // visitorCheckOutToolStripMenuItem
             // 
             this.visitorCheckOutToolStripMenuItem.Name = "visitorCheckOutToolStripMenuItem";
             this.visitorCheckOutToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.visitorCheckOutToolStripMenuItem.Text = "Visitor Check Out";
+            this.visitorCheckOutToolStripMenuItem.Click += new System.EventHandler(this.visitorCheckOutToolStripMenuItem_Click_1);
             // 
             // studentDetailToolStripMenuItem
             // 
             this.studentDetailToolStripMenuItem.Name = "studentDetailToolStripMenuItem";
             this.studentDetailToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
+            this.studentDetailToolStripMenuItem.Click += new System.EventHandler(this.studentDetailToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
             this.toolStripMenuItem1.Text = "Notifications";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
             // 
             // studentVisitorDetailToolStripMenuItem
             // 
@@ -244,12 +248,12 @@
             this.label5.TabIndex = 607;
             this.label5.Text = "Cnic";
             // 
-            // datetimeVcheckout
+            // datetimeVcheckin
             // 
-            this.datetimeVcheckout.Location = new System.Drawing.Point(512, 356);
-            this.datetimeVcheckout.Name = "datetimeVcheckout";
-            this.datetimeVcheckout.Size = new System.Drawing.Size(200, 20);
-            this.datetimeVcheckout.TabIndex = 606;
+            this.datetimeVcheckin.Location = new System.Drawing.Point(512, 356);
+            this.datetimeVcheckin.Name = "datetimeVcheckin";
+            this.datetimeVcheckin.Size = new System.Drawing.Size(200, 20);
+            this.datetimeVcheckin.TabIndex = 606;
             // 
             // label13
             // 
@@ -323,7 +327,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtcnicvisitor);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.datetimeVcheckout);
+            this.Controls.Add(this.datetimeVcheckin);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtViname);
             this.Controls.Add(this.txtstregno);
@@ -371,7 +375,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtcnicvisitor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker datetimeVcheckout;
+        private System.Windows.Forms.DateTimePicker datetimeVcheckin;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtViname;
         private System.Windows.Forms.TextBox txtstregno;

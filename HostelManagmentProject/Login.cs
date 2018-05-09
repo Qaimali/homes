@@ -66,47 +66,54 @@ namespace HostelManagmentProject
             sc.isAdmin(txtusername.Text, txtpassword.Text, out admin, out fail);
             sc.isStudent(txtusername.Text, txtpassword.Text, out student, out notst);
             sc.isHostelRegistered(txtusername.Text, out hostelregistered, out nothostelregistered);
-            if (admin)
+            if (txtusername.Text == "" )
             {
-                MessageBox.Show("welcocme admin");
-                AddHostel sh = new AddHostel();
-                sh.Show();
-                this.Hide();
+                MessageBox.Show("Enter User Name");
             }
-            else if (student)
+            else if (txtusername.Text != "" || txtpassword.Text != "")
             {
-                if (hostelregistered)
+                if (admin)
                 {
-                    MessageBox.Show("welcocme student");
-                    Stnotification stn = new Stnotification();
-                    stn.Show();
+                    MessageBox.Show("welcocme admin");
+                    AddHostel sh = new AddHostel();
+                    sh.Show();
+                    this.Hide();
+                }
+                else if (student)
+                {
+                    if (hostelregistered)
+                    {
+                        MessageBox.Show("welcocme student");
+                        Stnotification stn = new Stnotification();
+                        stn.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        Stregistration str = new Stregistration();
+                        str.Show();
+                        this.Hide();
+
+                    }
+                }
+                else if (rt)
+                {
+                    MessageBox.Show("wellcocme RT");
+                    rtNotifications rtn = new rtNotifications();
+                    rtn.Show();
+                    this.Hide();
+                }
+                else if (gatekeeper)
+                {
+                    MessageBox.Show("wellcocme gatekeeper");
+                    gkNotifications gkn = new gkNotifications();
+                    gkn.Show();
                     this.Hide();
                 }
                 else
                 {
-                    Stregistration str = new Stregistration();
-                    str.Show();
-                    this.Hide();
-
+                    MessageBox.Show("welcocme in homes");
                 }
-            }
-            else if (rt)
-            {
-                MessageBox.Show("wellcocme RT");
-                rtNotifications rtn = new rtNotifications();
-                rtn.Show();
-                this.Hide();
-            }
-            else if (gatekeeper)
-            {
-                MessageBox.Show("wellcocme gatekeeper");
-                gkNotifications gkn = new gkNotifications();
-                gkn.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("welcocme in homes");
             }
         }
 

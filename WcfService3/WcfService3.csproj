@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="adminDL.cs" />
     <Compile Include="Cadmin.cs" />
+    <Compile Include="CDate.cs" />
     <Compile Include="cgatekeeper.cs" />
     <Compile Include="Cnotification.cs" />
     <Compile Include="Complaints.cs" />

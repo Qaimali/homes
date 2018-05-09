@@ -60,18 +60,23 @@ namespace WcfService3
             return isfound;
         }
 
-        public static void addomplaintforRT(string name1,string subject1,string text1,string resident)
+        public static void addomplaintforRT(string name1,string subject1,string text1,string resident ,string regN,string roomN)
         {
             Complaints com = new Complaints();
             com.ComplaintSubject = subject1;
             com.TextCompliants = text1;
             com.Residencyofperson = resident;
             com.Name = name1;
+            com.RegistrationNumber = regN;
+            com.RoomNumber = roomN;
+            Cnotification n = new Cnotification();
+            n.Notification = "you have recieved a Complaint from " + name1;
             foreach(CRT rt in rtDL.allotedtRT)
             {
                 if (rt.AllotedHostel == resident)
                 {
                     rt.ComplaintsforRT.Add(com);
+                    rt.notificationaddtion(n);
                 }                
             }
         }

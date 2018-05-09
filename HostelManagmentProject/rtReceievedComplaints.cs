@@ -35,9 +35,9 @@ namespace HostelManagmentProject
                     su.DataSource = si.ComplaintsforRT;
                     GVRtcomplaints.DataSource = su;
                     temprt.ComplaintsforRT = si.ComplaintsforRT;
-                    GVRtcomplaints.Columns[1].Visible = false;
-                    GVRtcomplaints.Columns[3].Visible = false;
+                    GVRtcomplaints.Columns[2].Visible = false;
                     GVRtcomplaints.Columns[4].Visible = false;
+                    GVRtcomplaints.Columns[5].Visible = false;
                 }
                 else
                 {
@@ -50,13 +50,71 @@ namespace HostelManagmentProject
 
         private void GVRtcomplaints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
+            localhost.Service1 sci = new localhost.Service1();
+           
             if (e.ColumnIndex == 0)
             {
                 rtReadCompliants read = new rtReadCompliants(temprt.ComplaintsforRT[e.RowIndex]);
                 read.Show();
                 this.Hide();
             }
+            if (e.ColumnIndex == 1)
+            {
+                sci.deleteComplaintsfromStudents(temprt.ComplaintsforRT[e.RowIndex]);
+                localhost.Service1 sc = new localhost.Service1();
+                BindingSource s = new BindingSource();
+                s.DataSource = null;
+                GVRtcomplaints.DataSource = s;
+                BindingSource su = new BindingSource();
+                localhost.CRT rt = new localhost.CRT();
+                rt = sc.loggedRt();
+                foreach (localhost.CRT si in sc.allotedRT())
+                {
+                    if (si.AllotedHostel == rt.AllotedHostel)
+                    {
+                        txthostelName.Text = si.AllotedHostel;
+                        su.DataSource = si.ComplaintsforRT;
+                        GVRtcomplaints.DataSource = su;
+                        temprt.ComplaintsforRT = si.ComplaintsforRT;
+                        GVRtcomplaints.Columns[2].Visible = false;
+                        GVRtcomplaints.Columns[4].Visible = false;
+                        GVRtcomplaints.Columns[5].Visible = false;
+                    }
+                    else
+                    {
+                        txthostelName.Text = rt.AllotedHostel;
+                        su.DataSource = null;
+                        GVRtcomplaints.DataSource = su;
+                    }
+                }
+
+            }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rtWriteComplaints rt = new rtWriteComplaints();
+            rt.Show();
+            this.Hide();
+        }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtNotifications gk = new rtNotifications();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void compliantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPage gk = new MainPage();
+            gk.Show();
+            this.Hide();
         }
     }
 }

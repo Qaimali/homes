@@ -82,8 +82,7 @@ namespace HostelManagmentProject
             localhost.Service1 sc = new localhost.Service1();
             bool st = false;
             bool sts = false;
-            bool sts2 = false;
-            sc.visitor_checkOut(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text,DateTime.Parse(datetimeVcheckout.Text), sts2,txtstroomnu.Text, out st,out  sts);
+            sc.visitor_checkOut(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text,datetimeVcheckout.Text,txtstroomnu.Text, out st,out  sts);
             
             if (st)
             {

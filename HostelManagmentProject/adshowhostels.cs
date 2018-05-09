@@ -26,6 +26,8 @@ namespace HostelManagmentProject
             GVshowhostels.DataSource = s;
             
             GVshowhostels.Columns[3].Visible = false;
+            GVshowhostels.Columns[2].Visible = false;
+
         }
 
         private void GVshowhostels_CellContentClick(object sender, DataGridViewCellEventArgs e)

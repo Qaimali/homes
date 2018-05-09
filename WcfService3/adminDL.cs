@@ -8,6 +8,7 @@ namespace WcfService3
     public class adminDL
     {
         public static List<Cadmin> admlist = new List<Cadmin>();
+        public static List<Complaints> complaintsForAdmin = new List<Complaints>();
         public static void addadmin(Cadmin ad)
         {
             admlist.Add(ad);
@@ -44,8 +45,7 @@ namespace WcfService3
             com.TextCompliants = text1;
             com.Residencyofperson = resident;
             com.Name = name1;
-            Cadmin c = new Cadmin();
-            c.ComplaintsForAdmin.Add(com);
+            adminDL.complaintsForAdmin.Add(com);
         }
     }
 }

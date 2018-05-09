@@ -36,6 +36,7 @@
             this.txtsubject = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txthostel
@@ -107,12 +108,24 @@
             this.label8.TabIndex = 529;
             this.label8.Text = "Name";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(301, 472);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(105, 13);
+            this.linkLabel1.TabIndex = 537;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Go to Previous Page";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // adReadComplaints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txthostel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtcomplaint);
@@ -139,5 +152,6 @@
         private System.Windows.Forms.TextBox txtsubject;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

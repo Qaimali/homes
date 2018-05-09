@@ -29,6 +29,16 @@ namespace HostelManagmentProject
             txthostel.Text = complaints.Residencyofperson;
             txtname.Text = complaints.Name;
             txtsubject.Text = complaints.ComplaintSubject;
+            localhost.Service1 sc = new localhost.Service1();
+            string not = "your complaints has been submitted .Soon we will take suitable actions";
+            sc.addNotificationForRt(complaints.Name,complaints.Residencyofperson,not);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Admincomplain ad = new Admincomplain();
+            ad.Show();
+            this.Hide();
         }
     }
 }

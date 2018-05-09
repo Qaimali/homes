@@ -80,35 +80,17 @@
   <wsdl:message name="IService1_canresetrt_OutputMessage">
     <wsdl:part name="parameters" element="tns:canresetrtResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_mutateStNotification_InputMessage">
-    <wsdl:part name="parameters" element="tns:mutateStNotification" />
-  </wsdl:message>
-  <wsdl:message name="IService1_mutateStNotification_OutputMessage">
-    <wsdl:part name="parameters" element="tns:mutateStNotificationResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_loggedstudent_InputMessage">
     <wsdl:part name="parameters" element="tns:loggedstudent" />
   </wsdl:message>
   <wsdl:message name="IService1_loggedstudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:loggedstudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_mutateRtNotifications_InputMessage">
-    <wsdl:part name="parameters" element="tns:mutateRtNotifications" />
-  </wsdl:message>
-  <wsdl:message name="IService1_mutateRtNotifications_OutputMessage">
-    <wsdl:part name="parameters" element="tns:mutateRtNotificationsResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_loggedRt_InputMessage">
     <wsdl:part name="parameters" element="tns:loggedRt" />
   </wsdl:message>
   <wsdl:message name="IService1_loggedRt_OutputMessage">
     <wsdl:part name="parameters" element="tns:loggedRtResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_mutateGKNotifications_InputMessage">
-    <wsdl:part name="parameters" element="tns:mutateGKNotifications" />
-  </wsdl:message>
-  <wsdl:message name="IService1_mutateGKNotifications_OutputMessage">
-    <wsdl:part name="parameters" element="tns:mutateGKNotificationsResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_logged_Gatekeeper_InputMessage">
     <wsdl:part name="parameters" element="tns:logged_Gatekeeper" />
@@ -236,6 +218,48 @@
   <wsdl:message name="IService1_complaintsfromstudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:complaintsfromstudentResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_complaintsfromRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:complaintsfromRT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_complaintsfromRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:complaintsfromRTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getComplainFromRt_InputMessage">
+    <wsdl:part name="parameters" element="tns:getComplainFromRt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getComplainFromRt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getComplainFromRtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getIndexedComplaintsFromRt_InputMessage">
+    <wsdl:part name="parameters" element="tns:getIndexedComplaintsFromRt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getIndexedComplaintsFromRt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getIndexedComplaintsFromRtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addNotificationForRt_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNotificationForRt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addNotificationForRt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNotificationForRtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteComplaintsfromStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteComplaintsfromStudents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteComplaintsfromStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteComplaintsfromStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteComplaintsfromRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteComplaintsfromRT" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteComplaintsfromRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteComplaintsfromRTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteAllotedStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAllotedStudent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteAllotedStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAllotedStudentResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="regst">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/regst" message="tns:IService1_regst_InputMessage" />
@@ -285,25 +309,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/canresetrt" message="tns:IService1_canresetrt_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/canresetrtResponse" message="tns:IService1_canresetrt_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="mutateStNotification">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/mutateStNotification" message="tns:IService1_mutateStNotification_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/mutateStNotificationResponse" message="tns:IService1_mutateStNotification_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="loggedstudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/loggedstudent" message="tns:IService1_loggedstudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/loggedstudentResponse" message="tns:IService1_loggedstudent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="mutateRtNotifications">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/mutateRtNotifications" message="tns:IService1_mutateRtNotifications_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/mutateRtNotificationsResponse" message="tns:IService1_mutateRtNotifications_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="loggedRt">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/loggedRt" message="tns:IService1_loggedRt_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/loggedRtResponse" message="tns:IService1_loggedRt_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="mutateGKNotifications">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/mutateGKNotifications" message="tns:IService1_mutateGKNotifications_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/mutateGKNotificationsResponse" message="tns:IService1_mutateGKNotifications_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="logged_Gatekeeper">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/logged_Gatekeeper" message="tns:IService1_logged_Gatekeeper_InputMessage" />
@@ -388,6 +400,34 @@
     <wsdl:operation name="complaintsfromstudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/complaintsfromstudent" message="tns:IService1_complaintsfromstudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/complaintsfromstudentResponse" message="tns:IService1_complaintsfromstudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="complaintsfromRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/complaintsfromRT" message="tns:IService1_complaintsfromRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/complaintsfromRTResponse" message="tns:IService1_complaintsfromRT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getComplainFromRt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getComplainFromRt" message="tns:IService1_getComplainFromRt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getComplainFromRtResponse" message="tns:IService1_getComplainFromRt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getIndexedComplaintsFromRt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getIndexedComplaintsFromRt" message="tns:IService1_getIndexedComplaintsFromRt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getIndexedComplaintsFromRtResponse" message="tns:IService1_getIndexedComplaintsFromRt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNotificationForRt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addNotificationForRt" message="tns:IService1_addNotificationForRt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addNotificationForRtResponse" message="tns:IService1_addNotificationForRt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteComplaintsfromStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteComplaintsfromStudents" message="tns:IService1_deleteComplaintsfromStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteComplaintsfromStudentsResponse" message="tns:IService1_deleteComplaintsfromStudents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteComplaintsfromRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteComplaintsfromRT" message="tns:IService1_deleteComplaintsfromRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteComplaintsfromRTResponse" message="tns:IService1_deleteComplaintsfromRT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllotedStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteAllotedStudent" message="tns:IService1_deleteAllotedStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteAllotedStudentResponse" message="tns:IService1_deleteAllotedStudent_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -500,15 +540,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mutateStNotification">
-      <soap:operation soapAction="http://tempuri.org/IService1/mutateStNotification" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="loggedstudent">
       <soap:operation soapAction="http://tempuri.org/IService1/loggedstudent" style="document" />
       <wsdl:input>
@@ -518,26 +549,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mutateRtNotifications">
-      <soap:operation soapAction="http://tempuri.org/IService1/mutateRtNotifications" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="loggedRt">
       <soap:operation soapAction="http://tempuri.org/IService1/loggedRt" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mutateGKNotifications">
-      <soap:operation soapAction="http://tempuri.org/IService1/mutateGKNotifications" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -727,6 +740,69 @@
     </wsdl:operation>
     <wsdl:operation name="complaintsfromstudent">
       <soap:operation soapAction="http://tempuri.org/IService1/complaintsfromstudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="complaintsfromRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/complaintsfromRT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComplainFromRt">
+      <soap:operation soapAction="http://tempuri.org/IService1/getComplainFromRt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIndexedComplaintsFromRt">
+      <soap:operation soapAction="http://tempuri.org/IService1/getIndexedComplaintsFromRt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNotificationForRt">
+      <soap:operation soapAction="http://tempuri.org/IService1/addNotificationForRt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteComplaintsfromStudents">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteComplaintsfromStudents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteComplaintsfromRT">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteComplaintsfromRT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllotedStudent">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteAllotedStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

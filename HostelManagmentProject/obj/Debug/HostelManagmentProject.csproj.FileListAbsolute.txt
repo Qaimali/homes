@@ -1,73 +1,3 @@
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe.config
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\bin\Debug\HostelManagmentProject.pdb
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.csprojResolveAssemblyReference.cache
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Properties.Resources.resources
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.csproj.GenerateResource.Cache
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.exe
-c:\users\qaim ali siddiqui\documents\visual studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.pdb
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stregistration.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stcomplain.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Admincomplain.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adcomplaintsread.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.MainPage.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.StFormSubmission.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adpendingrequest.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.AdregisteredStudents.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Login.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.register.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.forgotpas.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtNotifications.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtReadCompliants.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtReceievedComplaints.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtWriteComplaints.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stnotification.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gkNotifications.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_StCheckin.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_Stdetails.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_stcheckout.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_Stvisitorscheckin.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_Stvisitorscheckout.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_StVisitorsDetails.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.AddHostel.resources
-C:\Users\Qaim Ali Siddiqui\Documents\Visual Studio 2012\Projects\HostelManagmentProject\HostelManagmentProject\obj\Debug\HostelManagmentProject.showhostels.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe.config
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.exe
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.pdb
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.pdb
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.csprojResolveAssemblyReference.cache
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.AddHostel.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.forgotpas.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gkNotifications.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_StCheckin.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_Stdetails.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_stcheckout.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_Stvisitorscheckin.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_Stvisitorscheckout.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.gk_StVisitorsDetails.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Login.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.MainPage.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.register.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtNotifications.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtReadCompliants.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtReceievedComplaints.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.rtWriteComplaints.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stnotification.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stregistration.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stcomplain.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Admincomplain.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adcomplaintsread.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.StFormSubmission.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adpendingrequest.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.AdregisteredStudents.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Properties.Resources.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.csproj.GenerateResource.Cache
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adpendingprofile.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adrromallotment.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adhostelDetail.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adshowhostels.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\New folder (2)\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adRegisteredStProfile.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe.config
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.exe
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.pdb
@@ -76,6 +6,7 @@ C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\bin\Debu
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.csprojResolveAssemblyReference.cache
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.AddHostel.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adpendingprofile.resources
+C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adReadComplaints.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adRegisteredStProfile.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.adrromallotment.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.forgotpas.resources
@@ -99,12 +30,8 @@ C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debu
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stregistration.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Stcomplain.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Admincomplain.resources
-C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adcomplaintsread.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.StFormSubmission.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Adpendingrequest.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.AdregisteredStudents.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.Properties.Resources.resources
 C:\Users\Qaim Ali Siddiqui\Desktop\ooad\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.csproj.GenerateResource.Cache
-C:\Users\Qaim Ali Siddiqui\Desktop\ooad\complaintsfromstudent\s1\homes\HostelManagmentProject\bin\Debug\HostelManagmentProject.exe.config
-C:\Users\Qaim Ali Siddiqui\Desktop\ooad\complaintsfromstudent\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.exe
-C:\Users\Qaim Ali Siddiqui\Desktop\ooad\complaintsfromstudent\s1\homes\HostelManagmentProject\obj\Debug\HostelManagmentProject.pdb

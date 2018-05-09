@@ -85,9 +85,59 @@ namespace HostelManagmentProject
                     BindingSource s = new BindingSource();
                     s.DataSource = cs.Visitors;
                     gvvheckin.DataSource = s;
-                    gvvheckin.Columns[0].DefaultCellStyle.Format = "MM/dd/yyyy";
+                    gvcheckout.DataSource = s;
+
                 }
             }
+        }
+
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gk_StCheckin gk = new gk_StCheckin();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void checkOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_stcheckout gk = new gk_stcheckout();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void visitorCheckInToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckin gk = new gk_Stvisitorscheckin();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void visitorCheckOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckout gk = new gk_Stvisitorscheckout();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stdetails gk = new gk_Stdetails();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            gkNotifications gk = new gkNotifications();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MainPage gk = new MainPage();
+            gk.Show();
+            this.Hide();
         }
     }
 }

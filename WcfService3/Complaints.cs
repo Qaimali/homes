@@ -13,6 +13,8 @@ namespace WcfService3
         string textCompliants;
         string name;
         string residencyofperson;
+        string roomNumber;
+        string registrationNumber;
         [DataMember]
         public string Residencyofperson
         {
@@ -63,6 +65,32 @@ namespace WcfService3
             set
             {
                 name = value;
+            }
+        }
+        [DataMember]
+        public string RegistrationNumber
+        {
+            get
+            {
+                return registrationNumber;
+            }
+
+            set
+            {
+                registrationNumber = value;
+            }
+        }
+        [DataMember]
+        public string RoomNumber
+        {
+            get
+            {
+                return roomNumber;
+            }
+
+            set
+            {
+                roomNumber = value;
             }
         }
     }

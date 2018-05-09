@@ -160,6 +160,7 @@
             // 
             // GVstNotifications
             // 
+            this.GVstNotifications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GVstNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVstNotifications.Location = new System.Drawing.Point(159, 140);
             this.GVstNotifications.Name = "GVstNotifications";

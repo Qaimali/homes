@@ -21,7 +21,7 @@ namespace WcfService3
             st.Question = question;
             st.Answer = answer;
             Cnotification not = new Cnotification();
-            not.Notification = "Dear Student fill the registration form to get allotment in HOMES" ;
+            not.Notification = "You are registered in HOMES now.You will notified soon on Room Alootment if there is vacancy" ;
             st.notificationaddtion(not);
             studentDL.addstudent(st);
         }
@@ -33,6 +33,9 @@ namespace WcfService3
             gk.Password = password;
             gk.Question = question;
             gk.Answer = answer;
+            Cnotification not = new Cnotification();
+            not.Notification = "You are registered in 'HOMES'.You will be notified if there vacancy in HOMES";
+            gk.notificationaddtion(not);
             gatekDL.addgatekeeper(gk);
         }
 
@@ -43,6 +46,9 @@ namespace WcfService3
             rt.Password = password;
             rt.Question = question;
             rt.Answer = answer;
+            Cnotification not = new Cnotification();
+            not.Notification = "You are registered in 'HOMES'.You will be notified if there vacancy in HOMES" ;
+            rt.notificationaddtion(not);
             rtDL.addRT(rt);
         }
 
@@ -83,9 +89,7 @@ namespace WcfService3
            
             if (rtDL.isRT(username, password))
             {
-                Cnotification not = new Cnotification();
-                not.Notification = "You are registered in 'HOMES'.You will be notified if there w" + myutilRT.loginRT.Name;
-                rtDL.addNotification(not);
+                
                 return true;
             }
             return false;
@@ -97,9 +101,7 @@ namespace WcfService3
             
             if (gatekDL.isgatekeeper(username, password))
             {
-                Cnotification not = new Cnotification();
-                not.Notification = "You are registered in 'HOMES'.Y";
-                gatekDL.addNotification(not);
+                
                 return true;
             }
             return false;
@@ -142,10 +144,7 @@ namespace WcfService3
             }
             return false;
         }
-        public List<Cnotification> mutateStNotification()
-        {
-            return myutilStudent.loginstudents.Notificationlist;
-        }
+        
         public Cstudent loggedstudent()
         {
             return myutilStudent.loginstudents;
@@ -153,15 +152,6 @@ namespace WcfService3
         public CRT loggedRt()
         {
             return myutilRT.loginRT;
-        }
-        public List<Cnotification> mutateGKNotifications()
-        {
-            return myutilGateKeeper.logingatkeeper.Notificationlist;
-
-        }
-        public List<Cnotification> mutateRtNotifications()
-        {
-            return myutilRT.loginRT.Notificationlist;
         }
         public Cgatek logged_Gatekeeper()
         {
@@ -255,14 +245,22 @@ namespace WcfService3
 
         public bool isHostelRegistered(String name)
         {
+            bool isfound = false;
             foreach (Cstudent stu in studentDL.hostelRegistration)
             {
                 if (stu.Userid == name)
                 {
-                    return true;
+                    isfound = true;
                 }
             }
-            return false;
+            foreach(Cstudent stu in studentDL.allotedstudents)
+            {
+                if (stu.Userid == name)
+                {
+                    isfound = true;
+                }
+            }
+            return isfound;
         }
 
         public List<Cstudent> registeredstudent()
@@ -297,14 +295,36 @@ namespace WcfService3
                 }
             }
         }
+        public void addNotificationForRt(string name,string hostel,string not)
+        {
+            Cnotification cs = new Cnotification();
+            cs.Notification = not;
+            foreach(CRT rt in rtDL.allotedtRT)
+            {
+                if(rt.AllotedHostel==hostel && rt.Name == name)
+                {
+                    rt.Notificationlist.Add(cs);
+                }
+            }
+        }
 
         public void deletependingst(Cstudent st)
         {
-            studentDL.hostelRegistration.Remove(st);
+            int p=0;
+           foreach(Cstudent s in studentDL.hostelRegistration)
+           {
+                if(s.Userid == st.Userid && s.RegistrationNumber == st.RegistrationNumber)
+                {
+                    p = studentDL.hostelRegistration.IndexOf(s);
+                    break;
+                }
+           }
+            studentDL.hostelRegistration.RemoveAt(p);
         }
 
-        public bool student_checkin(string name, string regNo, string roomNo, String checkin_date)
+        public bool student_checkin(string name, string regNo, string roomNo, string checkin_date)
         {
+            
             
             if (studentDL.checkInS(name, regNo, roomNo, checkin_date))
             {
@@ -312,7 +332,7 @@ namespace WcfService3
             }
             return false;
         }
-        public bool student_checkOut(string name, string regNo, string roomNo, DateTime checkOut_date)
+        public bool student_checkOut(string name, string regNo, string roomNo, string checkOut_date)
         {
             
             if (studentDL.checkOutS(name, regNo, roomNo, checkOut_date))
@@ -325,8 +345,9 @@ namespace WcfService3
         {
             return studentDL.allotedstudents[index];
         }
-        public bool visitor_checkIn(string host, string hostregno, string visitor_name, string visitor_cnic, DateTime checkin, string room_number)
+        public bool visitor_checkIn(string host, string hostregno, string visitor_name, string visitor_cnic, string checkin, string room_number)
         {
+            
             
             if (studentDL.CheckInVisitor(host, hostregno, visitor_name,room_number, checkin, visitor_cnic))
             {
@@ -334,8 +355,10 @@ namespace WcfService3
             }
             return false;
         }
-        public bool visitor_checkOut(string host, string hostregno, string visitor_name, string visitor_cnic, DateTime checkout, string room_number)
+        public bool visitor_checkOut(string host, string hostregno, string visitor_name, string visitor_cnic, string checkout, string room_number)
         {
+            CDate c = new CDate();
+            c.Date = checkout;
             
             if (studentDL.CheckOutVisitor(host, hostregno, visitor_name,room_number, checkout, visitor_cnic))
             {
@@ -349,14 +372,64 @@ namespace WcfService3
             return rtDL.allotedtRT;
         }
 
-        public void complaintsfromstudent(string n1, string s1, string t1, string r1)
+        public void complaintsfromstudent(string n1, string s1, string t1, string r1,string regNum,string roomNu)
         {
-            rtDL.addomplaintforRT(n1, s1, t1, r1);
+            rtDL.addomplaintforRT(n1, s1, t1, r1,regNum,roomNu);
         }
         public void complaintsfromRT(string n1, string s1, string t1, string r1)
         {
             adminDL.addcomplaintsforadmin(n1, s1, t1, r1);
         }
+
+        public List<Complaints> getComplainFromRt()
+        {
+            return adminDL.complaintsForAdmin;
+        }
+
+        public Complaints getIndexedComplaintsFromRt(int index)
+        {
+            return adminDL.complaintsForAdmin[index];
+        }
+        public void deleteComplaintsfromStudents(Complaints comp)
+        {
+            int p = 0;
+            foreach(CRT rt in rtDL.allotedtRT)
+            {
+                if(rt.AllotedHostel== comp.Residencyofperson)
+                {
+                    foreach(Complaints c in rt.ComplaintsforRT)
+                    {
+                        if(c.RegistrationNumber == comp.RegistrationNumber && c.Name== comp.Name)
+                        {
+                            p = rt.ComplaintsforRT.IndexOf(c);
+                            break;
+                        }
+                    }
+                    rt.ComplaintsforRT.RemoveAt(p);
+                }
+            }
+
+        }
+
+        public void deleteComplaintsfromRT(int index)
+        {
+            adminDL.complaintsForAdmin.RemoveAt(index);
+        }
+
+        public void deleteAllotedStudent(Cstudent s)
+        {
+            int p = 0;
+            foreach(Cstudent stud in studentDL.allotedstudents)
+            {
+                if(stud.RegistrationNumber == s.RegistrationNumber && stud.Userid == s.Userid)
+                {
+                    p = studentDL.allotedstudents.IndexOf(stud);
+                }
+            }
+            studentDL.allotedstudents.RemoveAt(p);
+        }
+
+
 
     }   
 }

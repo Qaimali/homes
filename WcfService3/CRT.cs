@@ -8,16 +8,6 @@ namespace WcfService3
     [DataContract]
     public class CRT
     {
-        
-        String name;
-
-        [DataMember]
-
-        public String Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
         String password;
 
         [DataMember]
@@ -29,6 +19,30 @@ namespace WcfService3
         }
         String question;
 
+        String name;
+
+        [DataMember]
+
+        public String Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        [DataMember]
+
+        public List<Complaints> ComplaintsforRT
+        {
+            get
+            {
+                return complaintsforRT;
+            }
+
+            set
+            {
+                complaintsforRT = value;
+            }
+        }
         [DataMember]
 
         public String Question
@@ -47,9 +61,11 @@ namespace WcfService3
         }
         string allotedHostel="Not Alloted any hostel";
 
-        [DataMember]
+        
 
         List<Cnotification> notificationlist = new List<Cnotification>();
+
+        [DataMember]
 
         public List<Cnotification> Notificationlist
         {
@@ -72,21 +88,17 @@ namespace WcfService3
             }
         }
 
-        [DataMember]
-
-        public List<Complaints> ComplaintsforRT
-        {
-            get
-            {
-                return complaintsforRT;
-            }
-
-            set
-            {
-                complaintsforRT = value;
-            }
-        }
+        
 
         List<Complaints> complaintsforRT = new List<Complaints>();
+
+        public void notificationaddtion(Cnotification n)
+        {
+            if (Notificationlist == null)
+            {
+                Notificationlist = new List<Cnotification>();
+            }
+            Notificationlist.Add(n);
+        }
     }
 }

@@ -84,7 +84,6 @@ namespace HostelManagmentProject
                 if(cs.Name==txtStiname.Text && cs.RegistrationNumber == txtstregno.Text && cs.RoomNumber == txtstroomnu.Text)
                 {
                     BindingSource s = new BindingSource();
-                    textBox1.Text = cs.Student_checkin[0];
                     s.DataSource = cs.Student_checkin;
                     gvvheckin.DataSource = s;
                     
@@ -99,6 +98,34 @@ namespace HostelManagmentProject
         private void gvcheckout_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void visitorCheckOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckout gk = new gk_Stvisitorscheckout();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gk_Stdetails gk = new gk_Stdetails();
+            gk.Show();
+            this.Show();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            gkNotifications gk = new gkNotifications();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentVisitorDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_StVisitorsDetails gk = new gk_StVisitorsDetails();
+            gk.Show();
+            this.Hide();
         }
     }
 }

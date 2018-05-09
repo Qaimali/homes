@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +49,10 @@
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.gvcheckout = new System.Windows.Forms.DataGridView();
+            this.studentcheckoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cstudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvvheckin = new System.Windows.Forms.DataGridView();
+            this.studentcheckinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtStiname = new System.Windows.Forms.TextBox();
             this.txtstregno = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,34 +63,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtstroomnu = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cstudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentcheckinBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentcheckoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lengthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayOfWeekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayOfYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.millisecondDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minuteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secondDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeOfDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvcheckout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).BeginInit();
-            this.menuStrip5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cstudentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentcheckinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentcheckoutBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cstudentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentcheckinBindingSource)).BeginInit();
+            this.menuStrip5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -188,24 +170,28 @@
             this.visitorCheckOutToolStripMenuItem.Name = "visitorCheckOutToolStripMenuItem";
             this.visitorCheckOutToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.visitorCheckOutToolStripMenuItem.Text = "Visitor Check Out";
+            this.visitorCheckOutToolStripMenuItem.Click += new System.EventHandler(this.visitorCheckOutToolStripMenuItem_Click_1);
             // 
             // studentDetailToolStripMenuItem
             // 
             this.studentDetailToolStripMenuItem.Name = "studentDetailToolStripMenuItem";
             this.studentDetailToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
+            this.studentDetailToolStripMenuItem.Click += new System.EventHandler(this.studentDetailToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
             this.toolStripMenuItem1.Text = "Notifications";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
             // 
             // studentVisitorDetailToolStripMenuItem
             // 
             this.studentVisitorDetailToolStripMenuItem.Name = "studentVisitorDetailToolStripMenuItem";
             this.studentVisitorDetailToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.studentVisitorDetailToolStripMenuItem.Text = "Student Visitor Detail";
+            this.studentVisitorDetailToolStripMenuItem.Click += new System.EventHandler(this.studentVisitorDetailToolStripMenuItem_Click_1);
             // 
             // logOutToolStripMenuItem
             // 
@@ -281,41 +267,34 @@
             // 
             // gvcheckout
             // 
-            this.gvcheckout.AutoGenerateColumns = false;
             this.gvcheckout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvcheckout.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dateDataGridViewTextBoxColumn,
-            this.dayDataGridViewTextBoxColumn,
-            this.dayOfWeekDataGridViewTextBoxColumn,
-            this.dayOfYearDataGridViewTextBoxColumn,
-            this.hourDataGridViewTextBoxColumn,
-            this.kindDataGridViewTextBoxColumn,
-            this.millisecondDataGridViewTextBoxColumn,
-            this.minuteDataGridViewTextBoxColumn,
-            this.monthDataGridViewTextBoxColumn,
-            this.secondDataGridViewTextBoxColumn,
-            this.ticksDataGridViewTextBoxColumn,
-            this.timeOfDayDataGridViewTextBoxColumn,
-            this.yearDataGridViewTextBoxColumn});
-            this.gvcheckout.DataSource = this.studentcheckoutBindingSource;
             this.gvcheckout.Location = new System.Drawing.Point(573, 292);
             this.gvcheckout.Name = "gvcheckout";
             this.gvcheckout.Size = new System.Drawing.Size(368, 150);
             this.gvcheckout.TabIndex = 567;
             this.gvcheckout.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvcheckout_CellContentClick);
             // 
+            // studentcheckoutBindingSource
+            // 
+            this.studentcheckoutBindingSource.DataMember = "Student_checkout";
+            this.studentcheckoutBindingSource.DataSource = this.cstudentBindingSource;
+            // 
+            // cstudentBindingSource
+            // 
+            this.cstudentBindingSource.DataSource = typeof(HostelManagmentProject.localhost.Cstudent);
+            // 
             // gvvheckin
             // 
-            this.gvvheckin.AutoGenerateColumns = false;
             this.gvvheckin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvvheckin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.lengthDataGridViewTextBoxColumn});
-            this.gvvheckin.DataSource = this.studentcheckinBindingSource;
             this.gvvheckin.Location = new System.Drawing.Point(170, 292);
             this.gvvheckin.Name = "gvvheckin";
             this.gvvheckin.Size = new System.Drawing.Size(346, 150);
             this.gvvheckin.TabIndex = 566;
+            // 
+            // studentcheckinBindingSource
+            // 
+            this.studentcheckinBindingSource.DataMember = "Student_checkin";
+            this.studentcheckinBindingSource.DataSource = this.cstudentBindingSource;
             // 
             // txtStiname
             // 
@@ -408,133 +387,6 @@
             this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 600;
             // 
-            // cstudentBindingSource
-            // 
-            this.cstudentBindingSource.DataSource = typeof(HostelManagmentProject.localhost.Cstudent);
-            // 
-            // studentcheckinBindingSource
-            // 
-            this.studentcheckinBindingSource.DataMember = "Student_checkin";
-            this.studentcheckinBindingSource.DataSource = this.cstudentBindingSource;
-            // 
-            // studentcheckoutBindingSource
-            // 
-            this.studentcheckoutBindingSource.DataMember = "Student_checkout";
-            this.studentcheckoutBindingSource.DataSource = this.cstudentBindingSource;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "DateTime";
-            dataGridViewCellStyle3.Format = "f";
-            dataGridViewCellStyle3.NullValue = "\"{0:D}\"";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // lengthDataGridViewTextBoxColumn
-            // 
-            this.lengthDataGridViewTextBoxColumn.DataPropertyName = "Length";
-            this.lengthDataGridViewTextBoxColumn.HeaderText = "Length";
-            this.lengthDataGridViewTextBoxColumn.Name = "lengthDataGridViewTextBoxColumn";
-            this.lengthDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            dataGridViewCellStyle1.Format = "f";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dayDataGridViewTextBoxColumn
-            // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "Day";
-            dataGridViewCellStyle2.Format = "f";
-            dataGridViewCellStyle2.NullValue = "\"{0:D}\"";
-            this.dayDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dayDataGridViewTextBoxColumn.HeaderText = "Day";
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
-            this.dayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dayOfWeekDataGridViewTextBoxColumn
-            // 
-            this.dayOfWeekDataGridViewTextBoxColumn.DataPropertyName = "DayOfWeek";
-            this.dayOfWeekDataGridViewTextBoxColumn.HeaderText = "DayOfWeek";
-            this.dayOfWeekDataGridViewTextBoxColumn.Name = "dayOfWeekDataGridViewTextBoxColumn";
-            this.dayOfWeekDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dayOfYearDataGridViewTextBoxColumn
-            // 
-            this.dayOfYearDataGridViewTextBoxColumn.DataPropertyName = "DayOfYear";
-            this.dayOfYearDataGridViewTextBoxColumn.HeaderText = "DayOfYear";
-            this.dayOfYearDataGridViewTextBoxColumn.Name = "dayOfYearDataGridViewTextBoxColumn";
-            this.dayOfYearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hourDataGridViewTextBoxColumn
-            // 
-            this.hourDataGridViewTextBoxColumn.DataPropertyName = "Hour";
-            this.hourDataGridViewTextBoxColumn.HeaderText = "Hour";
-            this.hourDataGridViewTextBoxColumn.Name = "hourDataGridViewTextBoxColumn";
-            this.hourDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kindDataGridViewTextBoxColumn
-            // 
-            this.kindDataGridViewTextBoxColumn.DataPropertyName = "Kind";
-            this.kindDataGridViewTextBoxColumn.HeaderText = "Kind";
-            this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
-            this.kindDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // millisecondDataGridViewTextBoxColumn
-            // 
-            this.millisecondDataGridViewTextBoxColumn.DataPropertyName = "Millisecond";
-            this.millisecondDataGridViewTextBoxColumn.HeaderText = "Millisecond";
-            this.millisecondDataGridViewTextBoxColumn.Name = "millisecondDataGridViewTextBoxColumn";
-            this.millisecondDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // minuteDataGridViewTextBoxColumn
-            // 
-            this.minuteDataGridViewTextBoxColumn.DataPropertyName = "Minute";
-            this.minuteDataGridViewTextBoxColumn.HeaderText = "Minute";
-            this.minuteDataGridViewTextBoxColumn.Name = "minuteDataGridViewTextBoxColumn";
-            this.minuteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // monthDataGridViewTextBoxColumn
-            // 
-            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
-            this.monthDataGridViewTextBoxColumn.HeaderText = "Month";
-            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
-            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // secondDataGridViewTextBoxColumn
-            // 
-            this.secondDataGridViewTextBoxColumn.DataPropertyName = "Second";
-            this.secondDataGridViewTextBoxColumn.HeaderText = "Second";
-            this.secondDataGridViewTextBoxColumn.Name = "secondDataGridViewTextBoxColumn";
-            this.secondDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ticksDataGridViewTextBoxColumn
-            // 
-            this.ticksDataGridViewTextBoxColumn.DataPropertyName = "Ticks";
-            this.ticksDataGridViewTextBoxColumn.HeaderText = "Ticks";
-            this.ticksDataGridViewTextBoxColumn.Name = "ticksDataGridViewTextBoxColumn";
-            this.ticksDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timeOfDayDataGridViewTextBoxColumn
-            // 
-            this.timeOfDayDataGridViewTextBoxColumn.DataPropertyName = "TimeOfDay";
-            this.timeOfDayDataGridViewTextBoxColumn.HeaderText = "TimeOfDay";
-            this.timeOfDayDataGridViewTextBoxColumn.Name = "timeOfDayDataGridViewTextBoxColumn";
-            this.timeOfDayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // gk_Stdetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,12 +424,12 @@
             this.menuStrip4.ResumeLayout(false);
             this.menuStrip4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvcheckout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentcheckoutBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cstudentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentcheckinBindingSource)).EndInit();
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cstudentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentcheckinBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentcheckoutBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,8 +470,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource studentcheckoutBindingSource;
         private System.Windows.Forms.BindingSource cstudentBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lengthDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource studentcheckinBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;

@@ -17,27 +17,31 @@ namespace WcfService3
             {
                 if(cs.Name== n1 && cs.RegistrationNumber == r1 && cs.RoomNumber == ro1)
                 {
-                    cs.Student_checkin.Add(dt);
+                    CDate d = new CDate();
+                    d.Date=dt;
+                    cs.Student_checkin.Add(d);
                     isfound =true;
                 }
             }
             return isfound;
         }
         
-        public static bool checkOutS(string n1, string r1, string ro1, DateTime dt)
+        public static bool checkOutS(string n1, string r1, string ro1, string dt)
         {
             bool isfound = false;
             foreach (Cstudent cs in studentDL.allotedstudents)
             {
                 if (cs.Name == n1 && cs.RegistrationNumber == r1 && cs.RoomNumber == ro1)
                 {
-                    cs.Student_checkout.Add(dt);
+                    CDate d = new CDate();
+                    d.Date = dt;
+                    cs.Student_checkout.Add(d);
                     isfound = true;
                 }
             }
             return isfound;
         }
-        public static bool CheckInVisitor(string h1,string r1,string v1,string room, DateTime checkin,string cnic)
+        public static bool CheckInVisitor(string h1,string r1,string v1,string room, string checkin,string cnic)
         {
             bool isfound = false;
             foreach(Cstudent c in studentDL.allotedstudents)
@@ -54,7 +58,7 @@ namespace WcfService3
             }
             return isfound;
         }
-        public static bool CheckOutVisitor(string h1, string r1, string v1, string room, DateTime checkout, string cnic)
+        public static bool CheckOutVisitor(string h1, string r1, string v1, string room, string checkout, string cnic)
         {
             bool isfound = false;
             foreach (Cstudent c in studentDL.allotedstudents)
@@ -84,8 +88,21 @@ namespace WcfService3
         }
         public static void allotment(Cstudent s)
         {
-            allotedstudents.Add(s);
+            int p = 0;
+            foreach(Hostel h in hostelDL.hostellist)
+            {
+                if (h.HostelName == s.HostelName)
+                {
+                    p = Convert.ToInt32(s.RoomNumber)-1;
+                    if (h.Roomlist[p].Allotees < h.Roomlist[p].Capacity)
+                    {
+                        allotedstudents.Add(s);
+                        h.Roomlist[p].Allotees++;
+                    }
+                }
+            }
         }
+        
         public static void addNotification(Cnotification not) 
         {
             myutilStudent.loginstudents.Notificationlist.Add(not);

@@ -20,11 +20,12 @@ namespace HostelManagmentProject
         private void rtNotifications_Load(object sender, EventArgs e)
         {
             localhost.Service1 sc = new localhost.Service1();
-            BindingSource s = new BindingSource();
-            s.DataSource = sc.mutateRtNotifications();
-            GVRtNotification.DataSource = s;
             localhost.CRT rt = new localhost.CRT();
             rt = sc.loggedRt();
+            BindingSource s = new BindingSource();
+            s.DataSource = rt.Notificationlist;
+            GVRtNotification.DataSource = s;
+            
             foreach(localhost.CRT si in sc.allotedRT())
             {
                 if(si.Name==rt.Name && si.AllotedHostel == rt.AllotedHostel)
@@ -55,6 +56,13 @@ namespace HostelManagmentProject
         {
             rtReceievedComplaints co = new rtReceievedComplaints();
             co.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rtWriteComplaints rt = new rtWriteComplaints();
+            rt.Show();
             this.Hide();
         }
     }

@@ -23,7 +23,18 @@ namespace HostelManagmentProject
             BindingSource s = new BindingSource();
             s.DataSource = sc.allotedStudentsforhostel();
             gvregisteredstudents.DataSource = s;
-
+            gvregisteredstudents.Columns[1].Visible = false;
+            gvregisteredstudents.Columns[2].Visible = false;
+            gvregisteredstudents.Columns[3].Visible = false;
+            gvregisteredstudents.Columns[4].Visible = false;
+            gvregisteredstudents.Columns[5].Visible = false;
+            gvregisteredstudents.Columns[6].Visible = false;
+            gvregisteredstudents.Columns[7].Visible = false;
+            gvregisteredstudents.Columns[8].Visible = false;
+            gvregisteredstudents.Columns[11].Visible = false;
+            gvregisteredstudents.Columns[12].Visible = false;
+            gvregisteredstudents.Columns[13].Visible = false;
+            gvregisteredstudents.Columns[15].Visible = false;
         }
 
         private void textBox127_TextChanged(object sender, EventArgs e)
@@ -101,7 +112,7 @@ namespace HostelManagmentProject
 
         private void complaintsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Adcomplaintsread a = new Adcomplaintsread();
+            Admincomplain a = new Admincomplain();
             a.Show();
             this.Hide();
         }

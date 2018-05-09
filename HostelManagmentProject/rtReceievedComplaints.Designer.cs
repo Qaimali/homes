@@ -28,19 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compliantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txthostelName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GVRtcomplaints = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.complaintsforRTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notificationlistBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVRtcomplaints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.complaintsforRTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationlistBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -72,6 +79,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.complaintsToolStripMenuItem,
             this.compliantsToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 57);
             this.menuStrip1.Name = "menuStrip1";
@@ -85,18 +93,28 @@
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.complaintsToolStripMenuItem.Text = "Notication";
+            this.complaintsToolStripMenuItem.Click += new System.EventHandler(this.complaintsToolStripMenuItem_Click);
             // 
             // compliantsToolStripMenuItem
             // 
             this.compliantsToolStripMenuItem.Name = "compliantsToolStripMenuItem";
             this.compliantsToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.compliantsToolStripMenuItem.Text = "Comlpaints";
+            this.compliantsToolStripMenuItem.Click += new System.EventHandler(this.compliantsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
+            this.toolStripMenuItem1.Text = "Write Complaints";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // txthostelName
             // 
@@ -122,7 +140,8 @@
             this.GVRtcomplaints.BackgroundColor = System.Drawing.Color.White;
             this.GVRtcomplaints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVRtcomplaints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.Column1,
+            this.Column2});
             this.GVRtcomplaints.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.GVRtcomplaints.Location = new System.Drawing.Point(151, 112);
             this.GVRtcomplaints.Name = "GVRtcomplaints";
@@ -137,6 +156,21 @@
             this.Column1.Name = "Column1";
             this.Column1.Text = "Click Here";
             this.Column1.UseColumnTextForLinkValue = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Delete";
+            this.Column2.Name = "Column2";
+            this.Column2.Text = "delete";
+            this.Column2.UseColumnTextForLinkValue = true;
+            // 
+            // complaintsforRTBindingSource
+            // 
+            this.complaintsforRTBindingSource.DataMember = "ComplaintsforRT";
+            // 
+            // notificationlistBindingSource
+            // 
+            this.notificationlistBindingSource.DataMember = "Notificationlist";
             // 
             // rtReceievedComplaints
             // 
@@ -157,6 +191,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVRtcomplaints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.complaintsforRTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationlistBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +209,17 @@
         private System.Windows.Forms.TextBox txthostelName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView GVRtcomplaints;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.BindingSource notificationlistBindingSource;
+        private System.Windows.Forms.BindingSource cRTBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn complaintSubjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registrationNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn residencyofpersonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textCompliantsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource complaintsforRTBindingSource;
         private System.Windows.Forms.DataGridViewLinkColumn Column1;
+        private System.Windows.Forms.DataGridViewLinkColumn Column2;
     }
 }

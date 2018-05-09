@@ -139,6 +139,7 @@
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
             this.checkInToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.checkInToolStripMenuItem.Text = "Check in";
+            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
             // checkOutToolStripMenuItem
             // 
@@ -146,30 +147,35 @@
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
             this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.checkOutToolStripMenuItem.Text = "Check Out";
+            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click_1);
             // 
             // visitorCheckInToolStripMenuItem
             // 
             this.visitorCheckInToolStripMenuItem.Name = "visitorCheckInToolStripMenuItem";
             this.visitorCheckInToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.visitorCheckInToolStripMenuItem.Text = "Visitor Check In";
+            this.visitorCheckInToolStripMenuItem.Click += new System.EventHandler(this.visitorCheckInToolStripMenuItem_Click_1);
             // 
             // visitorCheckOutToolStripMenuItem
             // 
             this.visitorCheckOutToolStripMenuItem.Name = "visitorCheckOutToolStripMenuItem";
             this.visitorCheckOutToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.visitorCheckOutToolStripMenuItem.Text = "Visitor Check Out";
+            this.visitorCheckOutToolStripMenuItem.Click += new System.EventHandler(this.visitorCheckOutToolStripMenuItem_Click_1);
             // 
             // studentDetailToolStripMenuItem
             // 
             this.studentDetailToolStripMenuItem.Name = "studentDetailToolStripMenuItem";
             this.studentDetailToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.studentDetailToolStripMenuItem.Text = "Student Detail";
+            this.studentDetailToolStripMenuItem.Click += new System.EventHandler(this.studentDetailToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
             this.toolStripMenuItem1.Text = "Notifications";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
             // 
             // studentVisitorDetailToolStripMenuItem
             // 
@@ -182,6 +188,7 @@
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click_1);
             // 
             // menuStrip2
             // 

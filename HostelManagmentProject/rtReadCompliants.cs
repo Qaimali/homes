@@ -28,6 +28,35 @@ namespace HostelManagmentProject
             txthostel.Text = curr.Residencyofperson;
             txtsubject.Text = curr.ComplaintSubject;
             txtcomplaint.Text = curr.TextCompliants;
+            localhost.Service1 sc = new localhost.Service1();
+            string not = "your complaints has been submitted .Soon we will take suitable actions";
+            sc.addnotificationforsearch(curr.Name, curr.Residencyofperson, not);
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainPage mp = new MainPage();
+            mp.Show();
+            this.Hide();
+        }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtNotifications r = new rtNotifications();
+            r.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rtWriteComplaints gk = new rtWriteComplaints();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void compliantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

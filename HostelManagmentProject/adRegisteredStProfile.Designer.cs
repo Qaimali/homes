@@ -60,6 +60,12 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmdDelete = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.txtHostel = new System.Windows.Forms.TextBox();
+            this.txtroom = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvvheckin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvcheckout)).BeginInit();
@@ -92,7 +98,7 @@
             // 
             // txtgender
             // 
-            this.txtgender.Location = new System.Drawing.Point(243, 130);
+            this.txtgender.Location = new System.Drawing.Point(225, 73);
             this.txtgender.Name = "txtgender";
             this.txtgender.Size = new System.Drawing.Size(137, 20);
             this.txtgender.TabIndex = 333;
@@ -101,7 +107,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(540, 274);
+            this.label5.Location = new System.Drawing.Point(522, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 332;
@@ -109,7 +115,7 @@
             // 
             // txtaddress
             // 
-            this.txtaddress.Location = new System.Drawing.Point(712, 274);
+            this.txtaddress.Location = new System.Drawing.Point(694, 217);
             this.txtaddress.Multiline = true;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(269, 36);
@@ -117,49 +123,49 @@
             // 
             // txtstudentname
             // 
-            this.txtstudentname.Location = new System.Drawing.Point(243, 96);
+            this.txtstudentname.Location = new System.Drawing.Point(225, 39);
             this.txtstudentname.Name = "txtstudentname";
             this.txtstudentname.Size = new System.Drawing.Size(137, 20);
             this.txtstudentname.TabIndex = 330;
             // 
             // txtguardianphone
             // 
-            this.txtguardianphone.Location = new System.Drawing.Point(712, 238);
+            this.txtguardianphone.Location = new System.Drawing.Point(694, 181);
             this.txtguardianphone.Name = "txtguardianphone";
             this.txtguardianphone.Size = new System.Drawing.Size(137, 20);
             this.txtguardianphone.TabIndex = 329;
             // 
             // txtfatherphone
             // 
-            this.txtfatherphone.Location = new System.Drawing.Point(712, 207);
+            this.txtfatherphone.Location = new System.Drawing.Point(694, 150);
             this.txtfatherphone.Name = "txtfatherphone";
             this.txtfatherphone.Size = new System.Drawing.Size(137, 20);
             this.txtfatherphone.TabIndex = 328;
             // 
             // txtregistrtaionnumber
             // 
-            this.txtregistrtaionnumber.Location = new System.Drawing.Point(243, 168);
+            this.txtregistrtaionnumber.Location = new System.Drawing.Point(225, 111);
             this.txtregistrtaionnumber.Name = "txtregistrtaionnumber";
             this.txtregistrtaionnumber.Size = new System.Drawing.Size(137, 20);
             this.txtregistrtaionnumber.TabIndex = 327;
             // 
             // txtfathername
             // 
-            this.txtfathername.Location = new System.Drawing.Point(243, 207);
+            this.txtfathername.Location = new System.Drawing.Point(225, 150);
             this.txtfathername.Name = "txtfathername";
             this.txtfathername.Size = new System.Drawing.Size(137, 20);
             this.txtfathername.TabIndex = 326;
             // 
             // txtguardianname
             // 
-            this.txtguardianname.Location = new System.Drawing.Point(243, 237);
+            this.txtguardianname.Location = new System.Drawing.Point(225, 180);
             this.txtguardianname.Name = "txtguardianname";
             this.txtguardianname.Size = new System.Drawing.Size(137, 20);
             this.txtguardianname.TabIndex = 325;
             // 
             // txtbllodgroup
             // 
-            this.txtbllodgroup.Location = new System.Drawing.Point(243, 270);
+            this.txtbllodgroup.Location = new System.Drawing.Point(225, 213);
             this.txtbllodgroup.Name = "txtbllodgroup";
             this.txtbllodgroup.Size = new System.Drawing.Size(137, 20);
             this.txtbllodgroup.TabIndex = 324;
@@ -168,7 +174,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(540, 211);
+            this.label3.Location = new System.Drawing.Point(522, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 323;
@@ -178,7 +184,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(58, 274);
+            this.label13.Location = new System.Drawing.Point(40, 217);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(84, 16);
             this.label13.TabIndex = 322;
@@ -188,7 +194,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(58, 168);
+            this.label12.Location = new System.Drawing.Point(40, 111);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(131, 16);
             this.label12.TabIndex = 321;
@@ -198,7 +204,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(59, 208);
+            this.label11.Location = new System.Drawing.Point(41, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 16);
             this.label11.TabIndex = 320;
@@ -208,7 +214,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(59, 237);
+            this.label10.Location = new System.Drawing.Point(41, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 16);
             this.label10.TabIndex = 319;
@@ -218,7 +224,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(540, 238);
+            this.label9.Location = new System.Drawing.Point(522, 181);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 16);
             this.label9.TabIndex = 318;
@@ -228,7 +234,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(59, 130);
+            this.label7.Location = new System.Drawing.Point(41, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 16);
             this.label7.TabIndex = 317;
@@ -239,7 +245,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(58, 96);
+            this.label1.Location = new System.Drawing.Point(40, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 316;
@@ -248,7 +254,7 @@
             // gvvheckin
             // 
             this.gvvheckin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvvheckin.Location = new System.Drawing.Point(61, 336);
+            this.gvvheckin.Location = new System.Drawing.Point(43, 279);
             this.gvvheckin.Name = "gvvheckin";
             this.gvvheckin.Size = new System.Drawing.Size(219, 150);
             this.gvvheckin.TabIndex = 334;
@@ -256,7 +262,7 @@
             // gvcheckout
             // 
             this.gvcheckout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvcheckout.Location = new System.Drawing.Point(286, 336);
+            this.gvcheckout.Location = new System.Drawing.Point(268, 279);
             this.gvcheckout.Name = "gvcheckout";
             this.gvcheckout.Size = new System.Drawing.Size(240, 150);
             this.gvcheckout.TabIndex = 335;
@@ -265,7 +271,7 @@
             // gvvisitorsCheckIn
             // 
             this.gvvisitorsCheckIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvvisitorsCheckIn.Location = new System.Drawing.Point(543, 336);
+            this.gvvisitorsCheckIn.Location = new System.Drawing.Point(525, 279);
             this.gvvisitorsCheckIn.Name = "gvvisitorsCheckIn";
             this.gvvisitorsCheckIn.Size = new System.Drawing.Size(240, 150);
             this.gvvisitorsCheckIn.TabIndex = 336;
@@ -273,7 +279,7 @@
             // gvVisitorsCheckOut
             // 
             this.gvVisitorsCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvVisitorsCheckOut.Location = new System.Drawing.Point(789, 336);
+            this.gvVisitorsCheckOut.Location = new System.Drawing.Point(771, 279);
             this.gvVisitorsCheckOut.Name = "gvVisitorsCheckOut";
             this.gvVisitorsCheckOut.Size = new System.Drawing.Size(240, 150);
             this.gvVisitorsCheckOut.TabIndex = 337;
@@ -287,7 +293,7 @@
             this.menuStrip3.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip3.Location = new System.Drawing.Point(61, 313);
+            this.menuStrip3.Location = new System.Drawing.Point(43, 256);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(219, 26);
             this.menuStrip3.TabIndex = 338;
@@ -310,7 +316,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem3});
-            this.menuStrip1.Location = new System.Drawing.Point(286, 313);
+            this.menuStrip1.Location = new System.Drawing.Point(268, 256);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(240, 26);
             this.menuStrip1.TabIndex = 339;
@@ -333,7 +339,7 @@
             this.menuStrip4.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem4});
-            this.menuStrip4.Location = new System.Drawing.Point(543, 313);
+            this.menuStrip4.Location = new System.Drawing.Point(525, 256);
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.Size = new System.Drawing.Size(240, 26);
             this.menuStrip4.TabIndex = 340;
@@ -356,7 +362,7 @@
             this.menuStrip5.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem5});
-            this.menuStrip5.Location = new System.Drawing.Point(789, 313);
+            this.menuStrip5.Location = new System.Drawing.Point(771, 256);
             this.menuStrip5.Name = "menuStrip5";
             this.menuStrip5.Size = new System.Drawing.Size(240, 26);
             this.menuStrip5.TabIndex = 341;
@@ -370,12 +376,73 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(116, 22);
             this.toolStripMenuItem5.Text = "Visitors Check Out";
             // 
+            // cmdDelete
+            // 
+            this.cmdDelete.Location = new System.Drawing.Point(469, 481);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(75, 23);
+            this.cmdDelete.TabIndex = 342;
+            this.cmdDelete.Text = "Delete";
+            this.cmdDelete.UseVisualStyleBackColor = true;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(43, 460);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(105, 13);
+            this.linkLabel1.TabIndex = 343;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Go to Previous Page";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // txtHostel
+            // 
+            this.txtHostel.Location = new System.Drawing.Point(694, 113);
+            this.txtHostel.Name = "txtHostel";
+            this.txtHostel.Size = new System.Drawing.Size(137, 20);
+            this.txtHostel.TabIndex = 347;
+            // 
+            // txtroom
+            // 
+            this.txtroom.Location = new System.Drawing.Point(694, 82);
+            this.txtroom.Name = "txtroom";
+            this.txtroom.Size = new System.Drawing.Size(137, 20);
+            this.txtroom.TabIndex = 346;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(522, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 16);
+            this.label2.TabIndex = 345;
+            this.label2.Text = "Room Number";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(522, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.TabIndex = 344;
+            this.label4.Text = "Hostel";
+            // 
             // adRegisteredStProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.txtHostel);
+            this.Controls.Add(this.txtroom);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.menuStrip5);
             this.Controls.Add(this.menuStrip4);
             this.Controls.Add(this.menuStrip1);
@@ -459,5 +526,11 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.Button cmdDelete;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox txtHostel;
+        private System.Windows.Forms.TextBox txtroom;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

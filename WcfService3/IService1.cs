@@ -55,23 +55,11 @@ namespace WcfService3
 
         [OperationContract]
 
-        List<Cnotification> mutateStNotification();//Getter of Student Notifiction
-
-        [OperationContract]
-
         Cstudent loggedstudent();//student which is logged in
 
         [OperationContract]
 
-        List<Cnotification> mutateRtNotifications();//Getter of RT Notifiction
-
-        [OperationContract]
-
         CRT loggedRt();//RT which is logged in
-
-        [OperationContract]
-
-        List<Cnotification> mutateGKNotifications();//Getter of GateKeeper Notifiction
 
         [OperationContract]
 
@@ -135,19 +123,19 @@ namespace WcfService3
 
         [OperationContract]
 
-        bool student_checkin(string name, string regNo, string roomNo, String checkin_date);
+        bool student_checkin(string name, string regNo, string roomNo, string checkin_date);
 
         [OperationContract]
 
-        bool student_checkOut(string name, string regNo, string roomNo, DateTime checkOut_date);
+        bool student_checkOut(string name, string regNo, string roomNo, string checkOut_date);
 
         [OperationContract]
 
-        bool visitor_checkIn(string host, string hostregno, string visitor_name, string visitor_cnic, DateTime checkin,string room_number);
+        bool visitor_checkIn(string host, string hostregno, string visitor_name, string visitor_cnic, string checkin,string room_number);
 
         [OperationContract]
 
-        bool visitor_checkOut(string host, string hostregno, string visitor_name, string visitor_cnic, DateTime checkout, string room_number);
+        bool visitor_checkOut(string host, string hostregno, string visitor_name, string visitor_cnic, string checkout, string room_number);
 
         [OperationContract]
 
@@ -155,8 +143,35 @@ namespace WcfService3
 
         [OperationContract]
 
-        void complaintsfromstudent(string n1, string s1, string t1, string r1);
+        void complaintsfromstudent(string n1, string s1, string t1, string r1, string regNum, string roomNu);
 
-        
+        [OperationContract]
+
+        void complaintsfromRT(string n1, string s1, string t1, string r1);
+
+        [OperationContract]
+
+        List<Complaints> getComplainFromRt();
+
+        [OperationContract]
+
+        Complaints getIndexedComplaintsFromRt(int index);
+
+        [OperationContract]
+
+        void addNotificationForRt(string name, string hostel, string not);
+
+        [OperationContract]
+
+        void deleteComplaintsfromStudents(Complaints comp);
+
+        [OperationContract]
+
+        void deleteComplaintsfromRT(int index);
+
+        [OperationContract]
+
+        void deleteAllotedStudent(Cstudent s);
+
     }
 }

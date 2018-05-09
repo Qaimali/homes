@@ -70,6 +70,7 @@ namespace HostelManagmentProject
             localhost.Service1 sc = new localhost.Service1();
             bool yes=true;
             sc.addhostel(txthostelname.Text,int.Parse(txtroomcapacity.Text),yes,int.Parse(txtnoofrooms.Text),yes, txt1strt.Text, txt2ndrt.Text, txt1stGK.Text, txt2ndGK.Text);
+            MessageBox.Show("Hostel Is added To xxxx");
         }
 
         private void messBillToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,7 +120,7 @@ namespace HostelManagmentProject
 
         private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Adcomplaintsread a = new Adcomplaintsread();
+            Admincomplain a = new Admincomplain();
             a.Show();
             this.Hide();
         }

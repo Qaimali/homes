@@ -52,6 +52,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txthostel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtregNum = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRoomNum = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -109,7 +113,7 @@
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(505, 163);
+            this.txtname.Location = new System.Drawing.Point(505, 174);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(137, 20);
             this.txtname.TabIndex = 506;
@@ -145,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 300);
+            this.label1.Location = new System.Drawing.Point(320, 374);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 507;
@@ -153,16 +157,16 @@
             // 
             // txtcomplaint
             // 
-            this.txtcomplaint.Location = new System.Drawing.Point(505, 300);
+            this.txtcomplaint.Location = new System.Drawing.Point(505, 373);
             this.txtcomplaint.Multiline = true;
             this.txtcomplaint.Name = "txtcomplaint";
-            this.txtcomplaint.Size = new System.Drawing.Size(251, 115);
+            this.txtcomplaint.Size = new System.Drawing.Size(251, 76);
             this.txtcomplaint.TabIndex = 508;
             this.txtcomplaint.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(505, 469);
+            this.button1.Location = new System.Drawing.Point(505, 481);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.TabIndex = 509;
@@ -290,12 +294,50 @@
             this.label4.TabIndex = 519;
             this.label4.Text = "Hostel";
             // 
+            // txtregNum
+            // 
+            this.txtregNum.Location = new System.Drawing.Point(505, 287);
+            this.txtregNum.Name = "txtregNum";
+            this.txtregNum.Size = new System.Drawing.Size(137, 20);
+            this.txtregNum.TabIndex = 522;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(320, 291);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 16);
+            this.label5.TabIndex = 521;
+            this.label5.Text = "Registration NUmber";
+            // 
+            // txtRoomNum
+            // 
+            this.txtRoomNum.Location = new System.Drawing.Point(505, 323);
+            this.txtRoomNum.Name = "txtRoomNum";
+            this.txtRoomNum.Size = new System.Drawing.Size(137, 20);
+            this.txtRoomNum.TabIndex = 524;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(320, 327);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 16);
+            this.label11.TabIndex = 523;
+            this.label11.Text = "Room Number";
+            // 
             // Stcomplain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1038, 516);
+            this.Controls.Add(this.txtRoomNum);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtregNum);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txthostel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
@@ -354,5 +396,9 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.TextBox txthostel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtregNum;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtRoomNum;
+        private System.Windows.Forms.Label label11;
     }
 }

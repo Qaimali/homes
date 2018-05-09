@@ -73,9 +73,9 @@ namespace HostelManagmentProject
         {
             localhost.Service1 sc = new localhost.Service1();
             bool st = false;
-            bool sts = false;
             bool sts2 = false;
-            sc.student_checkOut(txtstname.Text, txtstregno.Text, txtstroomnu.Text, DateTime.Now, sts, out st, out sts2);
+            sc.student_checkOut(txtstname.Text, txtstregno.Text, txtstroomnu.Text, datetimestcheckout.Text, out st, out sts2);
+            
             if (st)
             {
                 MessageBox.Show("submitted");
@@ -84,6 +84,34 @@ namespace HostelManagmentProject
             {
                 MessageBox.Show("inalid information");
             }
+        }
+
+        private void visitorCheckOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckout gk = new gk_Stvisitorscheckout();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stdetails gk = new gk_Stdetails();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            gkNotifications gk = new gkNotifications();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentVisitorDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_StVisitorsDetails gk = new gk_StVisitorsDetails();
+            gk.Show();
+            this.Hide();
         }
     }
 }

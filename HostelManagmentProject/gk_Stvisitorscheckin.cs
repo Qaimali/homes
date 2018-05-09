@@ -76,19 +76,7 @@ namespace HostelManagmentProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            localhost.Service1 sc = new localhost.Service1();
-            bool st = false;
-            bool sts = false;
-            bool sts2 = false;
-            sc.visitor_checkOut(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text, DateTime.Parse(datetimeVcheckout.Text), sts2,txtstroomnu.Text, out st, out sts);
-            if (st)
-            {
-                MessageBox.Show("submitted");
-            }
-            else
-            {
-                MessageBox.Show("inalid information");
-            }
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -96,9 +84,9 @@ namespace HostelManagmentProject
             localhost.Service1 sc = new localhost.Service1();
             bool st = false;
             bool sts = false;
-            bool sts2 = false;
             string temp = DateTime.Now.ToString("ddd dd MMM yyyy");
-            sc.visitor_checkIn(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text, DateTime.Now, sts2,txtstroomnu.Text, out st, out sts);
+            sc.visitor_checkIn(txthostname.Text, txtstregno.Text, txtViname.Text, txtcnicvisitor.Text,datetimeVcheckin.Text ,txtstroomnu.Text, out st, out sts);
+            
             if (st)
             {
                 MessageBox.Show("submitted");
@@ -113,6 +101,34 @@ namespace HostelManagmentProject
         {
             gk_StVisitorsDetails g = new gk_StVisitorsDetails();
             g.Show();
+            this.Hide();
+        }
+
+        private void visitorCheckInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckin gk = new gk_Stvisitorscheckin();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void visitorCheckOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stvisitorscheckout gk = new gk_Stvisitorscheckout();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void studentDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            gk_Stdetails gk = new gk_Stdetails();
+            gk.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            gkNotifications gk = new gkNotifications();
+            gk.Show();
             this.Hide();
         }
     }

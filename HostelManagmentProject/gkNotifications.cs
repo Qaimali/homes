@@ -48,11 +48,11 @@ namespace HostelManagmentProject
         private void gkNotifications_Load(object sender, EventArgs e)
         {
             localhost.Service1 sc=new localhost.Service1();
-            BindingSource s = new BindingSource();
-            s.DataSource = sc.mutateGKNotifications();
-            GVgkNotifications.DataSource = s;
             localhost.Cgatek cg = new localhost.Cgatek();
             cg = sc.logged_Gatekeeper();
+            BindingSource s = new BindingSource();
+            s.DataSource = cg.Notificationlist;
+            GVgkNotifications.DataSource = s;
             labelgkname.Text = cg.Name;
         }
         private void visitorCheckOutToolStripMenuItem_Click(object sender, EventArgs e)

@@ -35,13 +35,18 @@ namespace HostelManagmentProject
         private void combolistofhostels_SelectedIndexChanged(object sender, EventArgs e)
         {
             localhost.Service1 sc = new localhost.Service1();
+            
             foreach (localhost.Hostel hos in sc.showallhostel())
             {
                 if (combolistofhostels.GetItemText(combolistofhostels.SelectedItem) == hos.HostelName)
                 {
+                    
                     for(int i = 0; i < hos.Roomlist.Count(); i++)
                     {
-                        combolistofrooms.Items.Add(hos.Roomlist[i].Roomnumber);
+                        if (hos.Roomlist[i].Allotees < hos.Roomlist[i].Capacity)
+                        {
+                            combolistofrooms.Items.Add(hos.Roomlist[i].Roomnumber);
+                        }
                     }
                 }
             }
@@ -62,7 +67,7 @@ namespace HostelManagmentProject
             string c = "you are most wellcomed to HOMES Your hotel name is " + stud.HostelName + "& room number is " + stud.RoomNumber;
             sc.allotstudent(stud);
             sc.addnotificationforsearch(stud.Name, stud.RegistrationNumber, c);
-            //sc.deletependingst(stud);  
+            sc.deletependingst(stud);
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -73,7 +73,9 @@ namespace HostelManagmentProject
 
         private void studentVisitorDetailToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
+            gk_StVisitorsDetails gk = new gk_StVisitorsDetails();
+            gk.Show();
+            this.Hide();
         }
 
         private void gk_StCheckin_Load(object sender, EventArgs e)
@@ -85,10 +87,9 @@ namespace HostelManagmentProject
         {
             localhost.Service1 sc = new localhost.Service1();
             bool st = false;
-            //bool sts = false;
             bool sts2 = false;
-            string temp = DateTime.Now.ToShortDateString();
-            sc.student_checkin(txtstname.Text, txtstregno.Text, txtstroomnu.Text,temp , out st,out sts2);
+            
+            sc.student_checkin(txtstname.Text, txtstregno.Text, txtstroomnu.Text,datetimestcheckin.Text, out st,out sts2);
             
             if (st)
             {

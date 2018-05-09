@@ -9,6 +9,13 @@ namespace WcfService3
     [DataContract]
     public class Cgatek
     {
+        [DataMember]
+
+        public String Question
+        {
+            get { return question; }
+            set { question = value; }
+        }
         String name;
 
         [DataMember]
@@ -17,6 +24,20 @@ namespace WcfService3
         {
             get { return name; }
             set { name = value; }
+        }
+        [DataMember]
+
+        public List<Cnotification> Notificationlist
+        {
+            get { return notificationlist; }
+            set { notificationlist = value; }
+        }
+        [DataMember]
+
+        public String Answer
+        {
+            get { return answer; }
+            set { answer = value; }
         }
         String password;
 
@@ -29,34 +50,17 @@ namespace WcfService3
         }
         String question;
 
-        [DataMember]
-
-        public String Question
-        {
-            get { return question; }
-            set { question = value; }
-        }
+        
         String answer;
 
-        [DataMember]
-
-        public String Answer
-        {
-            get { return answer; }
-            set { answer = value; }
-        }
+        
         List<Cnotification> notificationlist = new List<Cnotification>();
 
-        [DataMember]
-
-        public List<Cnotification> Notificationlist
-        {
-            get { return notificationlist; }
-            set { notificationlist = value; }
-        }
+        
         public void notificationaddtion(Cnotification n)
         {
             Notificationlist.Add(n);
         }
+        
     }
 }

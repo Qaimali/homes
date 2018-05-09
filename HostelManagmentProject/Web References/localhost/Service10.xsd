@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService3" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:5352/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:complexType name="ArrayOfCnotification">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cnotification" nillable="true" type="tns:Cnotification" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCnotification" nillable="true" type="tns:ArrayOfCnotification" />
-  <xs:complexType name="Cnotification">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Notification" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Cnotification" nillable="true" type="tns:Cnotification" />
   <xs:complexType name="Cstudent">
     <xs:sequence>
       <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
@@ -31,13 +18,37 @@
       <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="RoomNumber" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Student_checkin" nillable="true" type="q1:ArrayOfstring" />
-      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Student_checkout" nillable="true" type="q2:ArrayOfdateTime" />
+      <xs:element minOccurs="0" name="Student_checkin" nillable="true" type="tns:ArrayOfCDate" />
+      <xs:element minOccurs="0" name="Student_checkout" nillable="true" type="tns:ArrayOfCDate" />
       <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Visitors" nillable="true" type="tns:ArrayOfCvisistor" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cstudent" nillable="true" type="tns:Cstudent" />
+  <xs:complexType name="ArrayOfCnotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cnotification" nillable="true" type="tns:Cnotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCnotification" nillable="true" type="tns:ArrayOfCnotification" />
+  <xs:complexType name="Cnotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Notification" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cnotification" nillable="true" type="tns:Cnotification" />
+  <xs:complexType name="ArrayOfCDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CDate" nillable="true" type="tns:CDate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCDate" nillable="true" type="tns:ArrayOfCDate" />
+  <xs:complexType name="CDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CDate" nillable="true" type="tns:CDate" />
   <xs:complexType name="ArrayOfCvisistor">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Cvisistor" nillable="true" type="tns:Cvisistor" />
@@ -46,8 +57,8 @@
   <xs:element name="ArrayOfCvisistor" nillable="true" type="tns:ArrayOfCvisistor" />
   <xs:complexType name="Cvisistor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="CheckIn" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="CheckOut" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CheckIn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckOut" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Cnic" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -59,9 +70,9 @@
       <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ComplaintsforRT" nillable="true" type="tns:ArrayOfComplaints" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="notificationlist" nillable="true" type="tns:ArrayOfCnotification" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CRT" nillable="true" type="tns:CRT" />
@@ -75,7 +86,9 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="ComplaintSubject" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Residencyofperson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TextCompliants" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

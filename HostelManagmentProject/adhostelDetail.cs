@@ -33,15 +33,15 @@ namespace HostelManagmentProject
             gvrtlist.DataSource = s;
             gvrtlist.Columns[0].Visible = false;
             gvrtlist.Columns[3].Visible = false;
+            gvrtlist.Columns[1].Visible = false;
+            gvrtlist.Columns[4].Visible = false;
             BindingSource si = new BindingSource();
             si.DataSource = hosteld.GatekeeperList;
             gvgatekeeperlist.DataSource = si;
             gvgatekeeperlist.Columns[0].Visible = false;
             gvgatekeeperlist.Columns[3].Visible = false;
-            for (int i=0;i< hosteld.Roomlist.Count(); i++)
-            {
-                comboBox1.Items.Add(hosteld.Roomlist[i].Roomnumber);
-            }
+            gvgatekeeperlist.Columns[2].Visible = false;
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

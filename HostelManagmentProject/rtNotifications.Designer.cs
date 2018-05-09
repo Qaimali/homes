@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compliantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GVRtNotification = new System.Windows.Forms.DataGridView();
             this.txthostelName = new System.Windows.Forms.TextBox();
@@ -71,6 +72,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.complaintsToolStripMenuItem,
             this.compliantsToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 61);
             this.menuStrip1.Name = "menuStrip1";
@@ -93,6 +95,13 @@
             this.compliantsToolStripMenuItem.Text = "Comlpaints";
             this.compliantsToolStripMenuItem.Click += new System.EventHandler(this.compliantsToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 26);
+            this.toolStripMenuItem1.Text = "Write Complaints";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
@@ -103,6 +112,7 @@
             // GVRtNotification
             // 
             this.GVRtNotification.AllowUserToOrderColumns = true;
+            this.GVRtNotification.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GVRtNotification.BackgroundColor = System.Drawing.Color.White;
             this.GVRtNotification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVRtNotification.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -165,5 +175,6 @@
         private System.Windows.Forms.DataGridView GVRtNotification;
         private System.Windows.Forms.TextBox txthostelName;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

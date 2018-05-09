@@ -9,8 +9,8 @@ namespace WcfService3
     public class Cvisistor
     {
         string name;
-        DateTime checkIn=new DateTime();
-        DateTime checkOut=new DateTime();
+        string checkIn = null;
+        string checkOut = null;
 
         string cnic;
         
@@ -28,7 +28,7 @@ namespace WcfService3
             }
         }
         [DataMember]
-        public DateTime CheckOut
+        public string CheckOut
         {
             get
             {
@@ -41,7 +41,7 @@ namespace WcfService3
             }
         }
         [DataMember]
-        public DateTime CheckIn
+        public string CheckIn
         {
             get
             {

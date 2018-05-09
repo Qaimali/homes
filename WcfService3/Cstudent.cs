@@ -29,8 +29,8 @@ namespace WcfService3
         String fatherNumber;
         String guardianNumber;
         String password;
-        List<String> student_checkin =new List<String>();
-        List<DateTime> student_checkout=new List<DateTime>();
+        List<CDate> student_checkin =new List<CDate>();
+        List<CDate> student_checkout=new List<CDate>();
         List<Cvisistor> visitors = new List<Cvisistor>();
         [DataMember]
         public String Password
@@ -212,7 +212,7 @@ namespace WcfService3
         
         
         [DataMember]
-        public List<DateTime> Student_checkout
+        public List<CDate> Student_checkout
         {
             get
             {
@@ -227,11 +227,13 @@ namespace WcfService3
         
         List<Cnotification> notificationlist = new List<Cnotification>();
         [DataMember]
+
         public List<Cnotification> Notificationlist
         {
             get { return notificationlist; }
             set { notificationlist = value; }
         }
+
         public void notificationaddtion(Cnotification n)
         {
             if (Notificationlist == null)
@@ -241,11 +243,13 @@ namespace WcfService3
             Notificationlist.Add(n);
         }
         [DataMember]
+
         public List<Cvisistor> Visitors
         {
             get{ return visitors;}
             set{ visitors = value; }
         }
+
         public void addvisitors(Cvisistor c)
         {
             if (Visitors == null)
@@ -257,7 +261,7 @@ namespace WcfService3
         [DataMember]
         
 
-        public List<String> Student_checkin
+        public List<CDate> Student_checkin
         {
             get
             {

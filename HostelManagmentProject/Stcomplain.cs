@@ -12,6 +12,7 @@ namespace HostelManagmentProject
 {
     public partial class Stcomplain : Form
     {
+        localhost.Cstudent cs;
         public Stcomplain()
         {
             InitializeComponent();
@@ -19,7 +20,21 @@ namespace HostelManagmentProject
 
         private void Form10_Load(object sender, EventArgs e)
         {
-
+            localhost.Service1 sc = new localhost.Service1();
+            
+            cs = sc.loggedstudent();
+            foreach(localhost.Cstudent su in sc.allotedStudentsforhostel())
+            {
+                if (su.Userid == cs.Userid)
+                {
+                    txthostel.Text = su.HostelName;
+                    txtname.Text = su.Name;
+                    txtRoomNum.Text = su.RoomNumber;
+                    txtregNum.Text = su.RegistrationNumber;
+                    
+                }
+            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,7 +64,7 @@ namespace HostelManagmentProject
         private void button1_Click(object sender, EventArgs e)
         {
             localhost.Service1 sc = new localhost.Service1();
-            sc.complaintsfromstudent(txtname.Text, txtsubject.Text,txtcomplaint.Text, txthostel.Text);
+            sc.complaintsfromstudent(txtname.Text, txtsubject.Text,txtcomplaint.Text, txthostel.Text,txtregNum.Text,txtRoomNum.Text);
         }
     }
 }
